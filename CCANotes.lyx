@@ -511,7 +511,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/nfaExample.svg
+	filename Diagrams/nfaExample.svg
 	scale 50
 
 \end_inset
@@ -753,7 +753,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Pictures/chessBoard.png
+	filename Diagrams/chessBoard.png
 	scale 50
 
 \end_inset
@@ -1519,7 +1519,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/chessDFA.svg
+	filename Diagrams/chessDFA.svg
 	scale 50
 
 \end_inset
@@ -1593,7 +1593,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/epsilonNFA.svg
+	filename Diagrams/epsilonNFA.svg
 	scale 50
 
 \end_inset
@@ -2003,7 +2003,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/productDFA.svg
+	filename Diagrams/productDFA.svg
 	scale 50
 
 \end_inset
@@ -2115,7 +2115,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/pumpingLemma.svg
+	filename Diagrams/pumpingLemma.svg
 	scale 50
 
 \end_inset
@@ -2386,7 +2386,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/intersectionDFA.svg
+	filename Diagrams/intersectionDFA.svg
 	scale 50
 
 \end_inset
@@ -2695,7 +2695,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/representationCycle.svg
+	filename Diagrams/representationCycle.svg
 	scale 50
 
 \end_inset
@@ -3653,7 +3653,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/pushdownAutomata.svg
+	filename Diagrams/pushdownAutomata.svg
 	scale 50
 
 \end_inset
@@ -3694,7 +3694,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/pdaExample.svg
+	filename Diagrams/pdaExample.svg
 	scale 50
 
 \end_inset
@@ -6380,7 +6380,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive - Georgia Institute of Technology/CCA/Diagram/LanguageClassHierarchy.png
+	filename Diagrams/LanguageClassHierarchy.png
 	scale 50
 
 \end_inset
@@ -6709,7 +6709,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/ClosurePropertiesRELandRL.svg
+	filename Diagrams/ClosurePropertiesRELandRL.svg
 	scale 50
 
 \end_inset
@@ -8360,7 +8360,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/DecidablityLanguageClass.svg
+	filename Diagrams/DecidablityLanguageClass.svg
 	scale 50
 
 \end_inset
@@ -8775,7 +8775,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/Reduction.svg
+	filename Diagrams/Reduction.svg
 	scale 50
 
 \end_inset
