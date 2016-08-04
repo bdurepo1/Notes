@@ -6,6 +6,9 @@
 \origin "C:/Users/DurepoBrandonA/OneDrive - Georgia Institute of Technology/CCA/Notes/"
 \textclass article
 \use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -84,7 +87,8 @@
 \begin_body
 
 \begin_layout Title
-Hitchhiker's Guide to Computability, Complexity, and Algorithms 
+Notes on Computability, Complexity, and Algorithms – An Ode to the Unprepared
+ Student
 \end_layout
 
 \begin_layout Author
@@ -109,11 +113,11 @@ bdurepo@gatech.edu
 \begin_inset Quotes eld
 \end_inset
 
-Don't Panic.
+Sapere aude.
 \begin_inset Quotes erd
 \end_inset
 
- – Douglas Adams
+ – Horace
 \end_layout
 
 \begin_layout Standard
@@ -125,8 +129,8 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Section
-Introduction
+\begin_layout Section*
+Preface
 \end_layout
 
 \begin_layout Standard
@@ -147,11 +151,554 @@ The purpose of this document is to help students of all stripes succeed
  another pass through.
 \end_layout
 
-\begin_layout Section
-Elementary Logic and Truth Tables
+\begin_layout Part
+Mathematics and Logic
 \end_layout
 
 \begin_layout Section
+Discrete Mathmatics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equivalence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\land T\equiv p$
+\end_inset
+
+, 
+\begin_inset Formula $p\lor F\equiv F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Identity Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\lor T\equiv T$
+\end_inset
+
+, 
+\begin_inset Formula $p\land F\equiv F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Domination Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\lor p\equiv p$
+\end_inset
+
+, 
+\begin_inset Formula $p\land p\equiv p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Idempotent Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lnot(\lnot p)\equiv p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Double Negation Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\lor q\equiv q\lor p$
+\end_inset
+
+, 
+\begin_inset Formula $p\land q\equiv q\land p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Communatative Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\lor q)\lor r\equiv p\lor(q\lor r)$
+\end_inset
+
+, 
+\begin_inset Formula $(p\land q)\land r\equiv p\land(q\land r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Associative Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\lor(q\land r)\equiv(p\lor q)\land(p\lor r)$
+\end_inset
+
+, 
+\begin_inset Formula $p\land(q\lor r)\equiv(p\land q)\lor(p\land r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distributive Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lnot(p\land q)\equiv\lnot p\lor\lnot q$
+\end_inset
+
+, 
+\begin_inset Formula $\lnot(p\lor q)\equiv\lnot p\land\lnot q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+De Morgan's Law
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\lor(p\land q)\equiv p$
+\end_inset
+
+, 
+\begin_inset Formula $p\land(p\lor q)\equiv p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Absoption Law
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\lor\lnot p\equiv T$
+\end_inset
+
+, 
+\begin_inset Formula $p\land\lnot p\equiv F$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Negation Laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logical Equivalences Involving Conditional Statements
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow q\equiv\lnot p\lor q\equiv\lnot q\rightarrow\lnot p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\lor q\equiv\lnot p\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\land q\equiv\lnot(p\rightarrow\lnot q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lnot(p\rightarrow q)\equiv p\land\lnot q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\rightarrow q)\land(p\rightarrow r)\equiv p\rightarrow(q\land r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\rightarrow r)\land(q\rightarrow r)\equiv(p\lor q)\rightarrow r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\rightarrow q)\lor(p\rightarrow r)\equiv p\rightarrow(q\lor r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\rightarrow r)\lor(q\rightarrow r)\equiv(p\land q)\rightarrow r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Logical Equivalences Involving Biconditional Statements
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\leftrightarrow q\equiv(p\rightarrow q)\land(q\rightarrow p)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\leftrightarrow q\equiv\lnot p\leftrightarrow\lnot q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\leftrightarrow q\equiv(p\land q)\lor(\lnot p\land\lnot q)\lor(\lnot p\land\lnot q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lnot(p\leftrightarrow q)\equiv p\leftrightarrow\lnot q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:lawsOfLogic"
+
+\end_inset
+
+ Logical equivalences.
+ Idemepotent denotes an element of a set that is unchanged in value when
+ multiplied or otherwise operated on by itself.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Propositional and Sentential Logic
 \begin_inset CommandInset label
 LatexCommand label
@@ -162,7 +709,1620 @@ name "sec:propositionalSententialLogic"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+All logical expressions can be described in some combination of 
+\emph on
+logical operators
+\emph default
+ and 
+\emph on
+implications
+\emph default
+.
+ The logical operators consist of the following: the logical conjunction
+ 
+\begin_inset Formula $\land$
+\end_inset
+
+, the logical disjunction 
+\begin_inset Formula $\lor$
+\end_inset
+
+, and the negation 
+\begin_inset Formula $\lnot$
+\end_inset
+
+.
+ The implication is made up of two propositional variables 
+\begin_inset Formula $p$
+\end_inset
+
+and 
+\begin_inset Formula $q.$
+\end_inset
+
+ 
+\begin_inset Formula $p$
+\end_inset
+
+is often called the 
+\emph on
+premise
+\emph default
+ or 
+\emph on
+hypothesis
+\emph default
+ or 
+\emph on
+antecedent
+\emph default
+, while 
+\begin_inset Formula $q$
+\end_inset
+
+may be referred to as the 
+\emph on
+conclusion
+\emph default
+, or 
+\emph on
+consequence
+\emph default
+.
+ Truth tables are a way of tabulating the values of arbitrary logical expression
+s by enumerating all possible truth values for the componenet of the expressions.
+ The usefulness of this technique quickly dimminishes as the number of propositi
+on variables goes beyond 4.
+ In this case the number of rows in the truth table is 
+\begin_inset Formula $2^{4}=16$
+\end_inset
+
+.
+ The precedence of logical operators is negation, conjunction, disjunction.
+\end_layout
+
+\begin_layout Standard
+The implication is given by the symbol 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+.
+ Variations on the traditional implication of 
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+ include its 
+\emph on
+converse
+\emph default
+ 
+\begin_inset Formula $q\rightarrow p$
+\end_inset
+
+, the 
+\emph on
+contraposative
+\emph default
+ 
+\begin_inset Formula $\lnot q\rightarrow\lnot p$
+\end_inset
+
+, and the 
+\emph on
+inverse
+\emph default
+ 
+\begin_inset Formula $\lnot p\rightarrow\lnot q$
+\end_inset
+
+.
+ A biconditional or bimplicational statement is a slightly more creative
+ way to use the implication.
+ A table of logical equivalances is provided in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:lawsOfLogic"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Use of these laws can allow you to estabish an equivalance of complex propositio
+nal statements with a more distilled simplified version.
+ Propositional statements are said to be 
+\emph on
+satisfiable
+\emph default
+ if some combination of truth assignments to the propostional variables
+ makes the statement true.
+\end_layout
+
+\begin_layout Subsection
+Predicate Calculus and Quantification Logic
+\end_layout
+
+\begin_layout Standard
+Predicate logic is a generalization of propositional logic onto arbitrary
+ statements.
+ 
+\emph on
+Propositonal functions
+\emph default
+ given by a capital letter and a number of parameters are used to define
+ propositional statements.
+ An example, 
+\begin_inset Quotes eld
+\end_inset
+
+Computer 
+\begin_inset Formula $x$
+\end_inset
+
+, is functioning properly
+\begin_inset Quotes erd
+\end_inset
+
+ would be written as 
+\begin_inset Formula $P(x).$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Quantification expresses the extent to which a predicate is true over a
+ range of elements.
+ In English, the words all, some, many, none, and few are used in quantification
+s.
+ The 
+\emph on
+univeral quantification
+\emph default
+ symbol for all is given by 
+\begin_inset Formula $\forall$
+\end_inset
+
+.
+ The 
+\emph on
+existential quantifiaction
+\emph default
+ symbol for exists is 
+\begin_inset Formula $\exists$
+\end_inset
+
+.
+ The statement 
+\begin_inset Formula $\forall xP(x)$
+\end_inset
+
+ reads 
+\begin_inset Quotes eld
+\end_inset
+
+For all computers given by 
+\begin_inset Formula $x$
+\end_inset
+
+, computer 
+\begin_inset Formula $x$
+\end_inset
+
+is functioning properly.
+\begin_inset Quotes erd
+\end_inset
+
+ If there is a single instance of a universal varaible which is false then
+ the predicate becomes false.
+ If for all instances of an existential varaibles the value is false then
+ the statement is false.
+ Quantification operators have higher precedence than logical operators.
+ Predicates used with quantifiers are said to be 
+\emph on
+bound variables
+\emph default
+ while those without are said to be 
+\emph on
+free variables
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lnot\forall xP(x)\equiv\exists x\lnot P(x).$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lnot\exists xP(x)\equiv\forall\lnot P($
+\end_inset
+
+x).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:quantificationNegation"
+
+\end_inset
+
+ This table shows the equivalance relations on predicates with quantification
+ symbols.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rules of Inference
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+validity
+\emph default
+ of a proofs arguments are derived from the truth of the premises it offers.
+ An argument in propositional logic is a sequence of propositions.
+ All but the final proposition in the argument are called premises and the
+ final proposition is called the conclusion.An argument is valid if the truth
+ of all its premises implies that the conclusion is true.
+ An argument form in propositional logic is a sequence of compound propositions
+ involving propositional variables.
+ An argument form is valid no matter which particular propositions are substitut
+ed for the propositional variables in its premises, the conclusion is true
+ if the premises are all true.
+ The rules of inference provide the templates of logical propostions which
+ when given in a valid combitation yield valid arguments.
+ The rules are given in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:inferenceRules"
+
+\end_inset
+
+.
+ Additonally the Rules of Inference applies to quantification logic as well
+ as shown in the table.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tautology
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\land(p\rightarrow q))\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modus ponens
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\neg q\land(p\rightarrow q))\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modus tollens
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $((p\rightarrow q)\land(q\rightarrow r))\rightarrow(p\rightarrow r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hypothetical syllogism
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $((p\lor q)\land\neg p)\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Disjunctive syllogism
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow(p\lor q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Addition
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\land q)\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simplification
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $((p)\land(q))\rightarrow(p\land q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Conjunction
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(p\lor q)\land(\neg p\lor r)\rightarrow(q\lor r)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resolution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inference Rule
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\forall xP(x)}{\therefore P(c)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Universal instantiation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{P(c)}{\therefore\forall xP(x)}$
+\end_inset
+
+ for an arbitrary 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Universal generalization
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\exists xP(x)}{\therefore P(c)}$
+\end_inset
+
+ for some element 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Existantial instantiation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{P(c)}{\therefore\exists xP(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Existential generalization
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:inferenceRules"
+
+\end_inset
+
+This table gives the Rules of Inference.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proofs
+\end_layout
+
+\begin_layout Standard
+In order to begin to understand how to construct valid proof it is important
+ to understand the terminology that is used.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Terminology of Proofs
+\end_layout
+
+\begin_layout Itemize
+a 
+\emph on
+theorem
+\emph default
+ is a statement that can be shown to be true.
+\end_layout
+
+\begin_layout Itemize
+A 
+\emph on
+proof
+\emph default
+ is a valid argument that establishes the truth of a theorem.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+axioms
+\emph default
+ (or 
+\emph on
+postulates
+\emph default
+) are statements we assume to be true.
+\end_layout
+
+\begin_layout Itemize
+A 
+\emph on
+lemma
+\emph default
+ is a less important theorem that is helpful in the proof of other results.
+\end_layout
+
+\begin_layout Itemize
+A 
+\emph on
+corollary
+\emph default
+ is a theorem that can be established directly from a theorem that has been
+ proved.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+without loss of generality
+\emph default
+ (WLOG) means that the author of a proof is omitting the proof of one of
+ the cases in a proof by cases.
+\end_layout
+
+\begin_layout Subsubsection
+Types of Proofs
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Direct Proofs
+\emph default
+ is a proof that assumes the antecedent of the implication is true and seeks
+ to justify and prove the conclusion of the theorem by examining the characteris
+tics of the relationship of the antecedent and conclusion.
+ A direct proof may use axioms, definitions, and previously proven theorems,
+ together with rules of inference, to show that q must also be true.
+ Here we are establishing the truth of the proof based on row 1 of the truth
+ table found in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:implicationTruthTable"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg q\rightarrow\neg p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:implicationTruthTable"
+
+\end_inset
+
+ Truth table for the implication and its contraposition.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In juxtaposition to the direct proof we have the indirect proof techniques.
+ Indirect proofs do not start with the assumption of the truth of the premise
+ to derive the truth of the conclusion.
+ The
+\emph on
+ Proof by Contraposition 
+\emph default
+technique takes advantage of the equivalance of the contrapostion of the
+ implication to prove the conclusion.
+ That is, 
+\begin_inset Formula $\neg q\rightarrow\neg p\equiv p\rightarrow q$
+\end_inset
+
+ as shown in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:lawsOfLogic"
+
+\end_inset
+
+.
+ The template for this type of proof is constructed by assuming the conclusion
+ 
+\begin_inset Formula $q$
+\end_inset
+
+is false which implies that the premise 
+\begin_inset Formula $p$
+\end_inset
+
+ is also false.
+ 
+\end_layout
+
+\begin_layout Itemize
+The trivial and vacuous proofs strategies are the simplest strategies.
+ A 
+\emph on
+Trivial Proof
+\emph default
+ is a proof that derives the truth of the conclusion based on the fact that
+ the premise is false.
+ This logic is based on row 3 of the implication truth table.
+ A Vacuous Proof is a proof based on the fact the conclusion is true also
+ show in row 3.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Proofs by Contradiction 
+\emph default
+seek to find a contradictory conclusion 
+\begin_inset Formula $q=r\land\neg r$
+\end_inset
+
+, such that 
+\begin_inset Formula $\neg p\rightarrow q$
+\end_inset
+
+ is true.
+ We must show that 
+\begin_inset Formula $p$
+\end_inset
+
+is true by showing 
+\begin_inset Formula $\neg p$
+\end_inset
+
+ is false so that we can target row 4 in the implication truth table.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Proofs of Equivalance 
+\emph default
+To prove a theorem that is a biconditional statement, that is, a statement
+ of the form 
+\begin_inset Formula $p\leftrightarrow q$
+\end_inset
+
+, we show that 
+\begin_inset Formula $p\rightarrow q$
+\end_inset
+
+ and 
+\begin_inset Formula $q\rightarrow p$
+\end_inset
+
+.
+ The validity of this approach is based on the tautology 
+\begin_inset Formula $(p\leftrightarrow q)\equiv(p\rightarrow q)\land(q\rightarrow p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Proofs by Counterexample 
+\emph default
+in this type of proof we typically try to debunk the truth of a univeral
+ quantifier over some predicate.
+ If we find one instance is false, then we can conclude the predicate is
+ false
+\emph on
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Proof by Cases and the Exhaustive Proof 
+\emph default
+sometimes using a single argument to cover the premise of a proof is not
+ sufficient.
+ As an alternative, we can devises cases that cover the entire domain of
+ the proof and address each case in turn to prove the conclusion.
+ This proof technique relies on the following tautology.
+\begin_inset Formula 
+\[
+[(p_{1}\lor p_{2}\lor\ldots\lor p_{n})\rightarrow q]\leftrightarrow[(p_{1}\rightarrow q)\land(p_{2}\rightarrow q)\land\ldots\land(p_{n}\rightarrow q)]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Existence Proofs 
+\emph default
+a proof of this type is of the form 
+\begin_inset Formula $\exists xP(x)$
+\end_inset
+
+.
+ This type of proof can be proven by providing a 
+\emph on
+witness
+\emph default
+ 
+\begin_inset Formula $a,$
+\end_inset
+
+ a instance of 
+\begin_inset Formula $x$
+\end_inset
+
+where 
+\begin_inset Formula $P(a)$
+\end_inset
+
+ is true.
+ This type of strategy is called a 
+\emph on
+constructive
+\emph default
+ proof.
+ A nonconstuctive existance uses some other means to prove that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\exists xP(x)$
+\end_inset
+
+.
+ Often contradition is used.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Uniqueness Proofs 
+\emph default
+in this type of proof we show that a unique element with a particular property
+ exists.
+ These types of proofs are composed of two steps.
+ First you must prove the existance of the element.
+ Then we show that if 
+\begin_inset Formula $y\neq x$
+\end_inset
+
+, then 
+\begin_inset Formula $y$
+\end_inset
+
+does not have the particular property of 
+\begin_inset Formula $x.$
+\end_inset
+
+ Formally, uniqueness proofs are of the form:
+\begin_inset Formula 
+\[
+\exists x(P(x)\land\forall y(y\neq x\rightarrow\neg P(y))).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Direct Methods
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Indirect Methods
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Direct Proof
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Proof by Contraposition
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Proof by Cases
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Proof by Contradiction
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exhaustive Proof
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Proof by Counterexample
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Existence Proof
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Uniqueness Proof
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Classification of the proof strategies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Strategies for Constructing Proofs
+\end_layout
+
+\begin_layout Standard
+The following general approach for constructing proofs is often helpful.
+\end_layout
+
+\begin_layout Enumerate
+Replace terms by their definitions.
+\end_layout
+
+\begin_layout Enumerate
+Analyze the hypothesis and conclusion.
+\end_layout
+
+\begin_layout Enumerate
+Attempt to construct the proof using the direct proof method, if the statement
+ is a coditional statement.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If you fail to construct a direct proof, attempt to provide an indirect
+ proof.
+\end_layout
+
+\begin_layout Enumerate
+If both the direct and indirect proof methods don't work, then attempt a
+ proof by contradiction.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\emph on
+Forward reasoning
+\emph default
+ as well as
+\emph on
+ backward reasoning
+\emph default
+ is necessary to construct valid proofs.
+ Forward reasoning uses premises as well as previously proven theorems and
+ axioms to prove the conclusion.
+ In a direct proof this is the method of choice.
+ Indirect proofs often will often require backward reasoning.
+ In backward reasoning we attempt to find a statement 
+\begin_inset Formula $p$
+\end_inset
+
+that we can prove true with 
+\begin_inset Formula $p\rightarrow q.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Adapatation 
+\emph default
+of existing proofs is often a fruitful procedure.
+ Even if the final conclusions required are not the same, it may be constructive
+ to look to the previous proves for ideas which may help in your new proof.
+\end_layout
+
+\begin_layout Subsection
 Sets
 \begin_inset CommandInset label
 LatexCommand label
@@ -173,29 +2333,7 @@ name "sec:Sets"
 
 \end_layout
 
-\begin_layout Section
-Quantification Logic
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:quantificationLogic"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Writing Proofs
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:writingProofs"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
+\begin_layout Subsection
 Relations
 \begin_inset CommandInset label
 LatexCommand label
@@ -206,7 +2344,7 @@ name "sec:Relations"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Functions
 \begin_inset CommandInset label
 LatexCommand label
@@ -217,7 +2355,7 @@ name "sec:Functions"
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Induction
 \begin_inset CommandInset label
 LatexCommand label
@@ -226,6 +2364,361 @@ name "sec:Induction"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Modular Arithmatic
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arithmetic Property
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modulo Positive Numbers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\%b=c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modulo Negative Numbers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c=a-q\cdot b$
+\end_inset
+
+, where 
+\begin_inset Formula $a<0$
+\end_inset
+
+, and 
+\begin_inset Formula $-1\leq q\leq\left\lfloor a/b\right\rfloor $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modular Congruence
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\%b\equiv b\%c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modular Addition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(a+b)\%c\equiv(a\%c+b\%c)\%c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modular Subtraction
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(a-b)\%c\equiv(a\%c-b\%c)\%c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modular Multiplication
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(a\cdot b)\%c\equiv(a\%c\cdot b\%c)\%c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:moduluarArithmatic"
+
+\end_inset
+
+This table gives an overview of useful modular arithmatic equations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Calculus and Real Analysis
+\end_layout
+
+\begin_layout Subsection
+Sequences and Series
+\end_layout
+
+\begin_layout Subsection
+Topology of Real Numbers
+\end_layout
+
+\begin_layout Subsection
+Functional Limits and Continuity
+\end_layout
+
+\begin_layout Subsection
+Derivatives
+\end_layout
+
+\begin_layout Subsection
+Sequences and Series of Functions
+\end_layout
+
+\begin_layout Subsection
+Rieman Integral
+\end_layout
+
+\begin_layout Subsection
+Cantor Diagonalization
+\end_layout
+
+\begin_layout Section
+Probability and Statistics
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Probability-and-Odds"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Discrete Probability Distributions
+\end_layout
+
+\begin_layout Subsection
+Continuous Probability Distributions
+\end_layout
+
+\begin_layout Subsection
+Combinatorics
+\end_layout
+
+\begin_layout Subsection
+Condiational Probability
+\end_layout
+
+\begin_layout Subsection
+Expected Value and Variance
+\end_layout
+
+\begin_layout Subsection
+Sample Space and Probability
+\end_layout
+
+\begin_layout Subsection
+Discrete Random Variables
+\end_layout
+
+\begin_layout Subsection
+General Random Variables
+\end_layout
+
+\begin_layout Subsection
+Limit Theorems
+\end_layout
+
+\begin_layout Section
+Linear Algebra and Integer Linear Programming
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Linear-Programming"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Linear Equations in Linear Algebra
+\end_layout
+
+\begin_layout Subsection
+Matrix Algebra
+\end_layout
+
+\begin_layout Subsection
+Determinants
+\end_layout
+
+\begin_layout Subsection
+Vector Spaces
+\end_layout
+
+\begin_layout Subsection
+Eigenvalues and Eigenvectors
+\end_layout
+
+\begin_layout Subsection
+Orthogonality and Least Squares
+\end_layout
+
+\begin_layout Subsection
+Symmetric Matrices and Quadratic Forms
+\end_layout
+
+\begin_layout Subsection
+Geometry of Vector Spaces
+\end_layout
+
+\begin_layout Subsection
+Basic Properties of Linear Progams
+\end_layout
+
+\begin_layout Subsection
+The Simplex Method
+\end_layout
+
+\begin_layout Subsection
+Duality and the Complementarity
+\end_layout
+
+\begin_layout Subsection
+Interior Point Methods
+\end_layout
+
+\begin_layout Part
+Computability
 \end_layout
 
 \begin_layout Section
@@ -511,7 +3004,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/nfaExample.svg
+	filename Diagrams/nfaExample.svg
 	scale 50
 
 \end_inset
@@ -753,7 +3246,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Pictures/chessBoard.png
+	filename Diagrams/chessBoard.png
 	scale 50
 
 \end_inset
@@ -1463,7 +3956,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/chessNFA2.svg
+	filename Diagrams/chessNFA2.svg
 	scale 50
 
 \end_inset
@@ -1519,7 +4012,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/chessDFA.svg
+	filename Diagrams/chessDFA.svg
 	scale 50
 
 \end_inset
@@ -1593,7 +4086,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/epsilonNFA.svg
+	filename Diagrams/epsilonNFA.svg
 	scale 50
 
 \end_inset
@@ -2003,7 +4496,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/productDFA.svg
+	filename Diagrams/productDFA.svg
 	scale 50
 
 \end_inset
@@ -2115,7 +4608,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/pumpingLemma.svg
+	filename Diagrams/pumpingLemma.svg
 	scale 50
 
 \end_inset
@@ -2386,7 +4879,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/intersectionDFA.svg
+	filename Diagrams/intersectionDFA.svg
 	scale 50
 
 \end_inset
@@ -2695,7 +5188,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/representationCycle.svg
+	filename Diagrams/representationCycle.svg
 	scale 50
 
 \end_inset
@@ -3653,7 +6146,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/pushdownAutomata.svg
+	filename Diagrams/pushdownAutomata.svg
 	scale 50
 
 \end_inset
@@ -3694,7 +6187,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/pdaExample.svg
+	filename Diagrams/pdaExample.svg
 	scale 50
 
 \end_inset
@@ -6380,7 +8873,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive - Georgia Institute of Technology/CCA/Diagram/LanguageClassHierarchy.png
+	filename Diagrams/LanguageClassHierarchy.png
 	scale 50
 
 \end_inset
@@ -6709,7 +9202,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/ClosurePropertiesRELandRL.svg
+	filename Diagrams/ClosurePropertiesRELandRL.svg
 	scale 50
 
 \end_inset
@@ -8360,7 +10853,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/DecidablityLanguageClass.svg
+	filename Diagrams/DecidablityLanguageClass.svg
 	scale 50
 
 \end_inset
@@ -8498,6 +10991,13 @@ accepts, then the UTM accepts.
 
 \begin_layout Subsection
 The UTM is Recursively Enumerable and Not Recursive (The Halting Problem)
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:haltingProblem"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8662,7 +11162,11 @@ wizzBang cannot exist.
 \emph default
 This tells us that the UTM is Recursively Enumerable (Turing-recognizable),
  but not Recursive (Decidable).
- 
+ We will regard the language of the UTM as 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+ going forward.
 \end_layout
 
 \begin_layout Section
@@ -8775,7 +11279,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/DurepoBrandonA/OneDrive/Diagrams/Reduction.svg
+	filename Diagrams/Reduction.svg
 	scale 50
 
 \end_inset
@@ -8851,19 +11355,477 @@ We now need to prove the claim of Rice's Theorem: Every nontrivial property
 \end_inset
 
 , is undecidable.
+ We’re going to assume that the empty language does not have property P.
+ If that is not the case, then consider the complement of P, say Q.
+ Surely the empty language then has property Q.
+ But if we could prove that Q were undecidable, then P also must be undecidable.
+ That is, if L_P were a recursive language, then so would be L_Q, since
+ the class of recursive languages is closed under complementation.
+ We will use the UTM (i.e.
  
+\begin_inset Formula $L_{U}$
+\end_inset
+
+) obtained in Section
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:haltingProblem"
+
+\end_inset
+
+.
+ In this reduction we reduce 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+ to 
+\begin_inset Formula $L_{P}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+ is undecidable this gives us the ability to say that 
+\begin_inset Formula $L_{P}$
+\end_inset
+
+ is undecidable.
+ Our reduction must take the parameters 
+\begin_inset Formula $M$
+\end_inset
+
+and 
+\begin_inset Formula $w$
+\end_inset
+
+ and create a new Turing Machine 
+\begin_inset Formula $M'$
+\end_inset
+
+ such that 
+\begin_inset Formula $L(M')$
+\end_inset
+
+ has property 
+\begin_inset Formula $P$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ That is, the result of 
+\begin_inset Formula $M'$
+\end_inset
+
+ is contingent on the result of 
+\begin_inset Formula $M$
+\end_inset
+
+'s result from taking in 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Our language property testing machine 
+\begin_inset Formula $M'$
+\end_inset
+
+ will be testing the language 
+\begin_inset Formula $L$
+\end_inset
+
+ such that 
+\begin_inset Formula $L$
+\end_inset
+
+ is any language with a property 
+\begin_inset Formula $P$
+\end_inset
+
+, and we let 
+\begin_inset Formula $M_{L}$
+\end_inset
+
+ be a TM that accepts 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ simulates 
+\begin_inset Formula $M$
+\end_inset
+
+ on input 
+\begin_inset Formula $w$
+\end_inset
+
+, and if 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts 
+\begin_inset Formula $w$
+\end_inset
+
+ then 
+\begin_inset Formula $M'$
+\end_inset
+
+ simulates 
+\begin_inset Formula $M_{L}$
+\end_inset
+
+ on the input 
+\begin_inset Formula $x$
+\end_inset
+
+to 
+\begin_inset Formula $M'$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts its input 
+\begin_inset Formula $x$
+\end_inset
+
+if and only if 
+\begin_inset Formula $M_{L}$
+\end_inset
+
+ accepts 
+\begin_inset Formula $x.$
+\end_inset
+
+ Suppose 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts 
+\begin_inset Formula $w$
+\end_inset
+
+, then 
+\begin_inset Formula $M'$
+\end_inset
+
+will simulate 
+\begin_inset Formula $M_{L}$
+\end_inset
+
+ on input 
+\begin_inset Formula $x$
+\end_inset
+
+and therefore accepts 
+\begin_inset Formula $x$
+\end_inset
+
+if and only if 
+\begin_inset Formula $x$
+\end_inset
+
+is in 
+\begin_inset Formula $L.$
+\end_inset
+
+ Formally, 
+\begin_inset Formula $L(M')=L(M_{L})=L$
+\end_inset
+
+, the language of 
+\begin_inset Formula $M'$
+\end_inset
+
+ is the language of 
+\begin_inset Formula $M_{L}$
+\end_inset
+
+, 
+\begin_inset Formula $L(M')$
+\end_inset
+
+ has property 
+\begin_inset Formula $P$
+\end_inset
+
+, and 
+\begin_inset Formula $M'$
+\end_inset
+
+ is in 
+\begin_inset Formula $L_{P}.$
+\end_inset
+
+ Now suppose the other case, 
+\begin_inset Formula $M$
+\end_inset
+
+ does not accpet (never halts) 
+\begin_inset Formula $w$
+\end_inset
+
+, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ never starts the simulation of 
+\begin_inset Formula $M_{L}$
+\end_inset
+
+ and thus never accpets the input 
+\begin_inset Formula $x$
+\end_inset
+
+, so 
+\begin_inset Formula $L(M')=L(M_{L})=\emptyset$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $L(M')$
+\end_inset
+
+ does not have the property 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ is not in 
+\begin_inset Formula $L_{P}$
+\end_inset
+
+.
+ This can viewed graphically in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:schematicRiceTheoremTM"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/riceTheoremTuringMachine.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:schematicRiceTheoremTM"
+
+\end_inset
+
+ Here we see a schematic of the TM 
+\begin_inset Formula $M'$
+\end_inset
+
+ in which the language of 
+\begin_inset Formula $M_{L}$
+\end_inset
+
+ is the language 
+\begin_inset Formula $L_{P}$
+\end_inset
+
+ who can only run once if 
+\begin_inset Formula $w$
+\end_inset
+
+ is accepted by M whose language is 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+.
+ As a whole this can be regarded as a reduction from 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+ to 
+\begin_inset Formula $L_{P}$
+\end_inset
+
+.
+ Since we know 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+ is undeciable then so is 
+\begin_inset Formula $L_{P}$
+\end_inset
+
+.
+ In essence it is bootstrapped by 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+ undecidability.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Post's Correspondence Problem
 \end_layout
 
+\begin_layout Standard
+Post's Correspondence Problem (PCP) will be a tool for us to use in developing
+ proving other problems are undecidable so its worth the effort of understanding.
+ PCP asks: Is there some some ordering of indicies 
+\begin_inset Formula $i_{1}\ldots i_{k}$
+\end_inset
+
+ for a list of cooresponding strings 
+\begin_inset Formula $(w_{1},x_{1}),(w_{2},x_{2}),\ldots,(w_{n},x_{n})$
+\end_inset
+
+ such that 
+\begin_inset Formula $w_{i}\ldots w_{n}=x_{i}\ldots x_{n}.$
+\end_inset
+
+ A restriction we place on this question is that neither strings of 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ nor 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ can be the empty string, and they share the same alphabet.
+ In less formal terms, PCP asks is there a way of concatenating 
+\begin_inset Formula $w$
+\end_inset
+
+-type strings with 
+\begin_inset Formula $x$
+\end_inset
+
+-type strings so that they beome equivalent strings.
+ 
+\end_layout
+
+\begin_layout Subsection
+PCP is Undecidable
+\end_layout
+
+\begin_layout Standard
+The proof that PCP is undeciable relies on two reductions.
+ The first reduction is from 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+, the language of the Univeral Turing Machine, to 
+\begin_inset Formula $MPCP$
+\end_inset
+
+.
+ 
+\begin_inset Formula $MPCP$
+\end_inset
+
+ can be regarded as a modified version of the PCP problem such that the
+ first pair must be chosen first when forming the match on 
+\begin_inset Formula $w$
+\end_inset
+
+ and 
+\begin_inset Formula $x.$
+\end_inset
+
+ Then next reduction is from 
+\begin_inset Formula $MPCP$
+\end_inset
+
+ to 
+\begin_inset Formula $PCP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Reduction from 
+\begin_inset Formula $L_{U}$
+\end_inset
+
+ to MPCP
+\end_layout
+
+\begin_layout Standard
+//TODO
+\end_layout
+
+\begin_layout Subsubsection
+Reduction from MPCP to PCP
+\end_layout
+
+\begin_layout Standard
+//TODO
+\end_layout
+
 \begin_layout Subsection
 Some Real Problems
 \end_layout
 
+\begin_layout Standard
+//TODO
+\end_layout
+
+\begin_layout Part
+Complexity
+\end_layout
+
 \begin_layout Section
-Big-O Analysis (Bachmann-Landau Notation)
+Time Complexity (Bachmann-Landau Notation)
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Big-O-Analysis"
@@ -8874,47 +11836,1845 @@ name "sec:Big-O-Analysis"
 \end_layout
 
 \begin_layout Section
-P and NP
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:P-and-NP"
+Space Complexity
+\end_layout
+
+\begin_layout Section
+Intractable Problems
+\end_layout
+
+\begin_layout Standard
+In this section we learn about Time-Bounded Turing Machines, The Polynomial
+ Class of Problems, P, and the Exponenetial Class of Problems, NP.
+ Lastly we learn about Polynomial-Time Reductions.
+ Refer to Michael Garey and David Johnson's 
+\emph on
+Computers and Intractability: A Guide to the Theory of NP-Completeness 
+\emph default
+as a primary source for this subject matter.
+\end_layout
+
+\begin_layout Subsection
+Time Bounded Turing Machines
+\end_layout
+
+\begin_layout Standard
+We say a Turing machine is 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ time bounded, where
+\begin_inset Formula $T(n)$
+\end_inset
+
+ is some function of 
+\begin_inset Formula $n$
+\end_inset
+
+, like 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ or 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+, if given an input of length 
+\begin_inset Formula $n$
+\end_inset
+
+, the machine always halts in at most 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ steps.
+ 
+\end_layout
+
+\begin_layout Subsection
+The Partial Order of Equivalance Classes P, NP, and NP-complete
+\end_layout
+
+\begin_layout Standard
+A Turing machine 
+\begin_inset Formula $M$
+\end_inset
+
+ is said to be polynomial-time bounded if it is time bounded by any polynomial.
+ It could be linear, or quadratic, or cubic, or 
+\begin_inset Formula $n^{1000}$
+\end_inset
+
+, as long as it is some polynomial.
+ The languages who are said to be bounded by polynomial time make up the
+ Polynomial class P.
+ For more complex polynomials you may wonder if they qualify for the class
+ P.
+ A problem qualifies to be in P if it is less than some polynomial.
+ For example, 
+\begin_inset Formula $O(nlogn)$
+\end_inset
+
+ is less than 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+, and therefore it qualifies for the class P.
+ The nondeterminitic polynomial NP class of problems is defined in term
+ of a NTM which has a polynomial time nondeterministic algorithm.
+ The algorithm should be composed of two seperate states.
+ Th first is the guessing stage, and the second is the checking stage.
+ A nondeterministic algorithm 
+\begin_inset Quotes eld
+\end_inset
+
+solves
+\begin_inset Quotes erd
+\end_inset
+
+ a descisions problem 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ if the followung two properties hold for all instances.
+\end_layout
+
+\begin_layout Enumerate
+If the instance of the problem is an accepting instance, then there exists
+ 
+\emph on
+some
+\emph default
+ structure 
+\begin_inset Formula $S$
+\end_inset
+
+ that, when guessed for the input of the instance, will lead to the checking
+ stage to 
+\emph on
+accept
+\emph default
+ for the instance and 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If the instance of the problem is an rejecting instance, then there exists
+ 
+\emph on
+no
+\emph default
+ structure 
+\begin_inset Formula $S$
+\end_inset
+
+ that, when guessed for the input of the instance, will lead to the checking
+ stage to 
+\emph on
+reject
+\emph default
+ for the instance and 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If there is a polynomial bound on the number steps an NTM must take in any
+ branch of its computation then the problem is in NP.
+ The term 
+\begin_inset Quotes eld
+\end_inset
+
+complete problem
+\begin_inset Quotes erd
+\end_inset
+
+ for class of problems means that the problem embodies the essence of all
+ other problems in the class.
+ Even though it may appear that the problem doesn't.
+ PCP embodies Turing Machine computation.
+ and the Knapsack Problem embodies all NTM computation.
+ Polynomial Time reductions allow us to define NP-Complete problems.
+ In order to show a problem 
+\begin_inset Formula $M$
+\end_inset
+
+ to be NP-complete, we have to show that every problem in NP is somehow
+ embedded in 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ We need a transformation from every problem in NP to 
+\begin_inset Formula $M$
+\end_inset
+
+, and this transformation has to be sufficiently fast that if we had a determini
+stic polynomial time algorithm for 
+\begin_inset Formula $M$
+\end_inset
+
+, then we could use it to build a deterministic polynomial time algorithm
+ for each problem in NP.
+ Formally, we say a problem or language 
+\begin_inset Formula $M$
+\end_inset
+
+ is NP-complete if, first of all, it is in NP, and for every language 
+\begin_inset Formula $L$
+\end_inset
+
+ in NP, there is a polytime reduction from 
+\begin_inset Formula $L$
+\end_inset
+
+ to 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A final point on producing creating nondeterministic algorithms for NP problems
+ concerns the status of the algorithms complement.
+ There is a lack of symmetry the accepting and rejecting instances.
+ 
+\emph on
+In a deterministic algorithm
+\emph default
+, for a problem 
+\begin_inset Quotes eld
+\end_inset
+
+Given an instance of the problem 
+\begin_inset Formula $I$
+\end_inset
+
+, is 
+\begin_inset Formula $X$
+\end_inset
+
+ true for 
+\begin_inset Formula $I$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, where 
+\begin_inset Formula $X$
+\end_inset
+
+ is some property, both the problem and its complement can be solved polynomiall
+y because a deterministic algorithm always halts.
+ To obtain the complent you would just interchange the accepting and rejecting
+ results.
+ 
+\emph on
+In a nondeterministic algorithm
+\emph default
+,
+\emph on
+ 
+\emph default
+for example the complement of the TSP problem–this is not the case.
+ Consider the complement of TSP: 
+\begin_inset Quotes eld
+\end_inset
+
+Given a set of cities, intercity distances, and a bound 
+\begin_inset Formula $B,$
+\end_inset
+
+ is it true that 
+\emph on
+no
+\emph default
+ tour of all the citeis has length 
+\begin_inset Formula $B$
+\end_inset
+
+or less? There is no know way to verify a 
+\begin_inset Quotes eld
+\end_inset
+
+yes
+\begin_inset Quotes erd
+\end_inset
+
+ answer to this problem other than computing all possible tours (an exponential
+ algorithm).
+ Thus membership P for a given problem implies membership in coP.
+ However membership in NP does not imply membership in coNP.
+ The prefix 
+\begin_inset Quotes eld
+\end_inset
+
+co
+\begin_inset Quotes erd
+\end_inset
+
+ implies the complement of this language class.
+ A tentative view of the world of NP can be seen in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:npHiearchy"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/npHierarchy.svg
+	scale 50
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-Satisfiability and Cook's Theorem
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Satisfiability-and-Cook's"
+name "fig:npHiearchy"
+
+\end_inset
+
+ This diagram gives a tentative view of the membership relationship among
+ the different language classes.
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-NP-Complete Problems
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:NP-Complete-Problems"
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-Probability and Odds
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Probability-and-Odds"
+\begin_layout Subsection
+Encoding Schemes
+\end_layout
+
+\begin_layout Standard
+It is important to note the effect an encoding scheme can have on an algorithm.
+ If the encoding scheme is poorly constructed the input length might become
+ exponential and thus violate one of the rules of prooving NP-completeness.
+ An example of reasonable encoding schemes can be seen in in Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:graphEncodingSchemes"
+
+\end_inset
+
+.
+ Similary, if the output of our polynomial reduction becomes is not described
+ in a polynomial length of the input then it too violates the rules of prooving
+ NP-completeness.
+ An example of this is a variant of the Traveling Salesman Problem (TSP)
+ problem.
+ This variant gives a bounds 
+\begin_inset Formula $B$
+\end_inset
+
+ and asks for all tours of length 
+\begin_inset Formula $B$
+\end_inset
+
+ or less yielding exponentially many tours less than 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+.
+
+\series default
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Encoding Schemes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+String
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Length
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vertex list, Edge list
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V[1]V[2]V[3]V[4](V[1]V[2])(V[2]V[3])
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+36
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adjacency list
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(V[2])(V[1]V[3])(V[2])()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Adjacency matrix
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0100/1010/0010/0000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lower Bound
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Upper Bound
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4v+10e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4v+10e+(v+2e)\cdot\left\lceil \log_{10}v\right\rceil $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2v+8e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2v+8e+2e\cdot\left\lceil \log_{10}v\right\rceil $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $v^{2}+v-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $v^{2}+v-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:graphEncodingSchemes"
+
+\end_inset
+
+ The table above demonstrates how a graph's description can be described.
+ The string length is given by length column.
+ For sparse graphs an adjaceny list representation is beneficial.
+ Dense graphs should be represented in an adjacency matrix.
+ The bounds describe the input length in terms of 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $e$
+\end_inset
+
+, for 
+\begin_inset Formula $G(V,E)$
+\end_inset
+
+ where 
+\begin_inset Formula $v=|V|$
+\end_inset
+
+ and 
+\begin_inset Formula $e=|E|$
+\end_inset
+
+.
+ Graphs encoded in any of these schemes will differ at most polynomially
+ for any instance of a graph.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transitivity of NP-completeness
+\end_layout
+
+\begin_layout Standard
+Polynomial transformations provide membership for languages to equivalence
+ classes with the following Lemma.
+ Visually this can be seen in the diagram for Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:schematicRiceTheoremTM"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+If 
+\begin_inset Formula $L_{1}\propto L_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\emph on
+P, 
+\emph default
+then 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\emph on
+P.
+ 
+\emph default
+Equivalently, If 
+\begin_inset Formula $L_{1}\propto L_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ 
+\begin_inset Formula $\not\epsilon$
+\end_inset
+
+
+\emph on
+ P, 
+\emph default
+then 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\not\epsilon$
+\end_inset
+
+
+\emph on
+ P.
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:pMembership"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\Sigma_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+ be the alphabets of languages 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ respectively, and let the function 
+\begin_inset Formula $f:\Sigma_{1}^{*}\rightarrow\Sigma_{2}^{*}$
+\end_inset
+
+ be a 
+\emph on
+polytime
+\emph default
+ function from 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $M_{f}$
+\end_inset
+
+ be a determinitic 
+\emph on
+polytime
+\emph default
+ DTM recoginizer computing the function 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be a 
+\emph on
+polytime 
+\emph default
+DTM recognzier for 
+\begin_inset Formula $L_{2}.$
+\end_inset
+
+ A 
+\emph on
+polytime
+\emph default
+ recognizer for 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ can be constructed by composing 
+\begin_inset Formula $M_{f}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+ For an input 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ we first apply the part of the program attributed to 
+\begin_inset Formula $M_{f}$
+\end_inset
+
+ which yields 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+ ( a string of the 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+'s alphabet).
+ We the apply the recognizer 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ to the program to determine if the string 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\begin_inset Formula $L_{2}.$
+\end_inset
+
+ Since 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ we now have a recognizer for 
+\begin_inset Formula $L_{1}.$
+\end_inset
+
+ The fact that this yields a polynomial algorithm is derived from the fact
+ that both 
+\begin_inset Formula $M_{f}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ are polytime algorithms themselves.
+ 
+\end_layout
+
+\begin_layout Standard
+Reductions have the feature of transitivity.
+ 
+\end_layout
+
+\begin_layout Lemma
+That is, if 
+\begin_inset Formula $L_{1}\propto L_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}\propto L_{3}$
+\end_inset
+
+, then 
+\begin_inset Formula $L_{1}\propto L_{3}$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:reductionTransitiviy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\Sigma_{1},\Sigma_{2},\Sigma_{3}$
+\end_inset
+
+ be the alphabets for 
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+ respectively.
+ The function mapping the language of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ to the language of 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ is given by 
+\begin_inset Formula $f_{1}:\Sigma_{1}^{*}\rightarrow\Sigma_{2}^{*}$
+\end_inset
+
+, and the function mapping the language of 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ to the language of 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+ is 
+\begin_inset Formula $f_{2}:\Sigma_{2}^{*}\rightarrow\Sigma_{3}^{*}$
+\end_inset
+
+.
+ Then the function transforming the language of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ to the language of 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+ is the composition of the given functions, 
+\begin_inset Formula $f(x)=f_{2}(f_{1}(x))$
+\end_inset
+
+, for all strings 
+\begin_inset Formula $x$
+\end_inset
+
+in 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+.
+ Clearly, 
+\begin_inset Formula $f(x)\epsilon L_{3}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x\epsilon L_{1}$
+\end_inset
+
+.
+ The fact that 
+\begin_inset Formula $f$
+\end_inset
+
+ can be computed polynomially is derived from Lemma
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "lem:pMembership"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+An import lemma that allows us to constuct the NP-complete equivalence class
+ is the application of reduction transitivity to NP-complete problems.
+\end_layout
+
+\begin_layout Lemma
+If 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ belong to NP, 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ is NP-complete, and 
+\begin_inset Formula $L_{1}\propto L_{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ is NP-complete.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\emph on
+NP
+\emph default
+ all we need to do is show that, for every 
+\begin_inset Formula $L'$
+\end_inset
+
+
+\emph on
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ NP
+\emph default
+, 
+\begin_inset Formula $L'\propto L_{2}$
+\end_inset
+
+.
+ Consider any 
+\begin_inset Formula $L'$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\emph on
+NP
+\emph default
+.
+ Since 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ is NP-complete, then surely 
+\begin_inset Formula $L'\propto L_{1}$
+\end_inset
+
+ by the definition of NP-completeness.
+ The tranistivity of 
+\begin_inset Formula $\propto$
+\end_inset
+
+ seen in Lemma
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "lem:reductionTransitiviy"
+
+\end_inset
+
+, and the fact that 
+\begin_inset Formula $L_{1}\propto L_{2}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $L'\propto L_{2}$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Proof
+So it clear that once we have a single NP-complete problem to stand in for
+ 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ it serves as a means to bootstrap the process of creating the NP-complete
+ equivalence class.
+ The first NP-complete problem that allows the process was provided by Steve
+ Cook and is discussed in Section
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "subsec:Cook's-Theorem"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Prooving NP-completeness
+\end_layout
+
+\begin_layout Standard
+In order to prove that a problem is NP-complete you will need to demonstrate
+ the following:
+\end_layout
+
+\begin_layout Enumerate
+Show that the problem is in NP by giving a nondeterministic polytime decider.
+\end_layout
+
+\begin_layout Enumerate
+Select an known NP-complete problem.
+\end_layout
+
+\begin_layout Enumerate
+Construct a transformation function 
+\begin_inset Formula $f$
+\end_inset
+
+ from the NP-completer problem to the problem in question.
+\end_layout
+
+\begin_layout Enumerate
+Prove that the tranformation function 
+\begin_inset Formula $f$
+\end_inset
+
+ is a polynomial tranformaton.
+\end_layout
+
+\begin_layout Standard
+Garey and Johnson suggest that three design patterns exist for proving NP-comple
+teness: restriction, local replacement and component design.
+ Descriptions of the three patters are given.
+\end_layout
+
+\begin_layout Subsubsection
+Restriction
+\end_layout
+
+\begin_layout Subsubsection
+Local Replacement
+\end_layout
+
+\begin_layout Subsubsection
+Component Design
+\end_layout
+
+\begin_layout Subsection
+Polynomial Time Reductions
+\end_layout
+
+\begin_layout Standard
+Polynomial time transducers are TM's that take in an input of length n,
+ operate deterministically for some polynomial time 
+\begin_inset Formula $p(n)$
+\end_inset
+
+.
+ Produces an output on a separate output tape, and the output must me at
+ most 
+\begin_inset Formula $p(n)$
+\end_inset
+
+.
+ Consider two languages or problems, say 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ We say 
+\begin_inset Formula $L$
+\end_inset
+
+ is polytime-reducible to 
+\begin_inset Formula $M$
+\end_inset
+
+ if there is a polytime transducer 
+\begin_inset Formula $T$
+\end_inset
+
+ that takes an input 
+\begin_inset Formula $w$
+\end_inset
+
+ that is an instance of 
+\begin_inset Formula $L$
+\end_inset
+
+, produces output 
+\begin_inset Formula $x$
+\end_inset
+
+ that is an instance of 
+\begin_inset Formula $M$
+\end_inset
+
+, and the answer to 
+\begin_inset Formula $L$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+ is the same as the answer to 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $w$
+\end_inset
+
+ is in 
+\begin_inset Formula $L$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x$
+\end_inset
+
+ is in 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Steve Cook and Dick Karp were the pioneers of NP-Completeness theory.
+ Cook concentrated on 3-SAT – the question of whether an expression of proposeit
+ional logic was satisfiable, that is, made true by some assignment of truth
+ values to the propositional variables.
+ But shortly after Cook wrote his original paper on NP-completeness, Dick
+ Karp wrote another paper that showed many of the classical problems that
+ had been puzzling mathematicians, sometimes for centuries, were NP-complete.
+ Karp used only polytime reductions to the problem Cook had proved NP-complete.
+ Since then, it is generally accepted that the preferred definition of NP-comple
+teness is the one we gave here – the existence of polytime reductions.
+ To make the distinction, this notion of NP-completeness is often called
+ Karp-completeness.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cook's Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Cook's-Theorem"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recall from the Section
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:propositionalSententialLogic"
+
+\end_inset
+
+ on propositional logic that we expresses the truth of expressions with
+ boolean operators.
+ Expressions are built from two components variables and constants using
+ boolean the operators (
+\begin_inset Formula $\land,\lor,\lnot).$
+\end_inset
+
+ Constants and the value of variables are either true (1) or false (0).
+ The order of precedence for the boolean operatios is NOT, AND, OR.
+ The Satisfiability Problem (SAT) is concened with determinig if there is
+ a satisfying assignment of boolean values to an expression such that the
+ expression is true.
+ Instances of the SAT problem are represented with the parenthesis, logical
+ operators, and variables 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $i$
+\end_inset
+
+ is the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ binary integer.
+ 
+\end_layout
+
+\begin_layout Standard
+In order to prove that SAT is NP-Complete we must first show that it is
+ in NP.
+ This can be done by giving an NTM that decides if an instance of SAT of
+ length 
+\begin_inset Formula $n$
+\end_inset
+
+is satisfiable.
+ The algorithm for this Turing Machine can use nondeterminisc guessing to
+ accomplish the goal.
+ First the NTM guesses truth values for the variables of the expression.
+ The NTM then checks the truth values of the expression.
+ If the expression is true, then accept, otherwise reject.
+ We now know that SAT is in NP.
+\end_layout
+
+\begin_layout Standard
+The next step is to prove that SAT is NP-complete.
+ Refer to Garey and Johnson pg 39-44 for the indepth proof.
+ Prior to reading this you should understand Logic Programming 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/Logic_programming
+\end_layout
+
+\end_inset
+
+ and Lambda Calculus 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/Lambda_calculus
+\end_layout
+
+\end_inset
+
+.
+ At a high level the transformation function that they provide is based
+ on the idea that the intermediate descriptions of the Turing machine can
+ be translated into logical programming constraints which represent the
+ clauses of the satisfiability problem.
+ 
+\end_layout
+
+\begin_layout Section
+Specific NP-Complete Problems
+\end_layout
+
+\begin_layout Standard
+Garey and Johnson provide six additional foundational NP-complete problems
+ which they have found to be the most useful.
+ The relationship between these problems can be seen in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:npCompleteTree"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+3SAT asks the question: Is there a truth assignment for a set of clauses
+ in which all clauses have 3 variables? 
+\end_layout
+
+\begin_layout Enumerate
+Three Dimmensional Matching asks the question: For the Cartesian product
+ of three disjount sets 
+\begin_inset Formula $X,Y,$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+, is there some subset of the product that has unique coordinates for all
+ members of the set? Formally, 
+\begin_inset Formula $X\times Y\times Z$
+\end_inset
+
+ = P, where the 
+\begin_inset Formula $|X|=|Y|=|Z|=q$
+\end_inset
+
+, does there exists a matching 
+\begin_inset Formula $M\subseteq P$
+\end_inset
+
+ such that for all members of 
+\begin_inset Formula $M$
+\end_inset
+
+ no coordiates of the triple 
+\begin_inset Formula $(x_{i},y_{i},z_{i})$
+\end_inset
+
+ are duplicated in any other element of 
+\begin_inset Formula $M$
+\end_inset
+
+, with 
+\begin_inset Formula $|M|=q$
+\end_inset
+
+? That is, for M = {
+\begin_inset Formula $(x_{i},y_{i},z_{i})$
+\end_inset
+
+ ,
+\begin_inset Formula $(x_{j},y_{j},z_{j}),$
+\end_inset
+
+
+\begin_inset Formula $\ldots,(x_{q},y_{q},z_{q})$
+\end_inset
+
+}, 
+\begin_inset Formula $x_{i}\neq x_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{i}\neq y_{j}$
+\end_inset
+
+, and 
+\begin_inset Formula $z_{i}\neq z_{j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Vertex Cover asks the question: Is there a vertex cover for a given graph
+ 
+\begin_inset Formula $G$
+\end_inset
+
+ of size 
+\begin_inset Formula $K$
+\end_inset
+
+ or less? A vertex cover is a set of vertices of a graph who are incident
+ on edges which whose vertices make up all the vertices of the graph.
+ Formally, for a graph 
+\begin_inset Formula $G(V,E),$
+\end_inset
+
+ is there a vertex cover 
+\begin_inset Formula $V'\subseteq V$
+\end_inset
+
+ such that 
+\begin_inset Formula $|V'|\leq K$
+\end_inset
+
+, and for each edge 
+\begin_inset Formula $\{u,v\}$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ either 
+\begin_inset Formula $u$
+\end_inset
+
+ or 
+\begin_inset Formula $v$
+\end_inset
+
+ belong to 
+\begin_inset Formula $V'$
+\end_inset
+
+, but not both?
+\end_layout
+
+\begin_layout Enumerate
+Clique asks the question: For a given graph 
+\begin_inset Formula $G(V,E)$
+\end_inset
+
+ is there a strongly connected component of size 
+\begin_inset Formula $J$
+\end_inset
+
+ or more in 
+\begin_inset Formula $G$
+\end_inset
+
+? A strongly connected componenet is a set of vertices with a path between
+ all pairs of vertices (i.e.
+ a complete subgraph)
+\end_layout
+
+\begin_layout Enumerate
+.Hamiltonian Circuit asks the question: Is there a cycle in the graph in
+ which all vertices are visited only once? Formally, for a given graph 
+\begin_inset Formula $G(V,E)$
+\end_inset
+
+, with 
+\begin_inset Formula $V=\{v_{1},v_{2},\ldots v_{n}\}$
+\end_inset
+
+, where n = 
+\begin_inset Formula $|V|$
+\end_inset
+
+.
+ Is there an ordering of the members of 
+\begin_inset Formula $V$
+\end_inset
+
+ such that 
+\begin_inset Formula $\{v_{1,}v_{n}\}$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ and 
+\begin_inset Formula $\{v_{i},v_{i+1}\}$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula $V$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq i<n$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Partition asks the question: Is there some way to evenly dividing a set
+ of elements such that the sum of their values is equivalent? Formally,
+ for a given set of elements 
+\begin_inset Formula $A=\{a_{1},a_{2},\ldots a_{n}\}$
+\end_inset
+
+, where 
+\begin_inset Formula $weight(a_{i})$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\begin_inset Formula $\mathbb{Z}^{+}$
+\end_inset
+
+, is there a set 
+\begin_inset Formula $A'\subseteq A$
+\end_inset
+
+ such that:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{a\epsilon A'}weight(a)=\sum_{a\epsilon A-A'}weight(a)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/npcompleteTree.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:npCompleteTree"
+
+\end_inset
+
+This diagram depicts the hiearchy of the NP-completeness proofs in this
+ section.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+SAT to 3SAT
+\end_layout
+
+\begin_layout Subsection
+3SAT to 3DIMM Matching
+\end_layout
+
+\begin_layout Subsection
+3DIMM Matching to Partition
+\end_layout
+
+\begin_layout Subsection
+3SAT to Vertex Cover
+\end_layout
+
+\begin_layout Subsection
+Vertex Cover to Hamiltonian Circuit
+\end_layout
+
+\begin_layout Standard
+For the given graph G, the graph 
+\begin_inset Formula $G'$
+\end_inset
+
+ can be generated to demonstrate the equivalence of VC and HC.
+ You can view both of these graphs in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:vcToHC"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Vertex Cover to Clique
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/vcToHC.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:vcToHC"
+
+\end_inset
+
+ A polynomial time mapping reduction from a graph 
+\begin_inset Formula $G$
+\end_inset
+
+ with a vertex cover of size 
+\begin_inset Formula $|K|$
+\end_inset
+
+ allows us to generate a graph 
+\begin_inset Formula $G'$
+\end_inset
+
+ which has a Hamiltonian circuit.
+ Here 
+\begin_inset Formula $K=\{a_{1}\}.$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Algorithms
+\end_layout
+
+\begin_layout Section
+Data Structures
+\end_layout
+
+\begin_layout Subsection
+Graphs
+\end_layout
+
+\begin_layout Subsection
+Trees
+\end_layout
+
+\begin_layout Subsection
+Lists
+\end_layout
+
+\begin_layout Subsection
+Queues
+\end_layout
+
+\begin_layout Subsection
+Arrays
+\end_layout
+
+\begin_layout Section
+Optimatility
 \end_layout
 
 \begin_layout Section
@@ -8928,8 +13688,20 @@ name "sec:Approximation-Algorithms"
 
 \end_layout
 
+\begin_layout Subsection
+Backtracking
+\end_layout
+
+\begin_layout Subsection
+Branch and Bound
+\end_layout
+
+\begin_layout Subsection
+Local Search
+\end_layout
+
 \begin_layout Section
-Randomization Algorithms
+Randomized Algorithms
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Randomization-Algorithms"
@@ -8937,6 +13709,26 @@ name "sec:Randomization-Algorithms"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Las Vegas and Monte Carlo
+\end_layout
+
+\begin_layout Subsection
+Game Theoretic Techniques
+\end_layout
+
+\begin_layout Subsection
+Moments and Deviations
+\end_layout
+
+\begin_layout Subsection
+Tail Inequalities
+\end_layout
+
+\begin_layout Subsection
+The Probablistic Method
 \end_layout
 
 \begin_layout Section
@@ -8948,6 +13740,14 @@ name "sec:Dynamic-Programming"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Recurrence Relations
+\end_layout
+
+\begin_layout Subsection
+Memoization
 \end_layout
 
 \begin_layout Section
@@ -8962,14 +13762,15 @@ name "sec:Fast-Fourier-Transform"
 \end_layout
 
 \begin_layout Section
-Representing Graphs
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:representingGraphs"
+Shortest Path Algorithms
+\end_layout
 
-\end_inset
+\begin_layout Subsection
+Dijkstra
+\end_layout
 
-
+\begin_layout Subsection
+Bellman-Ford
 \end_layout
 
 \begin_layout Section
@@ -8983,6 +13784,34 @@ name "sec:Maximum-Flow"
 
 \end_layout
 
+\begin_layout Subsection
+Flows and Cuts
+\end_layout
+
+\begin_layout Subsection
+The Max-Flow Min-Cut Theorem
+\end_layout
+
+\begin_layout Subsection
+Flow Networks, Residual Networks, and Augmenting Flows
+\end_layout
+
+\begin_layout Subsection
+Ford-Fulkerson Algorithm
+\end_layout
+
+\begin_layout Subsection
+The Scaling Algorithm
+\end_layout
+
+\begin_layout Subsection
+Edmonds-Karp Algorithm
+\end_layout
+
+\begin_layout Subsection
+Dinic's Algorithm
+\end_layout
+
 \begin_layout Section
 Bipartite Matching
 \begin_inset CommandInset label
@@ -8994,37 +13823,20 @@ name "sec:Bipartite-Matching"
 
 \end_layout
 
-\begin_layout Section
-Linear Programming
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Linear-Programming"
-
-\end_inset
-
-
+\begin_layout Subsection
+Nomencalture– Matchings, Perfect Matchings, Maximum Matchings, and Bipartiteness
 \end_layout
 
-\begin_layout Section
-Duality
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Duality"
-
-\end_inset
-
-
+\begin_layout Subsection
+The Frobenius-Hall Theorem
 \end_layout
 
-\begin_layout Section
-Appendix: Mathematics
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Appendix:-Mathematics"
+\begin_layout Subsection
+Hopcroft-Karp Algorithm
+\end_layout
 
-\end_inset
-
-
+\begin_layout Subsection
+The Hungarian Algorithm
 \end_layout
 
 \begin_layout Section
@@ -9133,8 +13945,18 @@ https://software.oit.gatech.edu
 Books
 \end_layout
 
+\begin_layout Standard
+Even if you buy all these books it will not make you any better.
+ I strongly suggest you acquire these for free and purchase the ones you
+ find useful at a later date.
+\end_layout
+
 \begin_layout Itemize
-How to Prove It: A Structured Approach by Daniel J.
+
+\emph on
+How to Prove It: A Structured Approach
+\emph default
+ by Daniel J.
  Velleman 
 \begin_inset Flex URL
 status collapsed
@@ -9150,7 +13972,11 @@ https://amzn.com/0521675995
 \end_layout
 
 \begin_layout Itemize
-Mathematical Reasoning: Writing and Proof by Ted Sundstrom 
+
+\emph on
+Mathematical Reasoning: Writing and Proof
+\emph default
+ by Ted Sundstrom 
 \begin_inset Flex URL
 status collapsed
 
@@ -9165,83 +13991,11 @@ https://amzn.com/1500143413
 \end_layout
 
 \begin_layout Itemize
-Introduction to the Theory of Computation by Michael Sipser 
-\begin_inset Flex URL
-status collapsed
 
-\begin_layout Plain Layout
-
-https://amzn.com/113318779X
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Discrete Mathematics and Its Applications by Kenneth Rosen 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-https://amzn.com/0073383090
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Linear and Nonlinear Programming by David Luenberger and Ye Yingyu 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-https://amzn.com/3319188410
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Algorithm Design by Jon Kleinberg and Eva Tardos 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-https://amzn.com/0321295358
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Introduction to Automata Theory, Languages and Computation by John Hopcroft,
- Rajeev Motwani and Jeffery Ullman 
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-https://amzn.com/0321455363
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Book of Proof by Richard Hammack 
+\emph on
+Book of Proof
+\emph default
+ by Richard Hammack 
 \begin_inset Flex URL
 status collapsed
 
@@ -9256,8 +14010,146 @@ https://amzn.com/0989472108
 \end_layout
 
 \begin_layout Itemize
-Algorithms by Sanjoy Dasgupta, Christos Papadimitriou, and Vijay Vazirani
- 
+
+\emph on
+Understanding Analysis
+\emph default
+ by Stephen Abbot 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/1493927116
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Introduction to Probability
+\emph default
+ by Dimitri P.
+ Bertsekas and John N.
+ Tsitsiklis 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/188652923X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Discrete Mathematics and Its Applications
+\emph default
+ by Kenneth Rosen 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/0073383090
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Introduction to the Theory of Computation
+\emph default
+ by Michael Sipser 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/113318779X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Introduction to Automata Theory, Languages and Computation
+\emph default
+ by John Hopcroft, Rajeev Motwani and Jeffery Ullman 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/0321455363
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Computers and Intractability: A Guide to the Theory of NP-Completeness
+\emph default
+ by Michael Garey and David Johnson 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/0716710455
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Algorithm Design
+\emph default
+ by Jon Kleinberg and Eva Tardos 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/0321295358
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Algorithms
+\emph default
+ by Sanjoy Dasgupta, Christos Papadimitriou, and Vijay Vazirani 
 \begin_inset Flex URL
 status collapsed
 
@@ -9272,14 +14164,95 @@ https://amzn.com/0073523402
 \end_layout
 
 \begin_layout Itemize
-Introduction to Algorithms by Thomas Cormen, Charles Leiserson, Ronald Rivest,
- and Clifford Stein 
+
+\emph on
+Introduction to Algorithms
+\emph default
+ by Thomas Cormen, Charles Leiserson, Ronald Rivest, and Clifford Stein
+ 
 \begin_inset Flex URL
 status collapsed
 
 \begin_layout Plain Layout
 
 https://amzn.com/0262033844
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Approximation Algorithms
+\emph default
+ by Vijay Vazirani 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/3540653678
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Randomized Algorithms
+\emph default
+ by Rajeev Motwani and Raghavan Prabhakar 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/0521474655
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Linear Algebra and Its Applications 
+\emph default
+by David C.
+ Lay 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/032198238X
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Linear and Nonlinear Programming
+\emph default
+ by David Luenberger and Ye Yingyu 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://amzn.com/3319188410
 \end_layout
 
 \end_inset
