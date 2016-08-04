@@ -2371,6 +2371,17 @@ Modular Arithmatic
 \end_layout
 
 \begin_layout Standard
+Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:moduluarArithmatic"
+
+\end_inset
+
+ gives an overview of basic modular arithmatic operations.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
