@@ -87,22 +87,51 @@ theorems-ams
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Pictures/techTower.jpg
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tech Tower was built in 1888, and it is the oldest surviving building on
+ campus.
+ Names of past alumi are scrawled on the inside of the bell tower dating
+ back to the earliest classes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Title
-Notes on Computability, Complexity, and Algorithms – An Ode to the Unprepared
- Student
+Notes on Computability, Complexity, and Algorithms
 \end_layout
 
 \begin_layout Author
 Brandon A.
- Durepo, 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-bdurepo@gatech.edu
+ Durepo
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -138,18 +167,23 @@ Preface
 The purpose of this document is to help students of all stripes succeed
  in Georgia Tech's course on Computability, Complexity and Algorithms more
  formally known as CS6505.
+ It is no secret that this class is a humdinger.
  Many students find this course to be challenging and the topics can be
  opaque at times to the newcomer.
  However with grit, determination, and luck you, the reader, can reap the
  many benefits that this course offers.
- In proceeding sections I outline some of the key concepts you will need
- to be successful in the course.
+ 
+\end_layout
+
+\begin_layout Standard
+In following sections I outline some of the key concepts you will need to
+ be successful in the course.
  I make no assumptions about prerequisite knowledge and attempt to provide
- you the green field perspective on the subject matter.
+ you the green-field perspective on the subject matter.
  In many cases, if you have already seen the information it is safe to skip
  forward and not concern yourself what may be obvious to you, but I encourage
  you to read all the sections because additional clarity may be gained with
- another pass through.
+ another pass.
 \end_layout
 
 \begin_layout Part
@@ -157,7 +191,7 @@ Mathematics and Logic
 \end_layout
 
 \begin_layout Section
-Discrete Mathmatics
+Discrete Mathematics
 \end_layout
 
 \begin_layout Standard
@@ -318,7 +352,7 @@ Double Negation Laws
 \begin_inset Text
 
 \begin_layout Plain Layout
-Communatative Laws
+Communicative Laws
 \end_layout
 
 \end_inset
@@ -685,7 +719,7 @@ name "fig:lawsOfLogic"
 \end_inset
 
  Logical equivalences.
- Idemepotent denotes an element of a set that is unchanged in value when
+ Idempotent denotes an element of a set that is unchanged in value when
  multiplied or otherwise operated on by itself.
 \end_layout
 
@@ -772,9 +806,9 @@ consequence
 \emph default
 .
  Truth tables are a way of tabulating the values of arbitrary logical expression
-s by enumerating all possible truth values for the componenet of the expressions.
- The usefulness of this technique quickly dimminishes as the number of propositi
-on variables goes beyond 4.
+s by enumerating all possible truth values for the component of the expressions.
+ The usefulness of this technique quickly diminishes as the number of propositio
+n variables goes beyond 4.
  In this case the number of rows in the truth table is 
 \begin_inset Formula $2^{4}=16$
 \end_inset
@@ -818,9 +852,9 @@ inverse
 \end_inset
 
 .
- A biconditional or bimplicational statement is a slightly more creative
- way to use the implication.
- A table of logical equivalances is provided in Figure
+ A biconditional or implication statement is a slightly more creative way
+ to use the implication.
+ A table of logical equivalences is provided in Figure
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:lawsOfLogic"
@@ -831,13 +865,13 @@ reference "fig:lawsOfLogic"
 \end_layout
 
 \begin_layout Standard
-Use of these laws can allow you to estabish an equivalance of complex propositio
-nal statements with a more distilled simplified version.
+Use of these laws can allow you to establish an equivalence of complex propositi
+onal statements with a more distilled simplified version.
  Propositional statements are said to be 
 \emph on
 satisfiable
 \emph default
- if some combination of truth assignments to the propostional variables
+ if some combination of truth assignments to the propositional variables
  makes the statement true.
 \end_layout
 
@@ -850,7 +884,7 @@ Predicate logic is a generalization of propositional logic onto arbitrary
  statements.
  
 \emph on
-Propositonal functions
+Propositional functions
 \emph default
  given by a capital letter and a number of parameters are used to define
  propositional statements.
@@ -877,10 +911,10 @@ Computer
 Quantification expresses the extent to which a predicate is true over a
  range of elements.
  In English, the words all, some, many, none, and few are used in quantification
-s.
+'s.
  The 
 \emph on
-univeral quantification
+universal quantification
 \emph default
  symbol for all is given by 
 \begin_inset Formula $\forall$
@@ -889,7 +923,7 @@ univeral quantification
 .
  The 
 \emph on
-existential quantifiaction
+existential quantification
 \emph default
  symbol for exists is 
 \begin_inset Formula $\exists$
@@ -916,9 +950,9 @@ is functioning properly.
 \begin_inset Quotes erd
 \end_inset
 
- If there is a single instance of a universal varaible which is false then
+ If there is a single instance of a universal variable which is false then
  the predicate becomes false.
- If for all instances of an existential varaibles the value is false then
+ If for all instances of an existential variables the value is false then
  the statement is false.
  Quantification operators have higher precedence than logical operators.
  Predicates used with quantifiers are said to be 
@@ -989,7 +1023,7 @@ name "fig:quantificationNegation"
 
 \end_inset
 
- This table shows the equivalance relations on predicates with quantification
+ This table shows the equivalence relations on predicates with quantification
  symbols.
 \end_layout
 
@@ -1018,16 +1052,32 @@ validity
 \emph default
  of a proofs arguments are derived from the truth of the premises it offers.
  An argument in propositional logic is a sequence of propositions.
- All but the final proposition in the argument are called premises and the
- final proposition is called the conclusion.An argument is valid if the truth
- of all its premises implies that the conclusion is true.
+ All but the final proposition in the argument are called 
+\emph on
+premises
+\emph default
+ and the final proposition is called the 
+\emph on
+conclusion
+\emph default
+.
+ An argument is valid if the truth of all its premises implies that the
+ conclusion is true.
  An argument form in propositional logic is a sequence of compound propositions
- involving propositional variables.
- An argument form is valid no matter which particular propositions are substitut
-ed for the propositional variables in its premises, the conclusion is true
- if the premises are all true.
- The rules of inference provide the templates of logical propostions which
- when given in a valid combitation yield valid arguments.
+ involving 
+\emph on
+propositional variables
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+An argument's form is valid no matter which particular propositions are
+ substituted for the propositional variables in its premises, the conclusion
+ is true if the premises are all true.
+ The rules of inference provide the templates of logical propositions which,
+ when given in a valid combination, yield valid arguments.
  The rules are given in Figure
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -1036,8 +1086,8 @@ reference "fig:inferenceRules"
 \end_inset
 
 .
- Additonally the Rules of Inference applies to quantification logic as well
- as shown in the table.
+ Additionally, the Rules of Inference applies to quantification logic as
+ well as shown in the table.
 \end_layout
 
 \begin_layout Standard
@@ -1362,7 +1412,7 @@ Universal generalization
 \begin_inset Text
 
 \begin_layout Plain Layout
-Existantial instantiation
+Existential instantiation
 \end_layout
 
 \end_inset
@@ -1864,7 +1914,7 @@ name "fig:implicationTruthTable"
 
 \end_inset
 
- Truth table for the implication and its contraposition.
+ Truth table for the implication and its contraposative.
 \end_layout
 
 \end_inset
@@ -1885,7 +1935,7 @@ In juxtaposition to the direct proof we have the indirect proof techniques.
 \emph on
  Proof by Contraposition 
 \emph default
-technique takes advantage of the equivalance of the contrapostion of the
+technique takes advantage of the equivalence of the contrapostion of the
  implication to prove the conclusion.
  That is, 
 \begin_inset Formula $\neg q\rightarrow\neg p\equiv p\rightarrow q$
@@ -1954,7 +2004,7 @@ is true by showing
 \begin_layout Itemize
 
 \emph on
-Proofs of Equivalance 
+Proofs of Equivalence 
 \emph default
 To prove a theorem that is a biconditional statement, that is, a statement
  of the form 
@@ -1982,7 +2032,7 @@ To prove a theorem that is a biconditional statement, that is, a statement
 \emph on
 Proofs by Counterexample 
 \emph default
-in this type of proof we typically try to debunk the truth of a univeral
+in this type of proof we typically try to debunk the truth of a universal
  quantifier over some predicate.
  If we find one instance is false, then we can conclude the predicate is
  false
@@ -2042,7 +2092,7 @@ where
 constructive
 \emph default
  proof.
- A nonconstuctive existance uses some other means to prove that 
+ A nonconstructive existence uses some other means to prove that 
 \family roman
 \series medium
 \shape up
@@ -2059,7 +2109,7 @@ constructive
 \end_inset
 
 .
- Often contradition is used.
+ Often contradiction is used.
 \end_layout
 
 \begin_layout Itemize
@@ -2070,7 +2120,7 @@ Uniqueness Proofs
 in this type of proof we show that a unique element with a particular property
  exists.
  These types of proofs are composed of two steps.
- First you must prove the existance of the element.
+ First you must prove the existence of the element.
  Then we show that if 
 \begin_inset Formula $y\neq x$
 \end_inset
@@ -2273,7 +2323,7 @@ Analyze the hypothesis and conclusion.
 
 \begin_layout Enumerate
 Attempt to construct the proof using the direct proof method, if the statement
- is a coditional statement.
+ is a conditional statement.
 \end_layout
 
 \begin_deeper
@@ -2316,7 +2366,7 @@ that we can prove true with
 \begin_layout Standard
 
 \emph on
-Adapatation 
+Adaptation 
 \emph default
 of existing proofs is often a fruitful procedure.
  Even if the final conclusions required are not the same, it may be constructive
@@ -2324,10 +2374,1315 @@ of existing proofs is often a fruitful procedure.
 \end_layout
 
 \begin_layout Subsection
-Sets
+Mathematical Structures: Sets, Sequences, Series, and Matrices
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Sets"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mathematical structures are the foundation on which reasoning is carried
+ out.
+ In the following sections we cover sets, sequences, series and matricies.
+\end_layout
+
+\begin_layout Subsubsection
+Sets
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+set
+\emph default
+ is an unordered collection of objects.
+ A object is said to be 
+\emph on
+contained
+\emph default
+ within a set when it is a member of the set.
+ The epsilon symbol is used to denote membership in a set ( object 
+\begin_inset Formula $a$
+\end_inset
+
+is in set 
+\begin_inset Formula $A$
+\end_inset
+
+ is written 
+\begin_inset Formula $a\epsilon A$
+\end_inset
+
+).
+ A strikethrough on the episilon symbol means that the object is not a member
+ of the set.
+\end_layout
+
+\begin_layout Standard
+Uppercase English letters traditionally denote the names of sets, while
+ lowercase English letters represents objects of a set.
+ Sets may be described by the 
+\emph on
+roster method 
+\emph default
+which lists all the elements of the set explicitly surrounded by curly braces,
+ or by using a 
+\emph on
+set former
+\emph default
+ sometimes called 
+\emph on
+set builder
+\emph default
+.
+ A set former works by specifing a variable that represents a member of
+ the set followed by the characteristics of the variable.
+ Often the name of the variable and the characteristics are seperated by
+ a vertical bar or colon which should be read 
+\begin_inset Quotes eld
+\end_inset
+
+such that.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+\begin_inset Formula $EQTM$
+\end_inset
+
+={(
+\begin_inset Formula $M_{1}$
+\end_inset
+
+,
+\begin_inset Formula $M_{2}$
+\end_inset
+
+) | 
+\begin_inset Formula $L(M_{1})=L(M_{2})\}$
+\end_inset
+
+.
+ This set former describes the set of pairs of Turing machines that have
+ the same language.
+\end_layout
+
+\begin_layout Standard
+Often set formers will reference equivalance classes from number theory
+ such as the rational numbers etc.
+ A list of importance number classes is given below.
+ These special sets are denoted by a special script font that distinquishes
+ them from other sets.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{N}=\{0,1,2,\ldots\}$
+\end_inset
+
+.
+ The set of natural numbers.
+ Some regard 0 as a natural number, others do not.
+ Be sure to ask if there is any question.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}$
+\end_inset
+
+.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The set of integers.
+ The positive or negative superscript denotes the positve or negative subset
+ of the integers.
+ 
+\begin_inset Formula $\mathbb{Z}^{+}\subset\mathbb{Z},\mathbb{Z}^{-}\subset\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{Q=}$
+\end_inset
+
+{
+\begin_inset Formula $\frac{p}{q}:p\epsilon\mathbb{Z}\land q\epsilon\mathbb{Z},q\neq0\}$
+\end_inset
+
+.
+ The set of rational numbers such that each is represented as a ratio of
+ integers.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ the set of real numbers, or the set of positive real numbers 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathbb{R}^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ the set of complex numbers.
+\end_layout
+
+\begin_layout Standard
+It is important to note the relationship amongst these sets.
+ The diagram in Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:numberClassification"
+
+\end_inset
+
+ is a good reference for reasoning about the relationships which comes in
+ hany for writing proofs.
+\end_layout
+
+\begin_layout Standard
+Some other terminology often used includes the 
+\emph on
+empty set 
+\emph default
+or a 
+\emph on
+null set
+\emph default
+ which means a set of no elements.
+ It is denoted by the symbol 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+ A 
+\emph on
+singleton set
+\emph default
+ is a name for a set with a single element.
+ A set is said to be a 
+\emph on
+subset
+\emph default
+ if and only if every element of one set is also a member of the another
+ set.
+ The subset relationship represented by the symbol 
+\begin_inset Formula $\subseteq$
+\end_inset
+
+.
+ When we want to say that a set is a subset of another set, not necesarilly
+ equivalent we use the proper subset symbol 
+\begin_inset Formula $\subset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are said to be equivalant if 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ and 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+, and the size of set is called its 
+\emph on
+cardinality.
+ 
+\emph default
+Cardinality is denoted by vertical bars surrounding the set name.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+power set
+\emph default
+ of a set gives all combinations of subsets of a given set, and it is denoted
+ as 
+\begin_inset Formula $2^{S}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathcal{P}(S)$
+\end_inset
+
+ where S is the set under consideration.
+\end_layout
+
+\begin_layout Example*
+The powerset of 
+\begin_inset Formula $S=\{a,b,c\}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{P}(S)=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The Cartesian product or Cross product of two sets denoted by 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ (read 
+\begin_inset Quotes eld
+\end_inset
+
+A cross B
+\begin_inset Quotes erd
+\end_inset
+
+) is the set of ordered n-tuples 
+\begin_inset Formula $(a_{i},b_{j})$
+\end_inset
+
+ for 
+\begin_inset Formula $i\leq|A|$
+\end_inset
+
+ and 
+\begin_inset Formula $j\leq|B|$
+\end_inset
+
+.
+ In more general terms the Cartesian product of the sets 
+\begin_inset Formula $A_{1},A_{2},\ldots,A_{n}$
+\end_inset
+
+ denoted by 
+\begin_inset Formula $A_{1}\times A_{2}\times\ldots\times A_{n}$
+\end_inset
+
+ is the set of ordered n-tuples 
+\begin_inset Formula $(a_{1},a_{2},\ldots,a_{n})$
+\end_inset
+
+, where 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ belongs to 
+\begin_inset Formula $Ai$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+union
+\emph default
+ of the sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $A\bigcup B$
+\end_inset
+
+, is the set that contains those elements that are either in A or in B,
+ or in both.
+ Let A and B be sets.
+ The 
+\emph on
+intersection
+\emph default
+ of the sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $A\bigcap B$
+\end_inset
+
+, is the set containing those elements in both 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Two sets are called 
+\emph on
+disjoint
+\emph default
+ if their intersection is the empty set.
+ The 
+\emph on
+complement
+\emph default
+ of the set 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ denoted by 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+, is the complement of 
+\begin_inset Formula $A$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Therefore, the complement of the set 
+\begin_inset Formula $A$
+\end_inset
+
+ is 
+\begin_inset Formula $U-A$
+\end_inset
+
+.
+ An illustration of the aforementioned set operations is given in figure
+ below.
+ A table of important set identities is given in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:setIdentites"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Identity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcap U=A$
+\end_inset
+
+ 
+\begin_inset Formula $A\bigcup\emptyset=A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Identity laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcup U=U$
+\end_inset
+
+
+\begin_inset Formula $A\bigcap\emptyset=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Domination laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcup A=A$
+\end_inset
+
+ 
+\begin_inset Formula $A\bigcap A=A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Idempotent laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overline{(\overline{A})}=A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Complementation law
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcup B=B\bigcup A$
+\end_inset
+
+ 
+\begin_inset Formula $A\bigcap B=B\bigcap A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Communative laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcup(B\bigcup C)=(A\bigcup B)\bigcup C$
+\end_inset
+
+ 
+\begin_inset Formula $A\bigcap(B\bigcap C)=(A\bigcap B)\bigcap C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Associative laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcup(B\bigcap C)=(A\bigcup B)\bigcap(A\bigcup C)$
+\end_inset
+
+ 
+\begin_inset Formula $A\bigcap(B\bigcup C)=(A\bigcap B)\bigcup(A\bigcap C)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distributive laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overline{A\bigcap B}=\bar{A}\bigcup\bar{B}$
+\end_inset
+
+ 
+\begin_inset Formula $\overline{A\bigcup B}=\bar{A}\bigcap\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+De Morgan's laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcup(A\bigcap B)=A$
+\end_inset
+
+ 
+\begin_inset Formula $A\bigcap(A\bigcup B)=A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Absorption laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\bigcup\bar{A}=U$
+\end_inset
+
+ 
+\begin_inset Formula $A\bigcap\bar{A}=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Complement laws
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:setIdentites"
+
+\end_inset
+
+The table lists important set identites.
+ Refer to these when writing proofs.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/setOperations.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:setOperations"
+
+\end_inset
+
+The intersection is given by the darkly shaded region.
+ The union is given by all the shaded regions in the left-most figure.
+ This figure demonstrates the idea that elements of the union count the
+ elements of the intersection twice.
+ The difference is given by the right-most figure.
+ The intersection is equivalent to 
+\begin_inset Formula $A\bigcap\bar{B}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Understanding countability of sets is critical.
+ The notion of counting as it pertains to counting in sets is called a sets
+ cardinality.
+ As we have seen in previous sections sets may be finite or infinite.
+ In the case of infinite sets the notion of counting to infinity seems rather
+ abstract.
+ In fact, the notion of infinity is not unique in itself there are infinities
+ that are countable and those that are uncountable.
+ Mathematicians refer to these ideas as 
+\emph on
+countably infinte
+\emph default
+ and 
+\emph on
+uncountably infinite
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+The sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same cardinality if and only if there is a 
+\emph on
+one-to-one correspondence
+\emph default
+ from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have the same cardinality, we write 
+\begin_inset Formula $|A|=|B|$
+\end_inset
+
+.
+ When we apply this definition to finite sets it seems quite intuitive,
+ however when applying this definition to an infinite set a novice students
+ will be quite perplexed.
+ Cardinality as it applies to infinite sets informs us of the relative size
+ of sets under consideration.
+ The purpose of a correspondence function is to establish some footing as
+ to the relative size of one set versus another.
+ 
+\end_layout
+
+\begin_layout Standard
+If there is a 
+\emph on
+one-to-one
+\emph default
+ function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+, the cardinality of 
+\begin_inset Formula $A$
+\end_inset
+
+ is less than or the same as the cardinality of 
+\begin_inset Formula $B$
+\end_inset
+
+ and we write 
+\begin_inset Formula $|A|\leq|B|$
+\end_inset
+
+.
+ Moreover, when 
+\begin_inset Formula $|A|\leq|B|$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ have different cardinality, we say that the cardinality of 
+\begin_inset Formula $A$
+\end_inset
+
+ is less than the cardinality of 
+\begin_inset Formula $B$
+\end_inset
+
+ and we write 
+\begin_inset Formula $|A|<|B|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A set that is either finite or has the same cardinality as the set of positive
+ integers is called 
+\emph on
+countable
+\emph default
+.
+ A set that is not countable is called 
+\emph on
+uncountable
+\emph default
+.When an infinite set 
+\begin_inset Formula $S$
+\end_inset
+
+ is countable, we denote the cardinality of S by 
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+ (where 
+\begin_inset Formula $\aleph$
+\end_inset
+
+ is aleph, the first letter of the Hebrew alphabet, pronounced 'ɑːlɛf'').
+ We write 
+\begin_inset Formula $|S|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Hilbert's Grand Hotel
+\series default
+ is classical example of the principles of countablility.
+ Hilbert's Grand Hotel is a hotel with a countably infinite number of rooms
+ such that the hotel when fully occupied by guests can accomadate a finitely
+ many number of new guests or a countably infinite number of new guests
+ without evicting any current tenants (quite a bizzare notion).
+\end_layout
+
+\begin_layout Standard
+The Schöder-Bernstein Theorem states that if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are sets with 
+\begin_inset Formula $|A|≤|B|$
+\end_inset
+
+ and 
+\begin_inset Formula $|B|≤|A|$
+\end_inset
+
+, then 
+\begin_inset Formula $|A|=|B|$
+\end_inset
+
+.
+ In other words, if there are one-to-one functions 
+\begin_inset Formula $f$
+\end_inset
+
+ from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ from 
+\begin_inset Formula $B$
+\end_inset
+
+ to 
+\begin_inset Formula $A$
+\end_inset
+
+, then there is a one-to-one correspondence between 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Rosen refers us to Velleman for a proof of this theorem.
+\end_layout
+
+\begin_layout Standard
+The Continuum Hypothesis 
+\end_layout
+
+\begin_layout Subsubsection
+Sequences and Summations
+\end_layout
+
+\begin_layout Standard
+A sequence is a function from a subset of the set of integers (usually either
+ the set 
+\begin_inset Formula $\{0,1,2,\ldots\}$
+\end_inset
+
+or the set 
+\begin_inset Formula $\{1,2,3,\ldots\}$
+\end_inset
+
+) to a set S.
+ We use the notation 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ to denote the image of the integer 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ We call 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+a term of the sequence.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "The Online Encyclopedia of Integer Sequences"
+target "https://oeis.org/"
+
+\end_inset
+
+ is a useful source for getting background information on notable integer
+ sequences.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Summations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Closed Form
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sum_{k=0}^{n}ar^{k},(r\neq0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{ar^{n+1}-a}{r-1},r\neq1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sum_{k=1}^{n}k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{n(n+1)}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sum_{k=1}^{n}k^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{n(n+1)(2n+1)}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sum_{k=1}^{n}k^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{n^{2}(n+1)^{2}}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sum_{k=0}^{\infty}x^{k},|x|<1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{1-x},x\neq1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sum_{k=1}^{\infty}kx^{k-1},|x|<1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{(1-x)^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:usefulSums"
+
+\end_inset
+
+Rosen provides a table of useful sums.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -2356,8 +3711,762 @@ name "sec:Functions"
 
 \end_layout
 
+\begin_layout Standard
+A 
+\emph on
+function
+\emph default
+ (sometimes called a 
+\emph on
+mapping
+\emph default
+ or 
+\emph on
+transformation
+\emph default
+) 
+\emph on
+
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\emph default
+from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+ is an assignment of exactly one element of 
+\begin_inset Formula $B$
+\end_inset
+
+ to each element of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ We write 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+ if 
+\begin_inset Formula $b$
+\end_inset
+
+ is the unique element of 
+\begin_inset Formula $B$
+\end_inset
+
+ assigned by the function 
+\begin_inset Formula $f$
+\end_inset
+
+ to the element 
+\begin_inset Formula $a$
+\end_inset
+
+of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+is a function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B,$
+\end_inset
+
+we writed 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $f$
+\end_inset
+
+ is a function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+, we say that 
+\begin_inset Formula $A$
+\end_inset
+
+ is the domain of 
+\begin_inset Formula $f$
+\end_inset
+
+and 
+\begin_inset Formula $B$
+\end_inset
+
+ is the codomain of 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+, we say that b is the image of 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $a$
+\end_inset
+
+is a preminage of 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ The 
+\emph on
+range 
+\emph default
+, or 
+\emph on
+image,
+\emph default
+ of 
+\begin_inset Formula $f$
+\end_inset
+
+ is the set of all images of elements of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Also, if 
+\begin_inset Formula $f$
+\end_inset
+
+ is a function from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+, we say htat 
+\begin_inset Formula $f$
+\end_inset
+
+ 
+\emph on
+maps 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ 
+\emph default
+The range is a subset of the codomain, and the image is a memeber of the
+ range.
+\end_layout
+
+\begin_layout Subsubsection
+One-to-One and Onto Functions and Their Nature
+\end_layout
+
+\begin_layout Standard
+Given sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B,$
+\end_inset
+
+ a function 
+\begin_inset Formula $f$
+\end_inset
+
+ is said to be 
+\emph on
+one-to-one, 
+\emph default
+or 
+\emph on
+injuction
+\emph default
+, if and only if 
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+ imples that 
+\begin_inset Formula $a=b$
+\end_inset
+
+ for all 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $b$
+\end_inset
+
+ in the domain of 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ A function is said to be 
+\emph on
+injective 
+\emph default
+if it is one-to-one.
+ A function is injecitve if and only if it takes on different images for
+ all elements in its domain.
+ Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:classesOfFunctions"
+
+\end_inset
+
+ shows examples of each combination of function and a description as to
+ why they are classified as such.
+\end_layout
+
+\begin_layout Standard
+A function 
+\begin_inset Formula $f$
+\end_inset
+
+ from 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $B$
+\end_inset
+
+ is called 
+\emph on
+onto, 
+\emph default
+or a 
+\emph on
+surjection, 
+\emph default
+if and only if
+\emph on
+ 
+\emph default
+for every element 
+\begin_inset Formula $b\epsilon B$
+\end_inset
+
+ there is an element 
+\begin_inset Formula $a\epsilon A$
+\end_inset
+
+ with 
+\begin_inset Formula $f(a)=b$
+\end_inset
+
+.
+ A function 
+\begin_inset Formula $f$
+\end_inset
+
+ is called surjective if it is onto.
+ The function 
+\begin_inset Formula $f$
+\end_inset
+
+ is a 
+\emph on
+one-to-one correspondence
+\emph default
+, or a 
+\emph on
+bijection
+\emph default
+, if it is surjective and injective.
+ A function of this type is called 
+\emph on
+bijective
+\emph default
+.
+ Visually, this is shown in Figure
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/visualizeFunctionClasses.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:visualizeFunctionClasses"
+
+\end_inset
+
+Bijective functions are in the intersection fo the Injective and Surjective
+ functions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A function 
+\begin_inset Formula $f$
+\end_inset
+
+ whose domain and codomain are subsets of the set of real numbeers is called
+ 
+\emph on
+increasing
+\emph default
+ if 
+\begin_inset Formula $f(k)\leq f(k+1)$
+\end_inset
+
+, and 
+\emph on
+strictly increading
+\emph default
+ if 
+\begin_inset Formula $f(k)<f(k+1)$
+\end_inset
+
+.
+ Similiarly, 
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\emph on
+decreaseing
+\emph default
+ if 
+\begin_inset Formula $f(k)\geq f(k+1)$
+\end_inset
+
+, and 
+\emph on
+strictly decreasing 
+\emph default
+if 
+\begin_inset Formula $f(k)>f(k+1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/ClassesOfFunctions.svg
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:classesOfFunctions"
+
+\end_inset
+
+ A) The function given by this figure is injective because elements of the
+ range map to distinct elements of the domain.
+ However, it is not surjective because not all elements of the range have
+ a corresponding element in the range.
+ Namely, 
+\begin_inset Formula $2$
+\end_inset
+
+ is not mapped to an element of the domain.
+ B) The function given by this figure is surjective because every element
+ in the range has been mapped.
+ However, it is not injective because the mapping is not distinct.
+ Both 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $d$
+\end_inset
+
+ of the domain map to 
+\begin_inset Formula $2$
+\end_inset
+
+ in the range.
+ C) The function given by this figure is both injective and surjective,
+ and therefore it is a bijection.
+ D) This figure does not model a function that is eigher a injective or
+ surjective, and therefore it is not a bijection.
+ D) This figure violates the definition of a function.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/numberClasses.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:numberClassification"
+
+\end_inset
+
+The diagram shows the hierarchy of numbers classified into subsets of the
+ complex numbers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Composition of Functions
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $g$
+\end_inset
+
+ be a function from the set 
+\begin_inset Formula $A$
+\end_inset
+
+ to the set 
+\begin_inset Formula $B$
+\end_inset
+
+and let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a function from the set 
+\begin_inset Formula $B$
+\end_inset
+
+ to the set 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ The 
+\emph on
+composition 
+\emph default
+of the functions 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+, denoted for all 
+\begin_inset Formula $a\epsilon A$
+\end_inset
+
+ by 
+\begin_inset Formula $f\circ g$
+\end_inset
+
+.
+ This notation is read 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ of 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ Mathematically, we then have 
+\begin_inset Formula 
+\[
+(f\circ g(a))=f(g(a))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rosen demonstrates this idea with a beautiful depiction of function composition
+ here given by Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:functionComposition"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagrams/functionComposition.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:functionComposition"
+
+\end_inset
+
+The composition of 
+\begin_inset Formula $f$
+\end_inset
+
+ of 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Note the dependence of the mapping of 
+\begin_inset Formula $f$
+\end_inset
+
+ by that of 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Induction
+The Growth of Functions and Time Complexity
+\end_layout
+
+\begin_layout Subsubsection
+Big-O Notation
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+ be functions from the set of integers or the set of real numbers to the
+ set of real numbers.
+ We say that 
+\begin_inset Formula $f(x)$
+\end_inset
+
+is 
+\begin_inset Formula $O(g(x))$
+\end_inset
+
+ if there are constants 
+\begin_inset Formula $C$
+\end_inset
+
+and 
+\begin_inset Formula $k$
+\end_inset
+
+ such that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|f(x)|\leq C|g(x)|,x>k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The constancs 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ are called witnesses to the relationship between 
+\begin_inset Formula $f(x)$
+\end_inset
+
+and 
+\begin_inset Formula $O(g(x))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Big-
+\begin_inset Formula $\Omega$
+\end_inset
+
+ and Big-
+\begin_inset Formula $\Theta$
+\end_inset
+
+ Notation
+\end_layout
+
+\begin_layout Subsubsection
+Time Complexity
+\end_layout
+
+\begin_layout Subsection
+Recursion and Induction
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Induction"
@@ -2367,8 +4476,217 @@ name "sec:Induction"
 
 \end_layout
 
+\begin_layout Standard
+Inductive mathematical proofs use the true of the basis step and the truth
+ of a statement implying that if 
+\begin_inset Formula $P(k)$
+\end_inset
+
+ is true then 
+\begin_inset Formula $P(k+1)$
+\end_inset
+
+ is also true.
+ When the implication can be proven then we can say for all integers 
+\begin_inset Formula $n$
+\end_inset
+
+ the statement 
+\begin_inset Formula $P$
+\end_inset
+
+ holds true.
+ Rosen provides a good template for creating proofs using induction.
+ The template follows:
+\end_layout
+
+\begin_layout Enumerate
+Express the statement that is to be proved in the form “for all 
+\begin_inset Formula $n\ge b,P(n)$
+\end_inset
+
+”, for a fixed integer 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Write out the words “Basis Step.” Then show that 
+\begin_inset Formula $P(b)$
+\end_inset
+
+ is true, taking care that the correct value of 
+\begin_inset Formula $b$
+\end_inset
+
+ is used.
+ This completes the first part of the proof.
+\end_layout
+
+\begin_layout Enumerate
+Write out the words “Inductive Step.”
+\end_layout
+
+\begin_layout Enumerate
+State, and clearly identify, the inductive hypothesis, in the form “assume
+ that 
+\begin_inset Formula $P(k)$
+\end_inset
+
+ is true for an arbitrary fixed integer 
+\begin_inset Formula $k≥b$
+\end_inset
+
+.”
+\end_layout
+
+\begin_layout Enumerate
+State what needs to be proved under the assumption that the inductive hypothesis
+ is true.
+ That is, write out what 
+\begin_inset Formula $P(k+1)$
+\end_inset
+
+ says.
+\end_layout
+
+\begin_layout Enumerate
+Prove the statement 
+\begin_inset Formula $P(k+1)$
+\end_inset
+
+ making use the assumption 
+\begin_inset Formula $P(k)$
+\end_inset
+
+.
+ Be sure that your proof is valid for all integers 
+\begin_inset Formula $k$
+\end_inset
+
+ with
+\begin_inset Formula $k≥b$
+\end_inset
+
+, taking care that the proof works for small values of 
+\begin_inset Formula $k$
+\end_inset
+
+, including 
+\begin_inset Formula $k=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Clearly identify the conclusion of the inductive step, such as by saying
+ “this completes the inductive step.” 
+\end_layout
+
+\begin_layout Enumerate
+After completing the basis step and the inductive step, state the conclusion,
+ namely that by mathematical induction, 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ is true for all integers 
+\begin_inset Formula $n$
+\end_inset
+
+ with 
+\begin_inset Formula $n≥b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+You can find a good review of 
+\begin_inset CommandInset href
+LatexCommand href
+name "algebratic simplification rules"
+target "http://tutorial.math.lamar.edu/getfile.aspx?file=B,31,N"
+
+\end_inset
+
+ at the given link.
+\end_layout
+
+\begin_layout Subsubsection
+Strong Induction and Well-Ordering
+\end_layout
+
+\begin_layout Standard
+To prove that 
+\begin_inset Formula $P(n)$
+\end_inset
+
+is true for all positive integers 
+\begin_inset Formula $n$
+\end_inset
+
+, where 
+\begin_inset Formula $P(n)$
+\end_inset
+
+ is a propositional function, we complete two steps:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Basis Step
+\emph default
+: We verify that the proposition 
+\begin_inset Formula $P(1)$
+\end_inset
+
+ is true.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Inductive Step: 
+\emph default
+We show that the conditional statement 
+\begin_inset Formula $[P(1)\land P(2)\land\ldots\land P(k)]\rightarrow P(k+1)$
+\end_inset
+
+ is true for all positive integers 
+\begin_inset Formula $k.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A good example of the use of strong induction is the proof of the Fundamental
+ Theorem of Arithmatic.
+ The theorem states all integers 
+\begin_inset Formula $n$
+\end_inset
+
+ can be written as the product of two primes.
+\end_layout
+
+\begin_layout Theorem
+An integer n can be written as the product of two primes.
+\end_layout
+
+\begin_layout Standard
+The
+\emph on
+ well-ordering property
+\emph default
+ states that every nonempty set of nonnegative integers has a least element.
+\end_layout
+
 \begin_layout Subsection
-Modular Arithmatic
+Modular Arithmetic
 \end_layout
 
 \begin_layout Standard
@@ -2379,7 +4697,17 @@ reference "fig:moduluarArithmatic"
 
 \end_inset
 
- gives an overview of basic modular arithmatic operations.
+ gives an overview of basic modular arithmetic operations.
+ This becomes useful for primality testing.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Miller-Rabin Compositeness Test
+\end_layout
+
+\begin_layout Standard
+//TODO give details on Miller-Rabin
 \end_layout
 
 \begin_layout Standard
@@ -2578,7 +4906,7 @@ name "fig:moduluarArithmatic"
 
 \end_inset
 
-This table gives an overview of useful modular arithmatic equations
+This table gives an overview of useful modular arithmetic equations
 \end_layout
 
 \end_inset
@@ -2591,39 +4919,613 @@ This table gives an overview of useful modular arithmatic equations
 
 \end_layout
 
-\begin_layout Section
-Calculus and Real Analysis
+\begin_layout Subsection
+Combinatorics
+\end_layout
+
+\begin_layout Standard
+You can use counting techniques to answer a variety of questions.
+ Learning how to account for the time complexity of algorithm will be very
+ useful in this course.
+\end_layout
+
+\begin_layout Subsubsection
+The Product Rule
+\end_layout
+
+\begin_layout Standard
+The product rule is used to count when counting separate tasks.
+ You should apply this rule when counting nested for loops.
+ Suppose that a procedure can be broken down into a sequence of two tasks.
+ If there are
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ ways to do the first task and for each of these ways of doing the first
+ task, there are 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ ways to do the second task, then there are 
+\begin_inset Formula $n_{1}n_{2}$
+\end_inset
+
+ ways to do the procedure.
+\end_layout
+
+\begin_layout Theorem
+Suppose that a procedure is carried out by performing the tasks 
+\begin_inset Formula $T_{1},T_{2},\ldots,T_{m}$
+\end_inset
+
+ in sequence.
+ If each task 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ , 
+\begin_inset Formula $i=1,2,\ldots,m$
+\end_inset
+
+ can be done in 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ ways, regardless of how the previous tasks were done, then there are 
+\begin_inset Formula $n_{1}\cdot n_{2}\cdot\ldots\cdot n_{m}$
+\end_inset
+
+ ways to carry out the procedure.
+\end_layout
+
+\begin_layout Proof
+//TODO Provide an inductive proof of the Product Rule.
+\end_layout
+
+\begin_layout Example
+Assigning tasks to employees.
+ Suppose you hire two employees Ralph and Loretta.
+ You are tasked with assigning cleaning responsibilities of 
+\begin_inset Formula $n$
+\end_inset
+
+ rooms among the two employees.
+ How many ways can you assign the responsibilities among the employees?
+\end_layout
+
+\begin_layout Solution*
+The first employee you select is unrestricted in the number of rooms to
+ clean.
+ Therefore 
+\begin_inset Formula $n$
+\end_inset
+
+ rooms may be cleaned by this employee.
+ The next employee has 
+\begin_inset Formula $n-1$
+\end_inset
+
+different rooms to clean.
+\end_layout
+
+\begin_layout Subsubsection
+The Sum Rule
+\end_layout
+
+\begin_layout Standard
+If a task can be done either in one of 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ ways or in one of 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ ways, where none of the set of 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ ways is the same as any of the set of 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ ways, then there are 
+\begin_inset Formula $n_{1}+n_{2}$
+\end_inset
+
+ ways to do the task.
+ The key things to look for are a disjunction of disjoint ways to do a task.
+ Use this rule when counting the number of steps in a number of sequential
+ for loops.
+ The Sum Rule can be generalized to 
+\begin_inset Formula $m$
+\end_inset
+
+ tasks as follows.
+ 
+\end_layout
+
+\begin_layout Theorem
+Suppose that a task can be done in one of 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ ways, in one of 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ ways, 
+\begin_inset Formula $\ldots$
+\end_inset
+
+ ,or in one of 
+\begin_inset Formula $n_{m}$
+\end_inset
+
+ ways, where none of the set of 
+\begin_inset Formula $n_{i}$
+\end_inset
+
+ ways of doing the task is the same as any of the set of 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+ ways, for all pairs 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ with 
+\begin_inset Formula $1\leq i<j\leq m$
+\end_inset
+
+.
+ Then the number of ways to do the task is 
+\begin_inset Formula $n_{1}+n_{2}+\ldots+n_{m}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+//TODO Provide an inductive proof of the Sum Rule.
+\end_layout
+
+\begin_layout Subsubsection
+The Subtraction Rule or The Inclusion Exclusion Principle
+\end_layout
+
+\begin_layout Standard
+If a task can be done in either 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ ways or 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ ways, then the number of ways to do the task is 
+\begin_inset Formula $n_{1}+n_{2}$
+\end_inset
+
+ minus the number of ways to do the task that are common to the two different
+ ways.
+ This rule is often called the principle of inclusion-exclusion especially
+ when considering the union of sets.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|A_{1}\bigcup A_{2}|=|A_{1}|+|A_{2}|-|A_{1}\bigcap A_{2}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The Division Rule
+\end_layout
+
+\begin_layout Standard
+There are
+\begin_inset Formula $n/d$
+\end_inset
+
+ ways to do a task if it can be done using a procedure that can be carried
+ out in 
+\begin_inset Formula $n$
+\end_inset
+
+ ways, and for every way 
+\begin_inset Formula $w$
+\end_inset
+
+, exactly 
+\begin_inset Formula $d$
+\end_inset
+
+ of the 
+\begin_inset Formula $n$
+\end_inset
+
+ ways correspond to way 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The Pigeonhole Principle (Dirichlet Drawer Principle)
+\end_layout
+
+\begin_layout Theorem
+If N objects are placed into k boxes, then there is at least one box containing
+ at least 
+\begin_inset Formula $\left\lceil N/k\right\rceil $
+\end_inset
+
+ objects.
+\end_layout
+
+\begin_layout Proof
+We will use a proof by contrapostion.
+ Suppose that none of the boxes contains more than 
+\begin_inset Formula $\left\lceil N/k\right\rceil -1$
+\end_inset
+
+ objects.
+ Then, the total number of objects is at most
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+k\left(\left\lceil \frac{N}{k}\right\rceil -1\right)<k\left(\left(\frac{N}{k}-1\right)+1\right)=N
+\]
+
+\end_inset
+
+This is a contradiction because at most
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left\lceil N/k\right\rceil -1$
+\end_inset
+
+ were claimed and yet the total is 
+\begin_inset Formula $N.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+A function f from a set with k +1 or more elements to a set with k elements
+ is not one-to-one.
+\end_layout
+
+\begin_layout Proof
+Suppose that for each element 
+\begin_inset Formula $y$
+\end_inset
+
+ in the codomain of 
+\begin_inset Formula $f$
+\end_inset
+
+ we have a box that contains all elements 
+\begin_inset Formula $x$
+\end_inset
+
+ of the domain of 
+\begin_inset Formula $f$
+\end_inset
+
+ such that 
+\begin_inset Formula $f(x)=y$
+\end_inset
+
+.
+ Because the domain contains 
+\begin_inset Formula $k+1$
+\end_inset
+
+ or more elements and the codomain contains only 
+\begin_inset Formula $k$
+\end_inset
+
+ elements, the pigeonhole principle tells us that one of these boxes contains
+ two or more elements 
+\begin_inset Formula $x$
+\end_inset
+
+ of the domain.
+ This means that 
+\begin_inset Formula $f$
+\end_inset
+
+ cannot be one-to-one.
 \end_layout
 
 \begin_layout Subsection
-Sequences and Series
+Permutations and Combinations
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+permutation
+\emph default
+ of the elements of a set is an ordered arrangement of the elements in the
+ set.
+ A 
+\emph on
+r-permuation 
+\emph default
+of a set 
+\begin_inset Formula $S$
+\end_inset
+
+ is a permutation of a subset 
+\begin_inset Formula $R\subseteq S$
+\end_inset
+
+ where 
+\begin_inset Formula $r=|R|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+An unordered selection of elements of a set is called a 
+\emph on
+combination.
+
+\emph default
+ An 
+\emph on
+r-combination
+\emph default
+ of elements of a set is an unordered selection of 
+\emph on
+r
+\emph default
+ elements from the set.
+\end_layout
+
+\begin_layout Standard
+A combinatorial proof of an identity is a proof that uses counting arguments
+ to prove that both sides of the identity count the same objects but in
+ different ways or a proof that is based on showing that there is a bijection
+ between the sets of objects counted by the two sides of the identity.
+ These two types of proofs are called double counting proofs and bijective
+ proofs, respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Type
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Repetition Allowed?
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Formula
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-permutations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{n!}{(n-r)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-combinations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{n!}{r!(n-r)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-permutations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n^{r}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+r-combinations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{(n+r-1)!}{r!(n-1)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:permCombFormulas"
+
+\end_inset
+
+Formulas for calculating permutations and combinations.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Topology of Real Numbers
-\end_layout
-
-\begin_layout Subsection
-Functional Limits and Continuity
-\end_layout
-
-\begin_layout Subsection
-Derivatives
-\end_layout
-
-\begin_layout Subsection
-Sequences and Series of Functions
-\end_layout
-
-\begin_layout Subsection
-Rieman Integral
-\end_layout
-
-\begin_layout Subsection
-Cantor Diagonalization
-\end_layout
-
-\begin_layout Section
 Probability and Statistics
 \begin_inset CommandInset label
 LatexCommand label
@@ -2634,44 +5536,682 @@ name "sec:Probability-and-Odds"
 
 \end_layout
 
-\begin_layout Subsection
-Discrete Probability Distributions
+\begin_layout Standard
+First we introduce some nomenclature for this domain of study.
+ 
 \end_layout
 
-\begin_layout Subsection
-Continuous Probability Distributions
+\begin_layout Itemize
+An 
+\emph on
+experiment
+\emph default
+ is a procedure that yields one of a given set of possible outcomes.
 \end_layout
 
-\begin_layout Subsection
-Combinatorics
+\begin_layout Itemize
+The
+\emph on
+ sample space
+\emph default
+ of the experiment is the set of possible outcomes.
 \end_layout
 
-\begin_layout Subsection
-Condiational Probability
+\begin_layout Itemize
+An 
+\emph on
+event
+\emph default
+ is a subset of the sample space.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+Laplace defines the probability of an event as given a set S, a finite nonempty
+ sample space, of equally likely outcomes, and 
+\begin_inset Formula $E$
+\end_inset
+
+ is an event, that is, 
+\begin_inset Formula $E\subseteq S$
+\end_inset
+
+, then the probability of 
+\begin_inset Formula $E$
+\end_inset
+
+ is 
+\begin_inset Formula $p(E)=\frac{|E|}{|S|}.$
+\end_inset
+
+ The probability of the complement of an event is 
+\begin_inset Formula $\bar{E}=S-E$
+\end_inset
+
+, and the complementary event is given by 
+\begin_inset Formula $p(\bar{E})=1-p(E)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can find the probability of the union of events by adding their probabilities
+ and subtracting the intersection of the events.
+ 
+\begin_inset Formula 
+\[
+p(E_{1}\bigcup E_{2)}=p(E_{1})+p(E_{2})-p(E_{1}\bigcap E_{2}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Nonuniform Probability
+\end_layout
+
+\begin_layout Standard
+In the previous section we operated under the conditions of equal probability
+ for each event in the sample space.
+ However, many questions may be posed where this is not the case.
+ To account for nonuniform probability of events we must introduce two constrain
+ts on the members of the sample pace 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\leq p(s)\leq1$
+\end_inset
+
+, The probability of each element in the samples space must be between 0
+ and 1.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{s\epsilon S}p(s)=1$
+\end_inset
+
+, The sum of the probabilities of each element of 
+\begin_inset Formula $S$
+\end_inset
+
+ must be 1.
+\end_layout
+
+\begin_layout Subsubsection
+Conditional Probability
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $E$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ be events with 
+\begin_inset Formula $p(F)>0$
+\end_inset
+
+.
+ The conditional probability of 
+\begin_inset Formula $E$
+\end_inset
+
+ given 
+\begin_inset Formula $F$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $p(E|F).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(E|F)=\frac{p(E\bigcap F)}{p(F)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Independent events
+\emph default
+ are events that do not affect each other.
+ When two events are independent, the occurrence of one of the events gives
+ no information about the probability that the other event occurs.
+ Mathematically, if 
+\begin_inset Formula $p(E)=p(E|F)$
+\end_inset
+
+ then the events 
+\begin_inset Formula $E$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ are said to be independent.
+\end_layout
+
+\begin_layout Standard
+Pairwise independence is defined as follows: The events 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{n}$
+\end_inset
+
+ are 
+\emph on
+pairwise independent 
+\emph default
+if and only if 
+\begin_inset Formula $p(E_{i}\bigcap E_{j})=p(E_{i})p(E_{j})$
+\end_inset
+
+ for all integers 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ with 
+\begin_inset Formula $1\leq i<j\leq n$
+\end_inset
+
+.
+ Events are said to be 
+\emph on
+mutually independent 
+\emph default
+if the following is true
+\begin_inset Formula 
+\[
+(E_{i_{1}}\bigcap E_{i_{2}}\bigcap\ldots\bigcap E_{i_{m}})=p(E_{i_{1}})p(E_{i_{2}})\ldots p(E_{i_{m}})
+\]
+
+\end_inset
+
+when for 
+\begin_inset Formula $i_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $1<j\leq m$
+\end_inset
+
+ and 
+\begin_inset Formula $1\leq i_{1}<i_{2}<\ldots<i_{m}\leq n$
+\end_inset
+
+.
+ It should be noted that all mutually independent events are also pairwise
+ independent, but not all pairwise independent events are mutually independent.
+\end_layout
+
+\begin_layout Subsubsection
+Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+An experiment that only has two possible outcomes is called a 
+\emph on
+Bernoulli trial.
+ 
+\emph default
+Bernoulli trials consist of independent events.
+ Examples of such experiments include flipping a coin and generating bits
+ at random.
+\end_layout
+
+\begin_layout Theorem
+The probability of exactly k successes in n independent Bernoulli trials,
+ with probability of success p and probability of failure q = 1−p, is
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+C(n,k)p^{k}q^{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+When 
+\begin_inset Formula $n$
+\end_inset
+
+ Bernoulli trials are carried out, the outcome is an n-tuple 
+\begin_inset Formula $(t_{1},t_{2},\ldots,t_{n)}$
+\end_inset
+
+.
+ Wherefore 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+, from 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+ each is denoted 
+\begin_inset Formula $S$
+\end_inset
+
+ in a successful trial and 
+\begin_inset Formula $F$
+\end_inset
+
+ in a failed trial.
+ Because the 
+\begin_inset Formula $n$
+\end_inset
+
+ trials are independent the probability of 
+\begin_inset Formula $k$
+\end_inset
+
+ success and 
+\begin_inset Formula $n-k$
+\end_inset
+
+ failures is 
+\begin_inset Formula $p^{k}q^{n-k}$
+\end_inset
+
+.
+ Further, there are 
+\begin_inset Formula $C(n,k)$
+\end_inset
+
+tuples in which there are 
+\begin_inset Formula $k$
+\end_inset
+
+ successes, and so the probability is 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $C(n,k)p^{k}q^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Random Variables
+\end_layout
+
+\begin_layout Standard
+(Possibly the most poorly named concept in mathematics) A random variable
+ is a 
+\emph on
+function
+\emph default
+ from the sample space of an experiment to the set of real numbers.
+ That is, a random variable assigns a real number 
+\begin_inset Formula $r$
+\end_inset
+
+ to each possible outcome.
+\end_layout
+
+\begin_layout Standard
+The distribution of a random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ on a sample space 
+\begin_inset Formula $S$
+\end_inset
+
+ is the set of pairs 
+\begin_inset Formula $(r,p(X=r))$
+\end_inset
+
+ for all 
+\begin_inset Formula $r$
+\end_inset
+
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula $X(S)$
+\end_inset
+
+, where 
+\begin_inset Formula $p(X=r)$
+\end_inset
+
+ is the probability that 
+\begin_inset Formula $X$
+\end_inset
+
+ takes the value 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ (The set of pairs in this distribution is determined by the probabilities
+ 
+\begin_inset Formula $p(X=r)$
+\end_inset
+
+ for 
+\begin_inset Formula $r∈X(S).)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Probablistic Algorithms
+\end_layout
+
+\begin_layout Standard
+Probabilitic algorithms are algorithims that make a random choice at some
+ step during computation.
+ This strikes a contrast with determinitic algorithms which proceed step
+ by step with each successive step defined explicitly by the source code.
+ For a sufficiently large number of computations the chances that a probabilitic
+ algorithm will yield a correct answer to a decision problem increases dramatica
+lly.
+ Probablistic algorithms are traditionally classified as Monte Carlo type
+ or Las Vegas type algorithms.
+\end_layout
+
+\begin_layout Subsubsection
+Monte Carlo Algorithms
+\end_layout
+
+\begin_layout Standard
+For a sufficiently large number of computations the chances that a Monte
+ Carlo algorithm will yield a correct answer to a decision problem increases
+ dramatically.
+ However, a chance remains that an incorrect answer will be given.
+ During the computation of a Monte Carlo algorithm a series of tests are
+ run that return a either true, false, or unknown.
+ After a sufficient number of iterations are run if any of the tests returned
+ a true response then the algorithm will respond in the affirmative.
+ However if every test responded with an unkown status then the algorithm
+ will respond false.
+\end_layout
+
+\begin_layout Subsubsection
+Las Vegas Algorithms
+\end_layout
+
+\begin_layout Subsubsection
+The Probabilistic Method
+\end_layout
+
+\begin_layout Standard
+The Pobablistic Method states that if the probability that an element chosen
+ at random from a 
+\begin_inset Formula $S$
+\end_inset
+
+ does not have a particular property is less than 1 (the is some uncertantity),
+ then there exists an element in S with this property.
+\end_layout
+
+\begin_layout Subsubsection
 Expected Value and Variance
 \end_layout
 
-\begin_layout Subsection
-Sample Space and Probability
+\begin_layout Standard
+The 
+\emph on
+expected value
+\emph default
+ of a random varariable (chance function) is the sum over all the elements
+ of the sample space of the probability of the element times the value of
+ the random variable at this element (i.e.
+ it is the weighted average of the random variable).
+ The expected value gives us a targeted value at which the distribution
+ of the random variable's probability curve.
+ Formally, the expected value, also called the expectation or mean, of the
+ random value 
+\begin_inset Formula $X$
+\end_inset
+
+on the sample space 
+\begin_inset Formula $S$
+\end_inset
+
+ is equal to:
+\begin_inset Formula 
+\[
+E(X)=\sum_{s\epsilon S}p(s)X(s)
+\]
+
+\end_inset
+
+ The 
+\emph on
+deviation 
+\emph default
+of X at 
+\begin_inset Formula $s\epsilon S$
+\end_inset
+
+ is 
+\begin_inset Formula $X(s)-E(x)$
+\end_inset
+
+, the difference between the value of 
+\begin_inset Formula $X$
+\end_inset
+
+and the mean of 
+\begin_inset Formula $X.$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
-Discrete Random Variables
+\begin_layout Standard
+In cases where computing the expected value directly is infeasible because
+ the size of the sample space is too large we can use the following theorem
+ to compute the expected value by grouping outcomes by their value and multiplyi
+ng them times their respective probabilities.
 \end_layout
 
-\begin_layout Subsection
-General Random Variables
+\begin_layout Theorem
+If X is a random variable and p(X=r) is the probability that X will be r,
+ so that the 
+\begin_inset Formula $\sum_{s\epsilon S,X(s)=r}p(s)$
+\end_inset
+
+, then:
 \end_layout
 
-\begin_layout Subsection
-Limit Theorems
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+E(X)=\sum_{r\epsilon X(S)}p(X=r)r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Suppose that 
+\begin_inset Formula $X$
+\end_inset
+
+ is a random variable with range 
+\begin_inset Formula $X(S)$
+\end_inset
+
+, and let 
+\begin_inset Formula $p(X=r)$
+\end_inset
+
+ be the probability that the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ takes the value 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Consequently, 
+\begin_inset Formula $p(X=r)$
+\end_inset
+
+ is the sum of the probabilities of the outcomes 
+\begin_inset Formula $s$
+\end_inset
+
+ such that 
+\begin_inset Formula $X(s)=r$
+\end_inset
+
+.
+ It follows that
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+E(X)=\sum_{r\epsilon X(S)}p(X=r)r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The Linearity of Expectations states that if for a random variable 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2,\ldots n$
+\end_inset
+
+, are random variables on the sample space 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ and if 
+\begin_inset Formula $a$
+\end_inset
+
+and 
+\begin_inset Formula $b$
+\end_inset
+
+ are real numbers then
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+E(X_{1}+X_{2}+\ldots+X_{3})=E(X_{1})+E(X_{2})+\ldots+E(X_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+E(aX+b)=aE(X)+b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Variance tells us the spread of the values of the random variable.
+ Let X be a random variable on a sample space S.
+ The variance of X, denoted by V(X), is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V(X)=\sum_{s\epsilon S}(X(s)-E(X))^{2}p(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Chebyshev's Inequality
+\end_layout
+
+\begin_layout Standard
+Chebyshev's inequality helps us answer how likely it is that the outcome
+ of a random variable will be significanyly more than its expected value.
+ Chebychev provides an upper bound on the probability that the value of
+ a random variable differs from the expected value of the random variable
+ by more than a specified amount.
+\end_layout
+
+\begin_layout Theorem
+Let X be a random variable on a sample space S with probability function
+ p.
+ If r is a positive real number, then
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+p(|X(s)−E(X)|≥r)≤V(X)/r^{2}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Linear Algebra and Integer Linear Programming
+Linear Algebra
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Linear-Programming"
@@ -2714,7 +6254,7 @@ Geometry of Vector Spaces
 \end_layout
 
 \begin_layout Subsection
-Basic Properties of Linear Progams
+Basic Properties of Linear Programs
 \end_layout
 
 \begin_layout Subsection
@@ -2722,7 +6262,7 @@ The Simplex Method
 \end_layout
 
 \begin_layout Subsection
-Duality and the Complementarity
+Duality and the Complementary
 \end_layout
 
 \begin_layout Subsection
@@ -2766,7 +6306,7 @@ name "subsec:Notation-of-DFA's"
 \end_layout
 
 \begin_layout Standard
-Traditionally finite automata
+Traditionally, finite automata
 \begin_inset Index idx
 status collapsed
 
@@ -2776,12 +6316,20 @@ automata
 
 \end_inset
 
- are expressed by a tuple of sets which express its behavior.
+ are expressed by a tuple which express its behavior.
  The tuple, for example 
 \begin_inset Formula $L=(Q,\Sigma,\delta,q_{0},F)$
 \end_inset
 
-, contains information on the states expressed by the set Q, the input alphabet
+.
+\end_layout
+
+\begin_layout Itemize
+The contains information on the states expressed by the set Q.
+\end_layout
+
+\begin_layout Itemize
+The input alphabet
 \begin_inset Index idx
 status collapsed
 
@@ -2795,7 +6343,11 @@ alphabet
 \begin_inset Formula $\Sigma$
 \end_inset
 
-, the transitions
+.
+\end_layout
+
+\begin_layout Itemize
+The transitions
 \begin_inset Index idx
 status collapsed
 
@@ -2809,16 +6361,28 @@ transitions
 \begin_inset Formula $\delta$
 \end_inset
 
-, the starting state given by 
+.
+\end_layout
+
+\begin_layout Itemize
+The starting state given by 
 \begin_inset Formula $q_{0}$
 \end_inset
 
-, and the set of final states given by 
+.
+\end_layout
+
+\begin_layout Itemize
+The set of final states given by 
 \begin_inset Formula $F$
 \end_inset
 
 .
- An example of a finite automata can be seen in Figure
+ 
+\end_layout
+
+\begin_layout Standard
+An example of a finite automata can be seen in Figure
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:productDFA"
@@ -2827,10 +6391,21 @@ reference "fig:productDFA"
 
 .
  Strings are typically represented by variables of lowercase letters at
- the end of the alphabet ( w, x, y, and z) whereas characters are represented
- variables of lowercase letters at the beginning of the English alphabet
- ( a, b, and c).
+ the end of the alphabet 
+\emph on
+(w, x, y, and z).
+
+\emph default
+ Whereas, characters are represented variables of lowercase letters at the
+ beginning of the English alphabet 
+\emph on
+(a, b, and c).
+
+\emph default
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\Sigma^{*}$
 \end_inset
 
@@ -2838,8 +6413,12 @@ reference "fig:productDFA"
 \begin_inset Formula $\Sigma$
 \end_inset
 
- including the empty string–the super-script star symbol is referred to
- as the Kleene star
+ including the empty string, 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ The super-script star symbol is referred to as the Kleene star
 \begin_inset Index idx
 status collapsed
 
@@ -2850,26 +6429,37 @@ Kleene star
 \end_inset
 
 .
- The empty string is denoted by the epsilon symbol 
-\begin_inset Formula $\epsilon$
+ The empty string denotes a string of length 0, a string of no characters
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
 \end_inset
 
 .
- The empty string denotes a string of length 0, a string of no characters.
- Length is often expressed by vertical bars surrounding the string in question,
- such as 
+\end_layout
+
+\begin_layout Standard
+Length, sometimes called cardinality, is often expressed by vertical bars
+ surrounding the string in question, such as 
 \begin_inset Formula $|w|$
 \end_inset
 
 .
- A transition function 
+\end_layout
+
+\begin_layout Standard
+A transition function 
 \begin_inset Formula $\delta$
 \end_inset
 
  takes two parameters, a state and an input symbol, and returns the next
  state to which the automaton should transition on input of the symbol (
  i.
- e 
+ e.
+ 
 \begin_inset Formula $\delta(q,$
 \end_inset
 
@@ -2892,10 +6482,14 @@ name "subsec:Computation-of-DFA's"
 Given a finite automata, computation can be carried out on an input string
  by processing each character of the input one-by-one and following the
  transitions based on the input character.
- by Upon encountering the last character in the input string computation
- stops and based on whether the state is a final state (accepting state)
- or a nonaccepting state, the string is either accepted or rejected.
- Accepted strings are said to be in the language of the automaton rejected
+ Upon encountering the last character in the input string computation stops.
+ The string is either accepted or rejected and based on whether the state
+ is a final state (accepting state) or a nonaccepting state.
+ 
+\end_layout
+
+\begin_layout Standard
+Accepted strings are said to be in the language of the automaton, and rejected
  strings are not in the language.
  Given an automaton 
 \begin_inset Formula $A$
@@ -2911,6 +6505,10 @@ Given a finite automata, computation can be carried out on an input string
 
 .
  A language is a subset of 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -2925,6 +6523,8 @@ name "subsec:Regular-Languages"
 \end_layout
 
 \begin_layout Standard
+
+\emph on
 A language is a regular language
 \begin_inset Index idx
 status collapsed
@@ -2945,13 +6545,22 @@ deterministic finite automata (DFA
 
 \end_inset
 
-deterministic finite automata (DFA).
+deterministic finite automata (DFA)
+\emph default
+.
  A caveat here is that the DFA must accept only those strings in the language
  it models and no others.
- Nonregular languages are those that cannot be modeled by a DFA.
+\end_layout
+
+\begin_layout Standard
+Nonregular languages are those that cannot be modeled by a DFA.
  Examples of nonregular languages are those that require automata to count
  beyond a finite number of states.
- The classical example is the language L = {
+ 
+\end_layout
+
+\begin_layout Standard
+The classical example is the language L = {
 \begin_inset Formula $0^{n}1$
 \end_inset
 
@@ -2966,7 +6575,14 @@ deterministic finite automata (DFA).
 }.
  DFA's cannot check for the same number of symbols in a string or balanced
  parenthesis.
- This job falls to context free grammars.
+ This job falls to context free grammars (CFG) outlined in section 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:contextFreeGrammars"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -3078,7 +6694,11 @@ name "subsec:Proof-of-Equivalence"
 \begin_layout Standard
 The proof of equivalence between DFA's and NFA's is often called the Subset
  Construction.
- In the succeeding proof given a NFA the states 
+ 
+\end_layout
+
+\begin_layout Standard
+In the following proof given a NFA the states 
 \begin_inset Formula $Q_{N}$
 \end_inset
 
@@ -3126,8 +6746,8 @@ The proof of equivalence between DFA's and NFA's is often called the Subset
 \begin_inset Formula $\delta_{D}(\{q_{1,}q_{2},\ldots q_{k}\},a)$
 \end_inset
 
- is the union over all i, for i = 1
-\begin_inset Formula $\ldots k$
+ is the union over all i, for
+\begin_inset Formula $i=1\ldots k$
 \end_inset
 
  of the NFA's transition function 
@@ -3135,13 +6755,21 @@ The proof of equivalence between DFA's and NFA's is often called the Subset
 \end_inset
 
 .
- To prove equivalence of the DFA and NFA representation we must show that
  
+\end_layout
+
+\begin_layout Theorem
+All NFA's have an equivalent DFA representation.
+ Formally, 
 \begin_inset Formula $\delta_{N}(q_{0},w)=\delta_{D}(\left\{ q_{0}\right\} ,w)$
 \end_inset
 
 .
- The proof is an induction on the string 
+ 
+\end_layout
+
+\begin_layout Proof
+The proof is an induction on the string 
 \begin_inset Formula $w$
 \end_inset
 
@@ -3998,7 +7626,7 @@ name "fig:chessNFA2"
 \end_inset
 
 .
- Transition labels have been ommited for the sake of clarity.
+ Transition labels have been omitted for the sake of clarity.
 \end_layout
 
 \end_inset
@@ -4201,7 +7829,7 @@ name "sec:Regular-Expressions"
 \begin_layout Standard
 Regular expressions use three operations: union, concatenation, and Kleene
  star.
- Concatenation on languaguages 
+ Concatenation on languages 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4234,7 +7862,7 @@ is denoted
 \begin_inset Formula $^{*})$
 \end_inset
 
- is the set of strings formed by concatenating 0 or more strigns of 
+ is the set of strings formed by concatenating 0 or more strings of 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4289,8 +7917,8 @@ name "subsec:algebraicLawsAndIdentitesRegularLanguages"
 \end_layout
 
 \begin_layout Standard
-Union is communative and associative.
- Concatenation is associative however is not communative.
+Union is commutative and associative.
+ Concatenation is associative however is not commutative.
 \begin_inset Formula $\emptyset$
 \end_inset
 
@@ -4668,8 +8296,8 @@ In the automaton pictured above a string w is formed by the the substrings
 
 \end_layout
 
-\begin_layout Paragraph
-Claim: If there is a string of length 
+\begin_layout Theorem
+If there is a string w=xyz of length 
 \begin_inset Formula $\geq n$
 \end_inset
 
@@ -4681,9 +8309,9 @@ Claim: If there is a string of length
  
 \end_layout
 
-\begin_layout Standard
-Proof: Because y is the first cycle on the path to the accepting state,
- the length 
+\begin_layout Proof
+Because y is the first cycle on the path to the accepting state, the length
+ 
 \begin_inset Formula $|xy|\leq n$
 \end_inset
 
@@ -5349,8 +8977,8 @@ name "subsec:usingThePumpingLemmaToProveALanguageIsNonregular"
 
 \end_layout
 
-\begin_layout Paragraph
-Claim: L = {
+\begin_layout Claim
+L = {
 \begin_inset Formula $0^{k}1$
 \end_inset
 
@@ -5365,8 +8993,8 @@ Claim: L = {
 } is a nonregular language.
 \end_layout
 
-\begin_layout Standard
-Proof: Suppose for the purposes of contradiction that L is a regular language,
+\begin_layout Proof
+Suppose for the purposes of contradiction that L is a regular language,
  then there exists an n for which the properties of the Pumping Lemma hold
  true.Let w = 
 \begin_inset Formula $0^{n}1$
@@ -5447,7 +9075,7 @@ A context free grammar is a notation for describing languages.
 \end_inset
 
 }.
- This is a familar language that we saw earlier in the examples on what
+ This is a familiar language that we saw earlier in the examples on what
  is not a regular language.
  A context free grammar (CFG) for 
 \begin_inset Formula $L$
@@ -5478,20 +9106,34 @@ name "subsec:CFGNomenclature"
 \end_layout
 
 \begin_layout Itemize
-Terminals - symbols of the alphabet of the language being defined.
+
+\emph on
+Terminals
+\emph default
+ - symbols of the alphabet of the language being defined.
 \end_layout
 
 \begin_layout Itemize
-Variables (Nonterminals) - A finite set of other symbols, each of which
- represents a language.
+
+\emph on
+Variables (Nonterminals)
+\emph default
+ - A finite set of other symbols, each of which represents a language.
 \end_layout
 
 \begin_layout Itemize
-Production (Rule) - a rule defining the relationships of terminals and nontermin
-als.
- It has the form HEAD -> TAIL (BODY).
+
+\emph on
+Production (Rule)
+\emph default
+ - a rule defining the relationships of terminals and nonterminals.
+ It has the form HEAD 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ TAIL (BODY).
  The body is composed of terminals and nonterminals.
- Each production represents a language on its own and nontermials in the
+ Each production represents a language on its own and nonterminals in the
  BODY represent languages on their own.
  Nonterminals are subsets of the parent language given by the head ( e.g.
  
@@ -5514,12 +9156,20 @@ als.
 \end_layout
 
 \begin_layout Itemize
-Derivation - The process of repeatedly replacing symbols for terminals based
- on the productions of a CFG.
+
+\emph on
+Derivation
+\emph default
+ - The process of repeatedly replacing symbols for terminals based on the
+ productions of a CFG.
 \end_layout
 
 \begin_layout Itemize
-Sentential form - the derived string.
+
+\emph on
+Sentential form
+\emph default
+ - the derived string.
 \end_layout
 
 \begin_layout Subsection
@@ -5534,7 +9184,7 @@ name "subsec:conventionalUsageOfContextFreeGrammars"
 \end_layout
 
 \begin_layout Standard
-Captial letters at the beginning of the alphabet are typically used as variables
+Capital letters at the beginning of the alphabet are typically used as variables
  (e.g A, B, C).
  Lowercase letters at the beginning of the alphabet are used as terminals
  (a, b, c).
@@ -5560,7 +9210,7 @@ Captial letters at the beginning of the alphabet are typically used as variables
 \begin_inset Formula $\Rightarrow_{lm}$
 \end_inset
 
- indicates the sentenial form is as specified after one setp of the left
+ indicates the sentential form is as specified after one setp of the left
  most derivation.
  A 
 \begin_inset Formula $\Rightarrow*_{lm}$
@@ -5586,7 +9236,7 @@ name "subsec:contextFreeLanguages"
 A language that is defined by some CFG is called a context-free language.
  Intuitively, a context free language is a language that can count to infinite
  elements but not three.
- An example of a non-context freem language is 
+ An example of a non-context free language is 
 \begin_inset Formula $L=\{0^{n}1^{n}2^{n}|n\geq1\}$
 \end_inset
 
@@ -5624,7 +9274,7 @@ name "subsec:normalFormsForCFG"
 \begin_layout Standard
 Poorly designed context free grammars may have rules that are never used
  in the derivation of strings.
- This is similiar to a DFA that has unreachable states.
+ This is similar to a DFA that has unreachable states.
  CFG's may also have redundant productions that may be combined.
  
 \end_layout
@@ -5661,11 +9311,11 @@ If a CFG's production never derives a terminal string, then it is useless.
 \end_inset
 
  consists only of terminals, then this qualifies as our basis.
- If we then have a prodcution 
+ If we then have a production 
 \begin_inset Formula $A\rightarrow\alpha$
 \end_inset
 
- who derives a string of variables and terminals than theis may qualify
+ who derives a string of variables and terminals than these may qualify
  for our inductive step.
  Additionally, we may have unreachable variables in the grammar.
  Variables that are unreachable can be eliminated from the grammar by an
@@ -5673,12 +9323,12 @@ If a CFG's production never derives a terminal string, then it is useless.
 \begin_inset Formula $S$
 \end_inset
 
- and the productions that envolve the symbols of those that were discovered.
+ and the productions that involve the symbols of those that were discovered.
  Variables not discovered can then be eliminated.
 \end_layout
 
 \begin_layout Subsubsection
-Elimininating Epilson Productions
+Eliminating Epsilon Productions
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:elimininatingEpilsonProduction"
@@ -5689,7 +9339,7 @@ name "subsec:elimininatingEpilsonProduction"
 \end_layout
 
 \begin_layout Standard
-Epsilon prodcutions are of the form 
+Epsilon productions are of the form 
 \begin_inset Formula $A\rightarrow\epsilon$
 \end_inset
 
@@ -5719,7 +9369,7 @@ Epsilon prodcutions are of the form
 \begin_inset Formula $\alpha$
 \end_inset
 
-eventulay derive epsilon then the production is nullable.
+eventually derive epsilon then the production is nullable.
  
 \end_layout
 
@@ -5752,7 +9402,7 @@ derives the production
 \begin_inset Formula $B\rightarrow\alpha$
 \end_inset
 
-, then we can rewite 
+, then we can rewrite 
 \begin_inset Formula $A$
 \end_inset
 
@@ -5842,7 +9492,7 @@ Theorem: If a language
  is a context free language, then the language with all epsilon productions
  eliminated has a context free grammar in Chomsky Normal Form.
  Forming the CFG such that it is in CNF can be carried out by cleaning up
- the grammar as descibed in the subsections
+ the grammar as described in the subsections
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "subsec:elimininatingEpilsonProduction"
@@ -5922,7 +9572,7 @@ reference "fig:pushdownAutomata"
 \begin_inset Formula $\delta$
 \end_inset
 
- a transistion function, 
+ a transition function, 
 \begin_inset Formula $q_{0}$
 \end_inset
 
@@ -6040,14 +9690,14 @@ name "subsec:instantaneousDescriptionsAndGoesToRelation"
 \begin_layout Standard
 An instantaneous description(ID) of a PDA is like a snapshot of a PDA as
  it computes.
- Each sucessesive step in Figure
+ Each successive step in Figure
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:pdaExample"
 
 \end_inset
 
- has a corresponding instantaeous description triple describing the current
+ has a corresponding instantaneous description triple describing the current
  state 
 \begin_inset Formula $q$
 \end_inset
@@ -6066,7 +9716,7 @@ and the contents of the stack
 \end_inset
 
 , represents the Goes-To relation.
- The relation means that for a specified ID I a tranistion to ID J is possible
+ The relation means that for a specified ID I a transition to ID J is possible
  in one step.
  For example if the transition function 
 \begin_inset Formula $\delta(q,a,X)$
@@ -6081,7 +9731,7 @@ and the contents of the stack
 \end_inset
 
 .
- Similiarly, the 
+ Similarly, the 
 \begin_inset Formula $\vdash^{*}$
 \end_inset
 
@@ -6133,7 +9783,7 @@ The languages of PDA's are defined by
 \begin_inset Formula $w$
 \end_inset
 
- that are consumed by the PDA such that only the empy string, 
+ that are consumed by the PDA such that only the empty string, 
 \begin_inset Formula $\epsilon,$
 \end_inset
 
@@ -6334,8 +9984,8 @@ For some grammar
 \begin_inset Formula $P.$
 \end_inset
 
- Intutitively, we must model the left sentential form of a grammar with
- the PDA.
+ Intuitively, we must model the left sentential form of a grammar with the
+ PDA.
  If the stack of the PDA 
 \begin_inset Formula $P$
 \end_inset
@@ -6392,7 +10042,7 @@ type-1
  In effect, we “cancel” the “a” on the stack against the “a” on the input.
  The left-sentential form represented does not change.
  We have now consumed one more symbol, “a”, from the input so that becomes
- part of the left-sentiantial form.
+ part of the left-sentential form.
  But the “a” that was on the stack is removed, so it no longer participates
  in the left-sentential form.
  The 
@@ -6461,7 +10111,7 @@ In order to prove equivalence between the two representations we need to
 \end_inset
 
 .
- That is, for all x the instantaneous decription 
+ That is, for all x the instantaneous description 
 \begin_inset Formula $(q,wx,S)$
 \end_inset
 
@@ -6638,7 +10288,7 @@ must end with the symbol
 \begin_inset Formula $n-1$
 \end_inset
 
- steps, we can conlude that there is a left most derivation from 
+ steps, we can conclude that there is a left most derivation from 
 \begin_inset Formula $S$
 \end_inset
 
@@ -6749,7 +10399,7 @@ rule in the
 \begin_inset Formula $\ldots$
 \end_inset
 
-[ommited]
+[omitted]
 \end_layout
 
 \begin_layout Subsection
@@ -6785,7 +10435,7 @@ In this section we obtain the grammar
 \begin_inset Formula $L=N(P).$
 \end_inset
 
- Intuitively, we should assign variables labled as 
+ Intuitively, we should assign variables labeled as 
 \begin_inset Formula $pXq$
 \end_inset
 
@@ -7136,7 +10786,7 @@ pump
 
  an the string an arbitrary number of times, thus producing a infinite number
  of strings in the language.
- Similiarly, the pumping lemma for context free languages models this idea,
+ Similarly, the pumping lemma for context free languages models this idea,
  but requires two cycles along the string's path in tandem.
  
 \end_layout
@@ -7294,7 +10944,7 @@ reference "sec:Dynamic-Programming"
 \end_layout
 
 \begin_layout Subsubsection
-The CYK ALgorithm
+The CYK Algorithm
 \end_layout
 
 \begin_layout Standard
@@ -7344,7 +10994,7 @@ reference "fig:triangularArray"
 \end_inset
 
 .
- Additionaly, each entry of the array should be viewed as a set of variables
+ Additionally, each entry of the array should be viewed as a set of variables
  of the grammar.
  The set 
 \begin_inset Formula $X_{ij}$
@@ -7358,7 +11008,7 @@ reference "fig:triangularArray"
 \begin_inset Formula $i\leq j$
 \end_inset
 
- and is inteded to be the set of variables that derive the substring of
+ and is intended to be the set of variables that derive the substring of
  the input starting from position 
 \begin_inset Formula $i$
 \end_inset
@@ -7758,7 +11408,7 @@ name "subsec:emptinessTestForCFL"
 \end_layout
 
 \begin_layout Standard
-The algorithim to test for an empty CFL uses the ideas we learned in subsection
+The algorithm to test for an empty CFL uses the ideas we learned in subsection
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "subsec:eliminatingUselessVariables"
@@ -7797,7 +11447,7 @@ reference "subsec:infinitenessTestRegularLanguages"
 \end_inset
 
 .
- Apply those priniciples with the pumping lemma for context free languages
+ Apply those principles with the pumping lemma for context free languages
  outlined in section
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -7846,7 +11496,7 @@ name "subsec:unionForCFL's"
 \end_layout
 
 \begin_layout Subsubsection
-Concatentation for CFL's
+Concatenation for CFL's
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:concatentationForCFL's"
@@ -7888,7 +11538,7 @@ name "sec:Countability"
 
 \begin_layout Standard
 It is important to understand that all computation can be encoded as integers.
- The ascii or if you like the UTF-8 table encodes english characters and
+ The ASCII or if you like the UTF-8 table encodes English characters and
  algebraic numerals, which we can interpret as integers.
  This idea can be applied to all types of media.
  At the very root we may interpret all things as integers.
@@ -7978,8 +11628,8 @@ A countable set is a set with a one to one correspondence with the positive
 \begin_inset Formula $101,0101,00101$
 \end_inset
 
- all coorespond to the integer value 5, so it seems imposible to form a
- coorespondence such that they become countable.
+ all correspond to the integer value 5, so it seems impossible to form a
+ correspondence such that they become countable.
  The trick here is to prepend a 1 to the binary strings so that the strings
  can become distinguishable.
  The aforementioned strings become 
@@ -8140,7 +11790,7 @@ is in the language by the definition of the language.
 \begin_inset Formula $w$
 \end_inset
 
- is not the language that correpsonds to the smae integer 
+ is not the language that corresponds to the same integer 
 \begin_inset Formula $i$
 \end_inset
 
@@ -8941,7 +12591,7 @@ Turing Machine Notation
 \end_layout
 
 \begin_layout Standard
-A Turing machine is made up of the following componenets.
+A Turing machine is made up of the following components.
 \end_layout
 
 \begin_layout Itemize
@@ -9010,7 +12660,7 @@ Conventionally, the lowercase letters at the beginning of the alphabet are
 \begin_inset Formula $a,b,c).$
 \end_inset
 
- Upper case letters at the end of the alphabet represetn tape symbols 
+ Upper case letters at the end of the alphabet represent tape symbols 
 \begin_inset Formula $(X,Y,Z)$
 \end_inset
 
@@ -9040,7 +12690,7 @@ Conventionally, the lowercase letters at the beginning of the alphabet are
 .
  The transition function yields a triple of the form (state, tape symbol,
  direction).
- If for a given input a tranisiton is not defined then the Turing machine
+ If for a given input a transition is not defined then the Turing machine
  halts in the current state.
 \end_layout
 
@@ -9157,11 +12807,11 @@ guaranteed to halt
 \end_layout
 
 \begin_layout Subsection
-Multitape Turing Machines
+Multi-tape Turing Machines
 \end_layout
 
 \begin_layout Standard
-Multitape Turing Machines allow for a ordinary Turing Machine to have 
+Multi tape Turing Machines allow for a ordinary Turing Machine to have 
 \begin_inset Formula $k$
 \end_inset
 
@@ -9169,7 +12819,7 @@ Multitape Turing Machines allow for a ordinary Turing Machine to have
 \begin_inset Formula $k.$
 \end_inset
 
- The steps the Multitape Turing Machine makes are dependant on the symbols
+ The steps the Multi tape Turing Machine makes are dependent on the symbols
  the head of each tape is pointing to and their corresponding states.
  Each tape has its own head and they move on their own tape without restricting
  each others movement.
@@ -9178,7 +12828,7 @@ Multitape Turing Machines allow for a ordinary Turing Machine to have
  Additionally, a head may choose to not move.
  This model is no more powerful than the traditional Turing Machine.
  One may simply expand the alphabet for a traditional Turing Machine to
- accomadate the number of tapes that it must simulate.
+ accommodate the number of tapes that it must simulate.
 \end_layout
 
 \begin_layout Subsection
@@ -9191,7 +12841,7 @@ Nondeterministic Turing Machines are granted multiple choices based on the
  Once a choice is made, then the next state, new symbol and head direction
  are determined.
  As with the NFA's, DFA's, and PDA's, the nondeterministic Turing Machine
- accpets if any sequence of choices leads to an ID with and accepting state.
+ accepts if any sequence of choices leads to an ID with and accepting state.
 \end_layout
 
 \begin_layout Subsection
@@ -9199,7 +12849,7 @@ Closure Properties of Recursive and Recursively Enumerable Languages
 \end_layout
 
 \begin_layout Standard
-Recursive Languages and Recursively Enumerable Languages share the properites:
+Recursive Languages and Recursively Enumerable Languages share the properties:
  union, concatenation, Kleene star, reversal, intersection, and inverse.
  Recursive languages have difference and complementation.
  Recursively Enumerable Languages have homomorphism.
@@ -13171,7 +16821,7 @@ teness is the one we gave here – the existence of polytime reductions.
 \end_layout
 
 \begin_layout Subsection
-Cook's Theorem
+Cook-Levin Theorem
 \begin_inset CommandInset label
 LatexCommand label
 name "subsec:Cook's-Theorem"
@@ -13240,7 +16890,7 @@ The next step is to prove that SAT is NP-complete.
  Refer to Garey and Johnson pg 39-44 for the indepth proof.
  Prior to reading this you should understand Logic Programming 
 \begin_inset Flex URL
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -13251,7 +16901,7 @@ https://en.wikipedia.org/wiki/Logic_programming
 
  and Lambda Calculus 
 \begin_inset Flex URL
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -13690,6 +17340,19 @@ Optimatility
 \end_layout
 
 \begin_layout Section
+Divide and Conquer
+\end_layout
+
+\begin_layout Standard
+T.
+ Roughgardener lectures
+\end_layout
+
+\begin_layout Section
+Greedy Algorithms
+\end_layout
+
+\begin_layout Section
 Approximation Algorithms
 \begin_inset CommandInset label
 LatexCommand label
@@ -13849,6 +17512,320 @@ Hopcroft-Karp Algorithm
 
 \begin_layout Subsection
 The Hungarian Algorithm
+\end_layout
+
+\begin_layout Section
+Appendix: Mathematical Rules
+\end_layout
+
+\begin_layout Standard
+This material will help you reason about various tasks including creating
+ inductive proofs and reasoning about Big O notation.
+\end_layout
+
+\begin_layout Subsection
+Rules About Logarithms
+\end_layout
+
+\begin_layout Standard
+The logarithm 
+\begin_inset Formula $y=log_{b}x$
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula $x=b^{y}$
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $log_{5}125=3$
+\end_inset
+
+ and 
+\begin_inset Formula $5^{3}=125$
+\end_inset
+
+.
+ In this course and many other computer science course the use of 
+\begin_inset Formula $log$
+\end_inset
+
+ connotes 
+\begin_inset Formula $log_{2}$
+\end_inset
+
+, where 2 is the base of the logarithm.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $log_{b}b=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $log_{b}1=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b^{log_{b}x}=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $log_{b}(x^{r})=rlog_{b}x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $log_{b}b^{x}=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $log_{b}\frac{x}{y}=log_{b}x-log_{b}y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $log_{b}(xy)=log_{b}x+log_{b}y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The domain of 
+\begin_inset Formula $log_{b}x$
+\end_inset
+
+ is 
+\begin_inset Formula $x>0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Rules About Exponents
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a^{n}a^{m}=a^{n+m}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{a^{n}}{a^{m}}=a^{n-m}=\frac{1}{a^{m-n}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(a^{n})^{m}=a^{nm}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a^{0}=1,a\neq0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(ab)^{n}=a^{n}b^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\frac{a}{b})^{n}=\frac{a^{n}}{b^{n}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a^{-n}=\frac{1}{a^{n}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{a^{-n}}=a^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\frac{a}{b})^{-n}=(\frac{b}{a})^{n}=\frac{b^{n}}{a^{n}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a^{\frac{n}{m}}=(a^{\frac{1}{m}})^{n}=(a^{n})^{\frac{1}{m}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

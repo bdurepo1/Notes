@@ -7,8 +7,10 @@
 \usepackage{babel}
 \usepackage{array}
 \usepackage{varioref}
+\usepackage{textcomp}
 \usepackage{url}
 \usepackage{multirow}
+\usepackage{tipa}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
@@ -28,24 +30,45 @@
 \providecommand{\tabularnewline}{\\}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+  \theoremstyle{definition}
+  \newtheorem*{example*}{\protect\examplename}
 \theoremstyle{plain}
 \newtheorem{thm}{\protect\theoremname}
+  \theoremstyle{definition}
+  \newtheorem{example}[thm]{\protect\examplename}
+  \theoremstyle{definition}
+  \newtheorem*{sol*}{\protect\solutionname}
+  \theoremstyle{plain}
+  \newtheorem{cor}[thm]{\protect\corollaryname}
+  \theoremstyle{remark}
+  \newtheorem{claim}[thm]{\protect\claimname}
   \theoremstyle{plain}
   \newtheorem{lem}[thm]{\protect\lemmaname}
 
 \@ifundefined{date}{}{\date{}}
 \makeatother
 
+  \providecommand{\claimname}{Claim}
+  \providecommand{\corollaryname}{Corollary}
+  \providecommand{\examplename}{Example}
   \providecommand{\lemmaname}{Lemma}
+  \providecommand{\solutionname}{Solution}
 \providecommand{\theoremname}{Theorem}
 
 \begin{document}
+\begin{figure}
+\centering{}\includegraphics[scale=0.25]{Pictures/techTower}\caption{Tech Tower was built in 1888, and it is the oldest surviving building
+on campus. Names of past alumi are scrawled on the inside of the bell
+tower dating back to the earliest classes.}
+\end{figure}
 
-\title{Notes on Computability, Complexity, and Algorithms \textendash{}
-An Ode to the Unprepared Student}
 
-\author{Brandon A. Durepo, \url{bdurepo@gatech.edu}}
+\title{Notes on Computability, Complexity, and Algorithms}
+
+\author{Brandon A. Durepo}
+
 \maketitle
+\pagebreak{}
 \begin{quote}
 \begin{flushright}
 ``Sapere aude.'' \textendash{} Horace
@@ -58,21 +81,23 @@ An Ode to the Unprepared Student}
 
 The purpose of this document is to help students of all stripes succeed
 in Georgia Tech's course on Computability, Complexity and Algorithms
-more formally known as CS6505. Many students find this course to be
-challenging and the topics can be opaque at times to the newcomer.
-However with grit, determination, and luck you, the reader, can reap
-the many benefits that this course offers. In proceeding sections
-I outline some of the key concepts you will need to be successful
-in the course. I make no assumptions about prerequisite knowledge
-and attempt to provide you the green field perspective on the subject
-matter. In many cases, if you have already seen the information it
-is safe to skip forward and not concern yourself what may be obvious
+more formally known as CS6505. It is no secret that this class is
+a humdinger. Many students find this course to be challenging and
+the topics can be opaque at times to the newcomer. However with grit,
+determination, and luck you, the reader, can reap the many benefits
+that this course offers. 
+
+In following sections I outline some of the key concepts you will
+need to be successful in the course. I make no assumptions about prerequisite
+knowledge and attempt to provide you the green-field perspective on
+the subject matter. In many cases, if you have already seen the information
+it is safe to skip forward and not concern yourself what may be obvious
 to you, but I encourage you to read all the sections because additional
-clarity may be gained with another pass through.
+clarity may be gained with another pass.
 
 \part{Mathematics and Logic}
 
-\section{Discrete Mathmatics}
+\section{Discrete Mathematics}
 
 \begin{figure}
 \begin{centering}
@@ -89,7 +114,7 @@ $p\lor p\equiv p$, $p\land p\equiv p$ & Idempotent Laws\tabularnewline
 \hline 
 $\lnot(\lnot p)\equiv p$ & Double Negation Laws\tabularnewline
 \hline 
-$p\lor q\equiv q\lor p$, $p\land q\equiv q\land p$ & Communatative Laws\tabularnewline
+$p\lor q\equiv q\lor p$, $p\land q\equiv q\land p$ & Communicative Laws\tabularnewline
 \hline 
 $(p\lor q)\lor r\equiv p\lor(q\lor r)$, $(p\land q)\land r\equiv p\land(q\land r)$ & Associative Laws\tabularnewline
 \hline 
@@ -139,7 +164,7 @@ $\lnot(p\leftrightarrow q)\equiv p\leftrightarrow\lnot q$\tabularnewline
 \hline 
 \end{tabular}
 \par\end{centering}
-\caption{\label{fig:lawsOfLogic} Logical equivalences. Idemepotent denotes
+\caption{\label{fig:lawsOfLogic} Logical equivalences. Idempotent denotes
 an element of a set that is unchanged in value when multiplied or
 otherwise operated on by itself.}
 \end{figure}
@@ -155,42 +180,42 @@ two propositional variables $p$and $q.$ $p$is often called the
 \emph{premise} or \emph{hypothesis} or \emph{antecedent}, while $q$may
 be referred to as the \emph{conclusion}, or \emph{consequence}. Truth
 tables are a way of tabulating the values of arbitrary logical expressions
-by enumerating all possible truth values for the componenet of the
-expressions. The usefulness of this technique quickly dimminishes
-as the number of proposition variables goes beyond 4. In this case
-the number of rows in the truth table is $2^{4}=16$. The precedence
-of logical operators is negation, conjunction, disjunction.
+by enumerating all possible truth values for the component of the
+expressions. The usefulness of this technique quickly diminishes as
+the number of proposition variables goes beyond 4. In this case the
+number of rows in the truth table is $2^{4}=16$. The precedence of
+logical operators is negation, conjunction, disjunction.
 
 The implication is given by the symbol $\rightarrow$. Variations
 on the traditional implication of $p\rightarrow q$ include its \emph{converse}
 $q\rightarrow p$, the \emph{contraposative} $\lnot q\rightarrow\lnot p$,
 and the \emph{inverse} $\lnot p\rightarrow\lnot q$. A biconditional
-or bimplicational statement is a slightly more creative way to use
-the implication. A table of logical equivalances is provided in Figure\vref{fig:lawsOfLogic}.
+or implication statement is a slightly more creative way to use the
+implication. A table of logical equivalences is provided in Figure\vref{fig:lawsOfLogic}.
 
-Use of these laws can allow you to estabish an equivalance of complex
+Use of these laws can allow you to establish an equivalence of complex
 propositional statements with a more distilled simplified version.
 Propositional statements are said to be \emph{satisfiable} if some
-combination of truth assignments to the propostional variables makes
+combination of truth assignments to the propositional variables makes
 the statement true.
 
 \subsection{Predicate Calculus and Quantification Logic}
 
 Predicate logic is a generalization of propositional logic onto arbitrary
-statements. \emph{Propositonal functions} given by a capital letter
+statements. \emph{Propositional functions} given by a capital letter
 and a number of parameters are used to define propositional statements.
 An example, ``Computer $x$, is functioning properly'' would be
 written as $P(x).$ 
 
 Quantification expresses the extent to which a predicate is true over
 a range of elements. In English, the words all, some, many, none,
-and few are used in quantifications. The \emph{univeral quantification}
-symbol for all is given by $\forall$. The \emph{existential quantifiaction}
+and few are used in quantification's. The \emph{universal quantification}
+symbol for all is given by $\forall$. The \emph{existential quantification}
 symbol for exists is $\exists$. The statement $\forall xP(x)$ reads
 ``For all computers given by $x$, computer $x$is functioning properly.''
-If there is a single instance of a universal varaible which is false
+If there is a single instance of a universal variable which is false
 then the predicate becomes false. If for all instances of an existential
-varaibles the value is false then the statement is false. Quantification
+variables the value is false then the statement is false. Quantification
 operators have higher precedence than logical operators. Predicates
 used with quantifiers are said to be \emph{bound variables} while
 those without are said to be \emph{free variables}.
@@ -205,7 +230,7 @@ $\lnot\exists xP(x)\equiv\forall\lnot P($x).\tabularnewline
 \hline 
 \end{tabular}
 \par\end{centering}
-\caption{\label{fig:quantificationNegation} This table shows the equivalance
+\caption{\label{fig:quantificationNegation} This table shows the equivalence
 relations on predicates with quantification symbols.}
 
 \end{figure}
@@ -216,17 +241,19 @@ relations on predicates with quantification symbols.}
 The \emph{validity} of a proofs arguments are derived from the truth
 of the premises it offers. An argument in propositional logic is a
 sequence of propositions. All but the final proposition in the argument
-are called premises and the final proposition is called the conclusion.An
-argument is valid if the truth of all its premises implies that the
-conclusion is true. An argument form in propositional logic is a sequence
-of compound propositions involving propositional variables. An argument
-form is valid no matter which particular propositions are substituted
-for the propositional variables in its premises, the conclusion is
-true if the premises are all true. The rules of inference provide
-the templates of logical propostions which when given in a valid combitation
-yield valid arguments. The rules are given in Figure\vref{fig:inferenceRules}.
-Additonally the Rules of Inference applies to quantification logic
-as well as shown in the table.
+are called \emph{premises} and the final proposition is called the
+\emph{conclusion}. An argument is valid if the truth of all its premises
+implies that the conclusion is true. An argument form in propositional
+logic is a sequence of compound propositions involving \emph{propositional
+variables}. 
+
+An argument's form is valid no matter which particular propositions
+are substituted for the propositional variables in its premises, the
+conclusion is true if the premises are all true. The rules of inference
+provide the templates of logical propositions which, when given in
+a valid combination, yield valid arguments. The rules are given in
+Figure\vref{fig:inferenceRules}. Additionally, the Rules of Inference
+applies to quantification logic as well as shown in the table.
 
 \begin{figure}
 \begin{centering}
@@ -263,7 +290,7 @@ $\frac{\forall xP(x)}{\therefore P(c)}$ & Universal instantiation\tabularnewline
 \hline 
 $\frac{P(c)}{\therefore\forall xP(x)}$ for an arbitrary $c$ & Universal generalization\tabularnewline
 \hline 
-$\frac{\exists xP(x)}{\therefore P(c)}$ for some element $c$ & Existantial instantiation\tabularnewline
+$\frac{\exists xP(x)}{\therefore P(c)}$ for some element $c$ & Existential instantiation\tabularnewline
 \hline 
 $\frac{P(c)}{\therefore\exists xP(x)}$ & Existential generalization\tabularnewline
 \hline 
@@ -335,14 +362,14 @@ F & F & T\tabularnewline
 \end{tabular}
 \par\end{centering}
 \caption{\label{fig:implicationTruthTable} Truth table for the implication
-and its contraposition.}
+and its contraposative.}
 \end{figure}
 
 \begin{itemize}
 \item In juxtaposition to the direct proof we have the indirect proof techniques.
 Indirect proofs do not start with the assumption of the truth of the
 premise to derive the truth of the conclusion. The\emph{ Proof by
-Contraposition }technique takes advantage of the equivalance of the
+Contraposition }technique takes advantage of the equivalence of the
 contrapostion of the implication to prove the conclusion. That is,
 $\neg q\rightarrow\neg p\equiv p\rightarrow q$ as shown in Figure\vref{fig:lawsOfLogic}.
 The template for this type of proof is constructed by assuming the
@@ -357,12 +384,12 @@ on the fact the conclusion is true also show in row 3.
 $q=r\land\neg r$, such that $\neg p\rightarrow q$ is true. We must
 show that $p$is true by showing $\neg p$ is false so that we can
 target row 4 in the implication truth table. 
-\item \emph{Proofs of Equivalance }To prove a theorem that is a biconditional
+\item \emph{Proofs of Equivalence }To prove a theorem that is a biconditional
 statement, that is, a statement of the form $p\leftrightarrow q$,
 we show that $p\rightarrow q$ and $q\rightarrow p$. The validity
 of this approach is based on the tautology $(p\leftrightarrow q)\equiv(p\rightarrow q)\land(q\rightarrow p)$
 \item \emph{Proofs by Counterexample }in this type of proof we typically
-try to debunk the truth of a univeral quantifier over some predicate.
+try to debunk the truth of a universal quantifier over some predicate.
 If we find one instance is false, then we can conclude the predicate
 is false\emph{.}
 \item \emph{Proof by Cases and the Exhaustive Proof }sometimes using a single
@@ -376,12 +403,12 @@ proof technique relies on the following tautology.
 \item \emph{Existence Proofs }a proof of this type is of the form $\exists xP(x)$.
 This type of proof can be proven by providing a \emph{witness} $a,$
 a instance of $x$where $P(a)$ is true. This type of strategy is
-called a \emph{constructive} proof. A nonconstuctive existance uses
-some other means to prove that $\exists xP(x)$. Often contradition
+called a \emph{constructive} proof. A nonconstructive existence uses
+some other means to prove that $\exists xP(x)$. Often contradiction
 is used.
 \item \emph{Uniqueness Proofs }in this type of proof we show that a unique
 element with a particular property exists. These types of proofs are
-composed of two steps. First you must prove the existance of the element.
+composed of two steps. First you must prove the existence of the element.
 Then we show that if $y\neq x$, then $y$does not have the particular
 property of $x.$ Formally, uniqueness proofs are of the form:
 \[
@@ -419,7 +446,7 @@ The following general approach for constructing proofs is often helpful.
 \item Replace terms by their definitions.
 \item Analyze the hypothesis and conclusion.
 \item Attempt to construct the proof using the direct proof method, if the
-statement is a coditional statement.
+statement is a conditional statement.
 \begin{enumerate}
 \item If you fail to construct a direct proof, attempt to provide an indirect
 proof.
@@ -434,23 +461,408 @@ In a direct proof this is the method of choice. Indirect proofs often
 will often require backward reasoning. In backward reasoning we attempt
 to find a statement $p$that we can prove true with $p\rightarrow q.$
 
-\emph{Adapatation }of existing proofs is often a fruitful procedure.
+\emph{Adaptation }of existing proofs is often a fruitful procedure.
 Even if the final conclusions required are not the same, it may be
 constructive to look to the previous proves for ideas which may help
 in your new proof.
 
-\subsection{Sets\label{sec:Sets}}
+\subsection{Mathematical Structures: Sets, Sequences, Series, and Matrices\label{sec:Sets}}
+
+Mathematical structures are the foundation on which reasoning is carried
+out. In the following sections we cover sets, sequences, series and
+matricies.
+
+\subsubsection{Sets}
+
+A \emph{set} is an unordered collection of objects. A object is said
+to be \emph{contained} within a set when it is a member of the set.
+The epsilon symbol is used to denote membership in a set ( object
+$a$is in set $A$ is written $a\epsilon A$). A strikethrough on
+the episilon symbol means that the object is not a member of the set.
+
+Uppercase English letters traditionally denote the names of sets,
+while lowercase English letters represents objects of a set. Sets
+may be described by the \emph{roster method }which lists all the elements
+of the set explicitly surrounded by curly braces, or by using a \emph{set
+former} sometimes called \emph{set builder}. A set former works by
+specifing a variable that represents a member of the set followed
+by the characteristics of the variable. Often the name of the variable
+and the characteristics are seperated by a vertical bar or colon which
+should be read ``such that.''
+\begin{example*}
+$EQTM$=\{($M_{1}$,$M_{2}$) | $L(M_{1})=L(M_{2})\}$. This set former
+describes the set of pairs of Turing machines that have the same language.
+\end{example*}
+Often set formers will reference equivalance classes from number theory
+such as the rational numbers etc. A list of importance number classes
+is given below. These special sets are denoted by a special script
+font that distinquishes them from other sets.
+\begin{itemize}
+\item $\mathbb{N}=\{0,1,2,\ldots\}$. The set of natural numbers. Some regard
+0 as a natural number, others do not. Be sure to ask if there is any
+question.
+\item $\mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}$. The set of integers.
+The positive or negative superscript denotes the positve or negative
+subset of the integers. $\mathbb{Z}^{+}\subset\mathbb{Z},\mathbb{Z}^{-}\subset\mathbb{Z}$
+\item $\mathbb{Q=}$\{$\frac{p}{q}:p\epsilon\mathbb{Z}\land q\epsilon\mathbb{Z},q\neq0\}$.
+The set of rational numbers such that each is represented as a ratio
+of integers.
+\item $\mathbb{R}$ the set of real numbers, or the set of positive real
+numbers $\mathbb{R}^{+}$.
+\item $\mathbb{C}$ the set of complex numbers.
+\end{itemize}
+It is important to note the relationship amongst these sets. The diagram
+in Figure\ref{fig:numberClassification} is a good reference for reasoning
+about the relationships which comes in hany for writing proofs.
+
+Some other terminology often used includes the \emph{empty set }or
+a \emph{null set} which means a set of no elements. It is denoted
+by the symbol $\emptyset$. A \emph{singleton set} is a name for a
+set with a single element. A set is said to be a \emph{subset} if
+and only if every element of one set is also a member of the another
+set. The subset relationship represented by the symbol $\subseteq$.
+When we want to say that a set is a subset of another set, not necesarilly
+equivalent we use the proper subset symbol $\subset$.
+
+Sets $A$ and $B$ are said to be equivalant if $A\subseteq B$ and
+$B\subseteq A$, and the size of set is called its \emph{cardinality.
+}Cardinality is denoted by vertical bars surrounding the set name.
+
+The \emph{power set} of a set gives all combinations of subsets of
+a given set, and it is denoted as $2^{S}$ or $\mathcal{P}(S)$ where
+S is the set under consideration.
+\begin{example*}
+The powerset of $S=\{a,b,c\}$ $\mathcal{P}(S)=\{\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\}\}$ 
+\end{example*}
+The Cartesian product or Cross product of two sets denoted by $A\times B$
+(read ``A cross B'') is the set of ordered n-tuples $(a_{i},b_{j})$
+for $i\leq|A|$ and $j\leq|B|$. In more general terms the Cartesian
+product of the sets $A_{1},A_{2},\ldots,A_{n}$ denoted by $A_{1}\times A_{2}\times\ldots\times A_{n}$
+is the set of ordered n-tuples $(a_{1},a_{2},\ldots,a_{n})$, where
+$a_{i}$ belongs to $Ai$ for $1\leq i\leq n$. 
+
+The \emph{union} of the sets $A$ and $B$, denoted by $A\bigcup B$,
+is the set that contains those elements that are either in A or in
+B, or in both. Let A and B be sets. The \emph{intersection} of the
+sets $A$ and $B$, denoted by $A\bigcap B$, is the set containing
+those elements in both $A$ and $B$. Two sets are called \emph{disjoint}
+if their intersection is the empty set. The \emph{complement} of the
+set $A$. denoted by $\bar{A}$, is the complement of $A$ with respect
+to $U$. Therefore, the complement of the set $A$ is $U-A$. An illustration
+of the aforementioned set operations is given in figure below. A table
+of important set identities is given in Figure\vref{fig:setIdentites}.
+
+\begin{figure}
+\begin{centering}
+\begin{tabular}{|c|c|}
+\hline 
+Identity & Name\tabularnewline
+\hline 
+$A\bigcap U=A$ $A\bigcup\emptyset=A$ & Identity laws\tabularnewline
+\hline 
+$A\bigcup U=U$$A\bigcap\emptyset=\emptyset$ & Domination laws\tabularnewline
+\hline 
+$A\bigcup A=A$ $A\bigcap A=A$ & Idempotent laws\tabularnewline
+\hline 
+$\overline{(\overline{A})}=A$ & Complementation law\tabularnewline
+\hline 
+$A\bigcup B=B\bigcup A$ $A\bigcap B=B\bigcap A$ & Communative laws\tabularnewline
+\hline 
+$A\bigcup(B\bigcup C)=(A\bigcup B)\bigcup C$ $A\bigcap(B\bigcap C)=(A\bigcap B)\bigcap C$ & Associative laws\tabularnewline
+\hline 
+$A\bigcup(B\bigcap C)=(A\bigcup B)\bigcap(A\bigcup C)$ $A\bigcap(B\bigcup C)=(A\bigcap B)\bigcup(A\bigcap C)$ & Distributive laws\tabularnewline
+\hline 
+$\overline{A\bigcap B}=\bar{A}\bigcup\bar{B}$ $\overline{A\bigcup B}=\bar{A}\bigcap\bar{B}$ & De Morgan's laws\tabularnewline
+\hline 
+$A\bigcup(A\bigcap B)=A$ $A\bigcap(A\bigcup B)=A$ & Absorption laws\tabularnewline
+\hline 
+$A\bigcup\bar{A}=U$ $A\bigcap\bar{A}=\emptyset$ & Complement laws\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{\label{fig:setIdentites}The table lists important set identites.
+Refer to these when writing proofs.}
+
+\end{figure}
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.5]{Diagrams/setOperations}
+\par\end{centering}
+\caption{\label{fig:setOperations}The intersection is given by the darkly
+shaded region. The union is given by all the shaded regions in the
+left-most figure. This figure demonstrates the idea that elements
+of the union count the elements of the intersection twice. The difference
+is given by the right-most figure. The intersection is equivalent
+to $A\bigcap\bar{B}$.}
+\end{figure}
+
+Understanding countability of sets is critical. The notion of counting
+as it pertains to counting in sets is called a sets cardinality. As
+we have seen in previous sections sets may be finite or infinite.
+In the case of infinite sets the notion of counting to infinity seems
+rather abstract. In fact, the notion of infinity is not unique in
+itself there are infinities that are countable and those that are
+uncountable. Mathematicians refer to these ideas as \emph{countably
+infinte} and \emph{uncountably infinite}.
+
+The sets $A$ and $B$ have the same cardinality if and only if there
+is a \emph{one-to-one correspondence} from $A$ to $B$. When $A$
+and $B$ have the same cardinality, we write $|A|=|B|$. When we apply
+this definition to finite sets it seems quite intuitive, however when
+applying this definition to an infinite set a novice students will
+be quite perplexed. Cardinality as it applies to infinite sets informs
+us of the relative size of sets under consideration. The purpose of
+a correspondence function is to establish some footing as to the relative
+size of one set versus another. 
+
+If there is a \emph{one-to-one} function from $A$ to $B$, the cardinality
+of $A$ is less than or the same as the cardinality of $B$ and we
+write $|A|\leq|B|$. Moreover, when $|A|\leq|B|$ and $A$ and $B$
+have different cardinality, we say that the cardinality of $A$ is
+less than the cardinality of $B$ and we write $|A|<|B|$.
+\begin{itemize}
+\item A set that is either finite or has the same cardinality as the set
+of positive integers is called \emph{countable}. A set that is not
+countable is called \emph{uncountable}.When an infinite set $S$ is
+countable, we denote the cardinality of S by $\aleph_{0}$ (where
+$\aleph$ is aleph, the first letter of the Hebrew alphabet, pronounced
+'\textscripta \textlengthmark l\textepsilon f''). We write $|S|=\aleph_{0}$.
+\end{itemize}
+\textbf{Hilbert's Grand Hotel} is classical example of the principles
+of countablility. Hilbert's Grand Hotel is a hotel with a countably
+infinite number of rooms such that the hotel when fully occupied by
+guests can accomadate a finitely many number of new guests or a countably
+infinite number of new guests without evicting any current tenants
+(quite a bizzare notion).
+
+The Schöder-Bernstein Theorem states that if $A$ and $B$ are sets
+with $|A|\le|B|$ and $|B|\le|A|$, then $|A|=|B|$. In other words,
+if there are one-to-one functions $f$ from $A$ to $B$ and $g$
+from $B$ to $A$, then there is a one-to-one correspondence between
+$A$ and $B$. Rosen refers us to Velleman for a proof of this theorem.
+
+The Continuum Hypothesis 
+
+\subsubsection{Sequences and Summations}
+
+A sequence is a function from a subset of the set of integers (usually
+either the set $\{0,1,2,\ldots\}$or the set $\{1,2,3,\ldots\}$)
+to a set S. We use the notation $a_{n}$ to denote the image of the
+integer $n$. We call $a_{n}$a term of the sequence. \href{https://oeis.org/}{The Online Encyclopedia of Integer Sequences}
+is a useful source for getting background information on notable integer
+sequences.
+
+\begin{figure}
+\begin{centering}
+\begin{tabular}{|c|c|}
+\hline 
+Summations & Closed Form\tabularnewline
+\hline 
+\hline 
+$\sum_{k=0}^{n}ar^{k},(r\neq0)$ & $\frac{ar^{n+1}-a}{r-1},r\neq1$\tabularnewline
+\hline 
+$\sum_{k=1}^{n}k$ & $\frac{n(n+1)}{2}$\tabularnewline
+\hline 
+$\sum_{k=1}^{n}k^{2}$ & $\frac{n(n+1)(2n+1)}{6}$\tabularnewline
+\hline 
+$\sum_{k=1}^{n}k^{3}$ & $\frac{n^{2}(n+1)^{2}}{4}$\tabularnewline
+\hline 
+$\sum_{k=0}^{\infty}x^{k},|x|<1$ & $\frac{1}{1-x},x\neq1$\tabularnewline
+\hline 
+$\sum_{k=1}^{\infty}kx^{k-1},|x|<1$ & $\frac{1}{(1-x)^{2}}$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{\label{fig:usefulSums}Rosen provides a table of useful sums.}
+
+\end{figure}
+
 
 \subsection{Relations\label{sec:Relations}}
 
 \subsection{Functions\label{sec:Functions}}
 
-\subsection{Induction\label{sec:Induction}}
+A \emph{function} (sometimes called a \emph{mapping} or \emph{transformation})
+\emph{$f$ }from $A$ to $B$ is an assignment of exactly one element
+of $B$ to each element of $A$. We write $f(a)=b$ if $b$ is the
+unique element of $B$ assigned by the function $f$ to the element
+$a$of $A$.
 
-\subsection{Modular Arithmatic}
+If $f$is a function from $A$ to $B,$we writed $f:A\rightarrow B$.
+If $f$ is a function from $A$ to $B$, we say that $A$ is the domain
+of $f$and $B$ is the codomain of $f$. If $f(a)=b$, we say that
+b is the image of $a$and $a$is a preminage of $b$. The \emph{range
+}, or \emph{image,} of $f$ is the set of all images of elements of
+$A$. Also, if $f$ is a function from $A$ to $B$, we say htat $f$
+\emph{maps $A$ to $B$. }The range is a subset of the codomain, and
+the image is a memeber of the range.
+
+\subsubsection{One-to-One and Onto Functions and Their Nature}
+
+Given sets $A$ and $B,$ a function $f$ is said to be \emph{one-to-one,
+}or \emph{injuction}, if and only if $f(a)=f(b)$ imples that $a=b$
+for all $a$and $b$ in the domain of $f$. A function is said to
+be \emph{injective }if it is one-to-one. A function is injecitve if
+and only if it takes on different images for all elements in its domain.
+Figure\vref{fig:classesOfFunctions} shows examples of each combination
+of function and a description as to why they are classified as such.
+
+A function $f$ from $A$ to $B$ is called \emph{onto, }or a \emph{surjection,
+}if and only if\emph{ }for every element $b\epsilon B$ there is an
+element $a\epsilon A$ with $f(a)=b$. A function $f$ is called surjective
+if it is onto. The function $f$ is a \emph{one-to-one correspondence},
+or a \emph{bijection}, if it is surjective and injective. A function
+of this type is called \emph{bijective}. Visually, this is shown in
+Figure
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.5]{Diagrams/visualizeFunctionClasses}
+\par\end{centering}
+\caption{\label{fig:visualizeFunctionClasses}Bijective functions are in the
+intersection fo the Injective and Surjective functions.}
+
+\end{figure}
+
+A function $f$ whose domain and codomain are subsets of the set of
+real numbeers is called \emph{increasing} if $f(k)\leq f(k+1)$, and
+\emph{strictly increading} if $f(k)<f(k+1)$. Similiarly, $f$ is
+\emph{decreaseing} if $f(k)\geq f(k+1)$, and \emph{strictly decreasing
+}if $f(k)>f(k+1)$.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.3]{Diagrams/ClassesOfFunctions}
+\par\end{centering}
+\caption{\label{fig:classesOfFunctions} A) The function given by this figure
+is injective because elements of the range map to distinct elements
+of the domain. However, it is not surjective because not all elements
+of the range have a corresponding element in the range. Namely, $2$
+is not mapped to an element of the domain. B) The function given by
+this figure is surjective because every element in the range has been
+mapped. However, it is not injective because the mapping is not distinct.
+Both $a$and $d$ of the domain map to $2$ in the range. C) The function
+given by this figure is both injective and surjective, and therefore
+it is a bijection. D) This figure does not model a function that is
+eigher a injective or surjective, and therefore it is not a bijection.
+D) This figure violates the definition of a function. }
+
+\end{figure}
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.5]{Diagrams/numberClasses}
+\par\end{centering}
+\caption{\label{fig:numberClassification}The diagram shows the hierarchy of
+numbers classified into subsets of the complex numbers.}
+
+\end{figure}
+
+
+\subsubsection{Composition of Functions}
+
+Let $g$ be a function from the set $A$ to the set $B$and let $f$
+be a function from the set $B$ to the set $C$. The \emph{composition
+}of the functions $f$ and $g$, denoted for all $a\epsilon A$ by
+$f\circ g$. This notation is read ``$f$ of $g$.'' Mathematically,
+we then have 
+\[
+(f\circ g(a))=f(g(a))
+\]
+
+Rosen demonstrates this idea with a beautiful depiction of function
+composition here given by Figure\vref{fig:functionComposition}.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.5]{Diagrams/functionComposition}
+\par\end{centering}
+\caption{\label{fig:functionComposition}The composition of $f$ of $g$. Note
+the dependence of the mapping of $f$ by that of $g$. }
+
+\end{figure}
+
+
+\subsection{The Growth of Functions and Time Complexity}
+
+\subsubsection{Big-O Notation}
+
+Let $f$ and $g$ be functions from the set of integers or the set
+of real numbers to the set of real numbers. We say that $f(x)$is
+$O(g(x))$ if there are constants $C$and $k$ such that 
+
+\[
+|f(x)|\leq C|g(x)|,x>k
+\]
+
+The constancs $C$ and $k$ are called witnesses to the relationship
+between $f(x)$and $O(g(x))$.
+
+\subsubsection{Big-$\Omega$ and Big-$\Theta$ Notation}
+
+\subsubsection{Time Complexity}
+
+\subsection{Recursion and Induction\label{sec:Induction}}
+
+Inductive mathematical proofs use the true of the basis step and the
+truth of a statement implying that if $P(k)$ is true then $P(k+1)$
+is also true. When the implication can be proven then we can say for
+all integers $n$ the statement $P$ holds true. Rosen provides a
+good template for creating proofs using induction. The template follows:
+\begin{enumerate}
+\item Express the statement that is to be proved in the form \textquotedblleft for
+all $n\ge b,P(n)$\textquotedblright , for a fixed integer $b$.
+\item Write out the words \textquotedblleft Basis Step.\textquotedblright{}
+Then show that $P(b)$ is true, taking care that the correct value
+of $b$ is used. This completes the first part of the proof.
+\item Write out the words \textquotedblleft Inductive Step.\textquotedblright{}
+\item State, and clearly identify, the inductive hypothesis, in the form
+\textquotedblleft assume that $P(k)$ is true for an arbitrary fixed
+integer $k\ge b$.\textquotedblright{}
+\item State what needs to be proved under the assumption that the inductive
+hypothesis is true. That is, write out what $P(k+1)$ says.
+\item Prove the statement $P(k+1)$ making use the assumption $P(k)$. Be
+sure that your proof is valid for all integers $k$ with$k\ge b$,
+taking care that the proof works for small values of $k$, including
+$k=b$.
+\item Clearly identify the conclusion of the inductive step, such as by
+saying \textquotedblleft this completes the inductive step.\textquotedblright{} 
+\item After completing the basis step and the inductive step, state the
+conclusion, namely that by mathematical induction, $P(n)$ is true
+for all integers $n$ with $n\ge b$.
+\end{enumerate}
+\begin{itemize}
+\item You can find a good review of \href{http://tutorial.math.lamar.edu/getfile.aspx?file=B,31,N}{algebratic simplification rules}
+at the given link.
+\end{itemize}
+
+\subsubsection{Strong Induction and Well-Ordering}
+
+To prove that $P(n)$is true for all positive integers $n$, where
+$P(n)$ is a propositional function, we complete two steps:
+\begin{itemize}
+\item \emph{Basis Step}: We verify that the proposition $P(1)$ is true.
+\item \emph{Inductive Step: }We show that the conditional statement $[P(1)\land P(2)\land\ldots\land P(k)]\rightarrow P(k+1)$
+is true for all positive integers $k.$
+\end{itemize}
+A good example of the use of strong induction is the proof of the
+Fundamental Theorem of Arithmatic. The theorem states all integers
+$n$ can be written as the product of two primes.
+\begin{thm}
+An integer n can be written as the product of two primes.
+\end{thm}
+The\emph{ well-ordering property} states that every nonempty set of
+nonnegative integers has a least element.
+
+\subsection{Modular Arithmetic}
 
 Figure\vref{fig:moduluarArithmatic} gives an overview of basic modular
-arithmatic operations.
+arithmetic operations. This becomes useful for primality testing. 
+
+\subsubsection{Miller-Rabin Compositeness Test}
+
+//TODO give details on Miller-Rabin
 
 \begin{figure}
 \begin{centering}
@@ -474,47 +886,364 @@ Modular Multiplication & $(a\cdot b)\%c\equiv(a\%c\cdot b\%c)\%c$\tabularnewline
 \end{tabular} 
 \par\end{centering}
 \caption{\label{fig:moduluarArithmatic}This table gives an overview of useful
-modular arithmatic equations}
+modular arithmetic equations}
 \end{figure}
 
 
-\section{Calculus and Real Analysis}
-
-\subsection{Sequences and Series}
-
-\subsection{Topology of Real Numbers}
-
-\subsection{Functional Limits and Continuity}
-
-\subsection{Derivatives}
-
-\subsection{Sequences and Series of Functions}
-
-\subsection{Rieman Integral}
-
-\subsection{Cantor Diagonalization}
-
-\section{Probability and Statistics\label{sec:Probability-and-Odds}}
-
-\subsection{Discrete Probability Distributions}
-
-\subsection{Continuous Probability Distributions}
-
 \subsection{Combinatorics}
 
-\subsection{Condiational Probability}
+You can use counting techniques to answer a variety of questions.
+Learning how to account for the time complexity of algorithm will
+be very useful in this course.
 
-\subsection{Expected Value and Variance}
+\subsubsection{The Product Rule}
 
-\subsection{Sample Space and Probability}
+The product rule is used to count when counting separate tasks. You
+should apply this rule when counting nested for loops. Suppose that
+a procedure can be broken down into a sequence of two tasks. If there
+are$n_{1}$ ways to do the first task and for each of these ways of
+doing the first task, there are $n_{2}$ ways to do the second task,
+then there are $n_{1}n_{2}$ ways to do the procedure.
+\begin{thm}
+Suppose that a procedure is carried out by performing the tasks $T_{1},T_{2},\ldots,T_{m}$
+in sequence. If each task $T_{i}$ , $i=1,2,\ldots,m$ can be done
+in $n_{i}$ ways, regardless of how the previous tasks were done,
+then there are $n_{1}\cdot n_{2}\cdot\ldots\cdot n_{m}$ ways to carry
+out the procedure.
+\end{thm}
+\begin{proof}
+//TODO Provide an inductive proof of the Product Rule.
+\end{proof}
+\begin{example}
+Assigning tasks to employees. Suppose you hire two employees Ralph
+and Loretta. You are tasked with assigning cleaning responsibilities
+of $n$ rooms among the two employees. How many ways can you assign
+the responsibilities among the employees?
+\end{example}
+\begin{sol*}
+The first employee you select is unrestricted in the number of rooms
+to clean. Therefore $n$ rooms may be cleaned by this employee. The
+next employee has $n-1$different rooms to clean.
+\end{sol*}
 
-\subsection{Discrete Random Variables}
+\subsubsection{The Sum Rule}
 
-\subsection{General Random Variables}
+If a task can be done either in one of $n_{1}$ ways or in one of
+$n_{2}$ ways, where none of the set of $n_{1}$ ways is the same
+as any of the set of $n_{2}$ ways, then there are $n_{1}+n_{2}$
+ways to do the task. The key things to look for are a disjunction
+of disjoint ways to do a task. Use this rule when counting the number
+of steps in a number of sequential for loops. The Sum Rule can be
+generalized to $m$ tasks as follows. 
+\begin{thm}
+Suppose that a task can be done in one of $n_{1}$ ways, in one of
+$n_{2}$ ways, $\ldots$ ,or in one of $n_{m}$ ways, where none of
+the set of $n_{i}$ ways of doing the task is the same as any of the
+set of $n_{j}$ ways, for all pairs $i$ and $j$ with $1\leq i<j\leq m$.
+Then the number of ways to do the task is $n_{1}+n_{2}+\ldots+n_{m}$. 
+\end{thm}
+\begin{proof}
+//TODO Provide an inductive proof of the Sum Rule.
+\end{proof}
 
-\subsection{Limit Theorems}
+\subsubsection{The Subtraction Rule or The Inclusion Exclusion Principle}
 
-\section{Linear Algebra and Integer Linear Programming\label{sec:Linear-Programming}}
+If a task can be done in either $n_{1}$ ways or $n_{2}$ ways, then
+the number of ways to do the task is $n_{1}+n_{2}$ minus the number
+of ways to do the task that are common to the two different ways.
+This rule is often called the principle of inclusion-exclusion especially
+when considering the union of sets.
+
+\[
+|A_{1}\bigcup A_{2}|=|A_{1}|+|A_{2}|-|A_{1}\bigcap A_{2}|
+\]
+
+
+\subsubsection{The Division Rule}
+
+There are$n/d$ ways to do a task if it can be done using a procedure
+that can be carried out in $n$ ways, and for every way $w$, exactly
+$d$ of the $n$ ways correspond to way $w$.
+
+\subsubsection{The Pigeonhole Principle (Dirichlet Drawer Principle)}
+\begin{thm}
+If N objects are placed into k boxes, then there is at least one box
+containing at least $\left\lceil N/k\right\rceil $ objects.
+\end{thm}
+\begin{proof}
+We will use a proof by contrapostion. Suppose that none of the boxes
+contains more than $\left\lceil N/k\right\rceil -1$ objects. Then,
+the total number of objects is at most
+
+\[
+k\left(\left\lceil \frac{N}{k}\right\rceil -1\right)<k\left(\left(\frac{N}{k}-1\right)+1\right)=N
+\]
+This is a contradiction because at most$\left\lceil N/k\right\rceil -1$
+were claimed and yet the total is $N.$
+\end{proof}
+\begin{cor}
+A function f from a set with k +1 or more elements to a set with k
+elements is not one-to-one.
+\end{cor}
+\begin{proof}
+Suppose that for each element $y$ in the codomain of $f$ we have
+a box that contains all elements $x$ of the domain of $f$ such that
+$f(x)=y$. Because the domain contains $k+1$ or more elements and
+the codomain contains only $k$ elements, the pigeonhole principle
+tells us that one of these boxes contains two or more elements $x$
+of the domain. This means that $f$ cannot be one-to-one.
+\end{proof}
+
+\subsection{Permutations and Combinations}
+
+A \emph{permutation} of the elements of a set is an ordered arrangement
+of the elements in the set. A \emph{r-permuation }of a set $S$ is
+a permutation of a subset $R\subseteq S$ where $r=|R|$.
+
+An unordered selection of elements of a set is called a \emph{combination.}
+An \emph{r-combination} of elements of a set is an unordered selection
+of \emph{r} elements from the set.
+
+A combinatorial proof of an identity is a proof that uses counting
+arguments to prove that both sides of the identity count the same
+objects but in different ways or a proof that is based on showing
+that there is a bijection between the sets of objects counted by the
+two sides of the identity. These two types of proofs are called double
+counting proofs and bijective proofs, respectively.
+
+\begin{figure}
+\begin{centering}
+\begin{tabular}{|c|c|c|}
+\hline 
+Type & Repetition Allowed? & Formula\tabularnewline
+\hline 
+\hline 
+r-permutations & No & $\frac{n!}{(n-r)!}$\tabularnewline
+\hline 
+r-combinations & No & $\frac{n!}{r!(n-r)!}$\tabularnewline
+\hline 
+r-permutations & Yes & $n^{r}$\tabularnewline
+\hline 
+r-combinations & Yes & $\frac{(n+r-1)!}{r!(n-1)!}$\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{\label{fig:permCombFormulas}Formulas for calculating permutations
+and combinations.}
+
+\end{figure}
+
+
+\subsection{Probability and Statistics\label{sec:Probability-and-Odds}}
+
+First we introduce some nomenclature for this domain of study. 
+\begin{itemize}
+\item An \emph{experiment} is a procedure that yields one of a given set
+of possible outcomes.
+\item The\emph{ sample space} of the experiment is the set of possible outcomes.
+\item An \emph{event} is a subset of the sample space.
+\end{itemize}
+Laplace defines the probability of an event as given a set S, a finite
+nonempty sample space, of equally likely outcomes, and $E$ is an
+event, that is, $E\subseteq S$, then the probability of $E$ is $p(E)=\frac{|E|}{|S|}.$
+The probability of the complement of an event is $\bar{E}=S-E$, and
+the complementary event is given by $p(\bar{E})=1-p(E)$.
+
+We can find the probability of the union of events by adding their
+probabilities and subtracting the intersection of the events. 
+\[
+p(E_{1}\bigcup E_{2)}=p(E_{1})+p(E_{2})-p(E_{1}\bigcap E_{2}).
+\]
+
+
+\subsubsection{Nonuniform Probability}
+
+In the previous section we operated under the conditions of equal
+probability for each event in the sample space. However, many questions
+may be posed where this is not the case. To account for nonuniform
+probability of events we must introduce two constraints on the members
+of the sample pace $S$.
+\begin{enumerate}
+\item $0\leq p(s)\leq1$, The probability of each element in the samples
+space must be between 0 and 1.
+\item $\sum_{s\epsilon S}p(s)=1$, The sum of the probabilities of each
+element of $S$ must be 1.
+\end{enumerate}
+
+\subsubsection{Conditional Probability}
+
+Let $E$ and $F$ be events with $p(F)>0$. The conditional probability
+of $E$ given $F$, denoted by $p(E|F).$
+
+\[
+p(E|F)=\frac{p(E\bigcap F)}{p(F)}
+\]
+
+\emph{Independent events} are events that do not affect each other.
+When two events are independent, the occurrence of one of the events
+gives no information about the probability that the other event occurs.
+Mathematically, if $p(E)=p(E|F)$ then the events $E$ and $F$ are
+said to be independent.
+
+Pairwise independence is defined as follows: The events $E_{1},E_{2},\ldots,E_{n}$
+are \emph{pairwise independent }if and only if $p(E_{i}\bigcap E_{j})=p(E_{i})p(E_{j})$
+for all integers $i$ and $j$ with $1\leq i<j\leq n$. Events are
+said to be \emph{mutually independent }if the following is true
+\[
+(E_{i_{1}}\bigcap E_{i_{2}}\bigcap\ldots\bigcap E_{i_{m}})=p(E_{i_{1}})p(E_{i_{2}})\ldots p(E_{i_{m}})
+\]
+when for $i_{j}$, $1<j\leq m$ and $1\leq i_{1}<i_{2}<\ldots<i_{m}\leq n$.
+It should be noted that all mutually independent events are also pairwise
+independent, but not all pairwise independent events are mutually
+independent.
+
+\subsubsection{Bernoulli Trials}
+
+An experiment that only has two possible outcomes is called a \emph{Bernoulli
+trial. }Bernoulli trials consist of independent events. Examples of
+such experiments include flipping a coin and generating bits at random.
+\begin{thm}
+The probability of exactly k successes in n independent Bernoulli
+trials, with probability of success p and probability of failure q
+= 1\textminus p, is
+
+\[
+C(n,k)p^{k}q^{n-k}
+\]
+\end{thm}
+\begin{proof}
+When $n$ Bernoulli trials are carried out, the outcome is an n-tuple
+$(t_{1},t_{2},\ldots,t_{n)}$. Wherefore $t_{i}$, from $1\leq i\leq n$
+each is denoted $S$ in a successful trial and $F$ in a failed trial.
+Because the $n$ trials are independent the probability of $k$ success
+and $n-k$ failures is $p^{k}q^{n-k}$. Further, there are $C(n,k)$tuples
+in which there are $k$ successes, and so the probability is $C(n,k)p^{k}q^{n-k}$.
+\end{proof}
+
+\subsubsection{Random Variables}
+
+(Possibly the most poorly named concept in mathematics) A random variable
+is a \emph{function} from the sample space of an experiment to the
+set of real numbers. That is, a random variable assigns a real number
+$r$ to each possible outcome.
+
+The distribution of a random variable $X$ on a sample space $S$
+is the set of pairs $(r,p(X=r))$ for all $r$ $\epsilon$ $X(S)$,
+where $p(X=r)$ is the probability that $X$ takes the value $r$.
+(The set of pairs in this distribution is determined by the probabilities
+$p(X=r)$ for $r\in X(S).)$
+
+\subsubsection{Probablistic Algorithms}
+
+Probabilitic algorithms are algorithims that make a random choice
+at some step during computation. This strikes a contrast with determinitic
+algorithms which proceed step by step with each successive step defined
+explicitly by the source code. For a sufficiently large number of
+computations the chances that a probabilitic algorithm will yield
+a correct answer to a decision problem increases dramatically. Probablistic
+algorithms are traditionally classified as Monte Carlo type or Las
+Vegas type algorithms.
+
+\subsubsection{Monte Carlo Algorithms}
+
+For a sufficiently large number of computations the chances that a
+Monte Carlo algorithm will yield a correct answer to a decision problem
+increases dramatically. However, a chance remains that an incorrect
+answer will be given. During the computation of a Monte Carlo algorithm
+a series of tests are run that return a either true, false, or unknown.
+After a sufficient number of iterations are run if any of the tests
+returned a true response then the algorithm will respond in the affirmative.
+However if every test responded with an unkown status then the algorithm
+will respond false.
+
+\subsubsection{Las Vegas Algorithms}
+
+\subsubsection{The Probabilistic Method}
+
+The Pobablistic Method states that if the probability that an element
+chosen at random from a $S$ does not have a particular property is
+less than 1 (the is some uncertantity), then there exists an element
+in S with this property.
+
+\subsubsection{Expected Value and Variance}
+
+The \emph{expected value} of a random varariable (chance function)
+is the sum over all the elements of the sample space of the probability
+of the element times the value of the random variable at this element
+(i.e. it is the weighted average of the random variable). The expected
+value gives us a targeted value at which the distribution of the random
+variable's probability curve. Formally, the expected value, also called
+the expectation or mean, of the random value $X$on the sample space
+$S$ is equal to:
+\[
+E(X)=\sum_{s\epsilon S}p(s)X(s)
+\]
+ The \emph{deviation }of X at $s\epsilon S$ is $X(s)-E(x)$, the
+difference between the value of $X$and the mean of $X.$
+
+In cases where computing the expected value directly is infeasible
+because the size of the sample space is too large we can use the following
+theorem to compute the expected value by grouping outcomes by their
+value and multiplying them times their respective probabilities.
+\begin{thm}
+If X is a random variable and p(X=r) is the probability that X will
+be r, so that the $\sum_{s\epsilon S,X(s)=r}p(s)$, then:
+
+\[
+E(X)=\sum_{r\epsilon X(S)}p(X=r)r
+\]
+\end{thm}
+\begin{proof}
+Suppose that $X$ is a random variable with range $X(S)$, and let
+$p(X=r)$ be the probability that the random variable $X$ takes the
+value $r$. Consequently, $p(X=r)$ is the sum of the probabilities
+of the outcomes $s$ such that $X(s)=r$. It follows that
+
+\[
+E(X)=\sum_{r\epsilon X(S)}p(X=r)r
+\]
+\end{proof}
+\begin{thm}
+The Linearity of Expectations states that if for a random variable
+$X_{i}$, $i=1,2,\ldots n$, are random variables on the sample space
+$S$. and if $a$and $b$ are real numbers then
+\end{thm}
+\begin{enumerate}
+\item 
+\[
+E(X_{1}+X_{2}+\ldots+X_{3})=E(X_{1})+E(X_{2})+\ldots+E(X_{n})
+\]
+\item 
+\[
+E(aX+b)=aE(X)+b
+\]
+\end{enumerate}
+Variance tells us the spread of the values of the random variable.
+Let X be a random variable on a sample space S. The variance of X,
+denoted by V(X), is:
+
+\[
+V(X)=\sum_{s\epsilon S}(X(s)-E(X))^{2}p(s)
+\]
+
+
+\subsubsection{Chebyshev's Inequality}
+
+Chebyshev's inequality helps us answer how likely it is that the outcome
+of a random variable will be significanyly more than its expected
+value. Chebychev provides an upper bound on the probability that the
+value of a random variable differs from the expected value of the
+random variable by more than a specified amount.
+\begin{thm}
+Let X be a random variable on a sample space S with probability function
+p. If r is a positive real number, then
+
+\[
+p(|X(s)-E(X)|\ge r)\le V(X)/r^{2}.
+\]
+\end{thm}
+
+\section{Linear Algebra\label{sec:Linear-Programming}}
 
 \subsection{Linear Equations in Linear Algebra}
 
@@ -532,11 +1261,11 @@ modular arithmatic equations}
 
 \subsection{Geometry of Vector Spaces}
 
-\subsection{Basic Properties of Linear Progams}
+\subsection{Basic Properties of Linear Programs}
 
 \subsection{The Simplex Method}
 
-\subsection{Duality and the Complementarity}
+\subsection{Duality and the Complementary}
 
 \subsection{Interior Point Methods}
 
@@ -553,49 +1282,63 @@ of states.
 
 \subsection{Notation of DFA's\label{subsec:Notation-of-DFA's}}
 
-Traditionally finite automata\index{automata} are expressed by a
-tuple of sets which express its behavior. The tuple, for example $L=(Q,\Sigma,\delta,q_{0},F)$,
-contains information on the states expressed by the set Q, the input
-alphabet\index{alphabet} expressed by the set $\Sigma$, the transitions\index{transitions}
-expressed by the function $\delta$, the starting state given by $q_{0}$,
-and the set of final states given by $F$. An example of a finite
-automata can be seen in Figure\ref{fig:productDFA}. Strings are typically
-represented by variables of lowercase letters at the end of the alphabet
-( w, x, y, and z) whereas characters are represented variables of
-lowercase letters at the beginning of the English alphabet ( a, b,
-and c). $\Sigma^{*}$ represents the set of all strings over the alphabet
-$\Sigma$ including the empty string\textendash the super-script star
-symbol is referred to as the Kleene star\index{Kleene star}. The
-empty string is denoted by the epsilon symbol $\epsilon$. The empty
-string denotes a string of length 0, a string of no characters. Length
-is often expressed by vertical bars surrounding the string in question,
-such as $|w|$. A transition function $\delta$ takes two parameters,
-a state and an input symbol, and returns the next state to which the
-automaton should transition on input of the symbol ( i. e $\delta(q,$a)). 
+Traditionally, finite automata\index{automata} are expressed by a
+tuple which express its behavior. The tuple, for example $L=(Q,\Sigma,\delta,q_{0},F)$.
+\begin{itemize}
+\item The contains information on the states expressed by the set Q.
+\item The input alphabet\index{alphabet} expressed by the set $\Sigma$.
+\item The transitions\index{transitions} expressed by the function $\delta$.
+\item The starting state given by $q_{0}$.
+\item The set of final states given by $F$. 
+\end{itemize}
+An example of a finite automata can be seen in Figure\ref{fig:productDFA}.
+Strings are typically represented by variables of lowercase letters
+at the end of the alphabet \emph{(w, x, y, and z).} Whereas, characters
+are represented variables of lowercase letters at the beginning of
+the English alphabet \emph{(a, b, and c).} 
+
+$\Sigma^{*}$ represents the set of all strings over the alphabet
+$\Sigma$ including the empty string, $\varepsilon$. The super-script
+star symbol is referred to as the Kleene star\index{Kleene star}.
+The empty string denotes a string of length 0, a string of no characters
+``''.
+
+Length, sometimes called cardinality, is often expressed by vertical
+bars surrounding the string in question, such as $|w|$.
+
+A transition function $\delta$ takes two parameters, a state and
+an input symbol, and returns the next state to which the automaton
+should transition on input of the symbol ( i. e. $\delta(q,$a)). 
 
 \subsection{Computation of DFA's\label{subsec:Computation-of-DFA's}}
 
 Given a finite automata, computation can be carried out on an input
 string by processing each character of the input one-by-one and following
-the transitions based on the input character. by Upon encountering
-the last character in the input string computation stops and based
-on whether the state is a final state (accepting state) or a nonaccepting
-state, the string is either accepted or rejected. Accepted strings
-are said to be in the language of the automaton rejected strings are
-not in the language. Given an automaton $A$ the language of $A$
-is denoted $L(A)$. A language is a subset of 
+the transitions based on the input character. Upon encountering the
+last character in the input string computation stops. The string is
+either accepted or rejected and based on whether the state is a final
+state (accepting state) or a nonaccepting state. 
+
+Accepted strings are said to be in the language of the automaton,
+and rejected strings are not in the language. Given an automaton $A$
+the language of $A$ is denoted $L(A)$. A language is a subset of
+$\Sigma^{*}$.
 
 \subsection{Regular Languages\label{subsec:Regular-Languages}}
 
-A language is a regular language\index{regular language} if it is
-accepted by some \index{deterministic finite automata (DFA}deterministic
-finite automata (DFA). A caveat here is that the DFA must accept only
-those strings in the language it models and no others. Nonregular
-languages are those that cannot be modeled by a DFA. Examples of nonregular
-languages are those that require automata to count beyond a finite
-number of states. The classical example is the language L = \{$0^{n}1$$^{n}$
-| $n\geq1$\}. DFA's cannot check for the same number of symbols in
-a string or balanced parenthesis. This job falls to context free grammars.
+\emph{A language is a regular language\index{regular language} if
+it is accepted by some \index{deterministic finite automata (DFA}deterministic
+finite automata (DFA)}. A caveat here is that the DFA must accept
+only those strings in the language it models and no others.
+
+Nonregular languages are those that cannot be modeled by a DFA. Examples
+of nonregular languages are those that require automata to count beyond
+a finite number of states. 
+
+The classical example is the language L = \{$0^{n}1$$^{n}$ | $n\geq1$\}.
+DFA's cannot check for the same number of symbols in a string or balanced
+parenthesis. This job falls to context free grammars (CFG) outlined
+in section \vref{sec:contextFreeGrammars}.
 
 \section{Nondeterministic Finite Automata\label{sec:Nondeterministic-Finite-Automata}}
 
@@ -622,20 +1365,25 @@ and $q_{3}$ at the same time. }
 \subsection{Proof of Equivalence of NFA's and DFA's\label{subsec:Proof-of-Equivalence}}
 
 The proof of equivalence between DFA's and NFA's is often called the
-Subset Construction. In the succeeding proof given a NFA the states
-$Q_{N}$, inputs $\Sigma$, transition function $\delta_{N}$, start
-state q, and final states $F$. The set of states of the constructed
-DFA $Q_{D}$ = 2$^{Q_{N}}$, that is the power set of the set of states
-of the NFA. A power set of a set is defined as the set of all possible
-subsets of a given set. The inputs to the DFA will be the same as
-the inputs of the NFA, $\Sigma$. The start state of the DFA is the
-set containing the start state, $q_{0}$ of the NFA. The DFA states
-are named such that they enumerate the powerset's subsets with labels
-that correspond to the states of the NFA. The transition function
-for the DFA, $\delta_{D}$ is defined by $\delta_{D}(\{q_{1,}q_{2},\ldots q_{k}\},a)$
-is the union over all i, for i = 1$\ldots k$ of the NFA's transition
-function $\delta_{N}(q_{i},a)$. To prove equivalence of the DFA and
-NFA representation we must show that $\delta_{N}(q_{0},w)=\delta_{D}(\left\{ q_{0}\right\} ,w)$.
+Subset Construction. 
+
+In the following proof given a NFA the states $Q_{N}$, inputs $\Sigma$,
+transition function $\delta_{N}$, start state q, and final states
+$F$. The set of states of the constructed DFA $Q_{D}$ = 2$^{Q_{N}}$,
+that is the power set of the set of states of the NFA. A power set
+of a set is defined as the set of all possible subsets of a given
+set. The inputs to the DFA will be the same as the inputs of the NFA,
+$\Sigma$. The start state of the DFA is the set containing the start
+state, $q_{0}$ of the NFA. The DFA states are named such that they
+enumerate the powerset's subsets with labels that correspond to the
+states of the NFA. The transition function for the DFA, $\delta_{D}$
+is defined by $\delta_{D}(\{q_{1,}q_{2},\ldots q_{k}\},a)$ is the
+union over all i, for$i=1\ldots k$ of the NFA's transition function
+$\delta_{N}(q_{i},a)$. 
+\begin{thm}
+All NFA's have an equivalent DFA representation. Formally, $\delta_{N}(q_{0},w)=\delta_{D}(\left\{ q_{0}\right\} ,w)$. 
+\end{thm}
+\begin{proof}
 The proof is an induction on the string $w$. For the basis step we
 take $w=\epsilon$ : $\delta_{N}(q_{0},\epsilon)=\delta_{D}(\left\{ q_{0}\right\} ,\epsilon)=\{q_{0}\}$
 . This is true by the basis rule for extending the delta function
@@ -646,6 +1394,7 @@ $S$ represents a label for a set of states of the NFA. Let $T$ be
 the union over all states $p$ in $S$ of $\delta_{N}(p,a).$ Then
 $\delta_{N}(q_{0},w)=\delta_{D}(\{q_{0}\},w)=T$ by the rule for extending
 delta functions of NFA's and DFA's. Thus, DFA's and NFA's are equivalent.
+\end{proof}
 
 \subsection{Conversion from NFA to DFA\label{subsec:Conversion-from-NFA}}
 
@@ -737,7 +1486,7 @@ table indicate a final state.}
 \caption{\label{fig:chessNFA2} The chess NFA automaton. Transitions from odd
 numbers to even numbers occur on the input symbol $r$. Transitions
 from even numbers to odd numbers occur on input symbol $b$. Transition
-labels have been ommited for the sake of clarity.}
+labels have been omitted for the sake of clarity.}
 
 \end{figure}
 
@@ -777,10 +1526,10 @@ The closure of state $q2$ in Figure \vref{fig:epsilonNFA} is $\left\{ q2,q1,q3,q
 \section{Regular Expressions\label{sec:Regular-Expressions}}
 
 Regular expressions use three operations: union, concatenation, and
-Kleene star. Concatenation on languaguages $L$ and $M$is denoted
-$LM.$ $LM$ is defined as $wx$ where $w\varepsilon L$ and $x\varepsilon M$.
+Kleene star. Concatenation on languages $L$ and $M$is denoted $LM.$
+$LM$ is defined as $wx$ where $w\varepsilon L$ and $x\varepsilon M$.
 Kleene star ($^{*})$ is the set of strings formed by concatenating
-0 or more strigns of $L$ in any order. The Kleene star of $L$ is
+0 or more strings of $L$ in any order. The Kleene star of $L$ is
 then $L^{*}=\left\{ \epsilon\right\} \cup L\cup LL\ldots$ 
 
 \subsection{Precedence of Operators on Regular Expressions\label{subsec:Precedence-of-Operators}}
@@ -793,8 +1542,8 @@ then $L^{*}=\left\{ \epsilon\right\} \cup L\cup LL\ldots$
 
 \subsection{Algebraic Laws and Identities of Regular Expressions\label{subsec:algebraicLawsAndIdentitesRegularLanguages}}
 
-Union is communative and associative. Concatenation is associative
-however is not communative.$\emptyset$ is the identity for union.$\epsilon$is
+Union is commutative and associative. Concatenation is associative
+however is not commutative.$\emptyset$ is the identity for union.$\epsilon$is
 the identity for concatenation. $\emptyset$ is the annihilator for
 concatenation.
 
@@ -903,23 +1652,25 @@ for all $i\geq0$ is in the language, and therefore an infinite number
 of strings exist in the language.}
 \end{figure}
 
-
-\paragraph{Claim: If there is a string of length $\geq n$ in L, then there
-is a string of length $\left[n,2n-1\right]$ . }
-
-Proof: Because y is the first cycle on the path to the accepting state,
-the length $|xy|\leq n$, and more specifically, $1\leq|y|\leq n$
-( x and z may be empty strings). Some state along the path xy surely
-must repeat. If w is the shortest possible string of length n, then
-it cannot be longer than 2n. However, suppose it was. The string xz
-is another accepted string in the language. We know that xz = w -
-y, and the length of $y\leq n$, so the length of $xz\geq n$. Which
+\begin{thm}
+If there is a string w=xyz of length $\geq n$ in L, then there is
+a string of length $\left[n,2n-1\right]$ . 
+\end{thm}
+\begin{proof}
+Because y is the first cycle on the path to the accepting state, the
+length $|xy|\leq n$, and more specifically, $1\leq|y|\leq n$ ( x
+and z may be empty strings). Some state along the path xy surely must
+repeat. If w is the shortest possible string of length n, then it
+cannot be longer than 2n. However, suppose it was. The string xz is
+another accepted string in the language. We know that xz = w - y,
+and the length of $y\leq n$, so the length of $xz\geq n$. Which
 means that $|xz|\leq|w|$, and yet at least n in length which is accepted,
 but we assumed that the were no strings that were shorter than w and
 of length at least n. Thus, if the string w were of length $\geqq2n$
 , there is a shorter string of length $\left[n,2n-1\right]$ formed
 by removing the substrings represented by y which are $\left[1,n\right]$
 . 
+\end{proof}
 
 \subsection{Closure Properties of Regular Languages\label{subsec:closurePropertiesOfRegularLanguages}}
 
@@ -1032,13 +1783,14 @@ The Pumping Lemma is useful in determining whether a language is regular
 or nonregular.
 
 \subsection{Using the Pumping Lemma to Prove a Language is Nonregular\label{subsec:usingThePumpingLemmaToProveALanguageIsNonregular}}
-
-\paragraph{Claim: L = \{$0^{k}1$$^{k}$ | $k\geq1$\} is a nonregular language.}
-
-Proof: Suppose for the purposes of contradiction that L is a regular
-language, then there exists an n for which the properties of the Pumping
-Lemma hold true.Let w = $0^{n}1$$^{n}$. The string w can be written
-in the form w = xyx where each component x, y, z forms some substring
+\begin{claim}
+L = \{$0^{k}1$$^{k}$ | $k\geq1$\} is a nonregular language.
+\end{claim}
+\begin{proof}
+Suppose for the purposes of contradiction that L is a regular language,
+then there exists an n for which the properties of the Pumping Lemma
+hold true.Let w = $0^{n}1$$^{n}$. The string w can be written in
+the form w = xyx where each component x, y, z forms some substring
 of w where x and consist of 0's and $y\not=\epsilon$, and z is composed
 of 1's. However, for this to be a regular language all the properties
 of the Pumping Lemma must hold true. In particular particular property\ref{enu:PumpingLemmaProperty3}.
@@ -1049,6 +1801,7 @@ the string formed by this construction contains more 1's than 0's
 again violating the conditions of the language. Thus, the language
 must be nonregular because it does not meet the conditions of the
 Pumping Lemma. 
+\end{proof}
 
 \section{Context Free Grammars\label{sec:contextFreeGrammars}}
 
@@ -1058,7 +1811,7 @@ still cannot define all possible languages. A context free grammar
 is composed of variables which stand for a set of strings. These variables
 are defined in terms of each other. These rules for how variables
 should be composed are often called productions. Take for example
-the language L = \{$0^{n}1$$^{n}$ | $n\geq1$\}. This is a familar
+the language L = \{$0^{n}1$$^{n}$ | $n\geq1$\}. This is a familiar
 language that we saw earlier in the examples on what is not a regular
 language. A context free grammar (CFG) for $L$ can be defined as
 $S\rightarrow01$, $S\rightarrow0S1$. Here S is defined recursively
@@ -1066,24 +1819,24 @@ such that there will always be an equal number of 0's and 1's.
 
 \subsection{CFG Nomenclature\label{subsec:CFGNomenclature}}
 \begin{itemize}
-\item Terminals - symbols of the alphabet of the language being defined.
-\item Variables (Nonterminals) - A finite set of other symbols, each of
-which represents a language.
-\item Production (Rule) - a rule defining the relationships of terminals
-and nonterminals. It has the form HEAD -> TAIL (BODY). The body is
-composed of terminals and nonterminals. Each production represents
-a language on its own and nontermials in the BODY represent languages
-on their own. Nonterminals are subsets of the parent language given
-by the head ( e.g. $A\rightarrow XY$, where the concatenation of
-language $X$ and language$Y$ forms the language $A$).
-\item Derivation - The process of repeatedly replacing symbols for terminals
-based on the productions of a CFG.
-\item Sentential form - the derived string.
+\item \emph{Terminals} - symbols of the alphabet of the language being defined.
+\item \emph{Variables (Nonterminals)} - A finite set of other symbols, each
+of which represents a language.
+\item \emph{Production (Rule)} - a rule defining the relationships of terminals
+and nonterminals. It has the form HEAD $\rightarrow$ TAIL (BODY).
+The body is composed of terminals and nonterminals. Each production
+represents a language on its own and nonterminals in the BODY represent
+languages on their own. Nonterminals are subsets of the parent language
+given by the head ( e.g. $A\rightarrow XY$, where the concatenation
+of language $X$ and language$Y$ forms the language $A$).
+\item \emph{Derivation} - The process of repeatedly replacing symbols for
+terminals based on the productions of a CFG.
+\item \emph{Sentential form} - the derived string.
 \end{itemize}
 
 \subsection{Conventional Usage of Context Free Grammars\label{subsec:conventionalUsageOfContextFreeGrammars}}
 
-Captial letters at the beginning of the alphabet are typically used
+Capital letters at the beginning of the alphabet are typically used
 as variables (e.g A, B, C). Lowercase letters at the beginning of
 the alphabet are used as terminals (a, b, c). Capital letters at the
 end of the alphabet can be either terminals or variables (X, Y, Z).
@@ -1093,7 +1846,7 @@ or variables ($\alpha,$$\beta,\gamma)$. A star ({*}) indicates 0
 or more steps are necessary to obtain a specified derivation. A variable
 followed by the epsilon symbol effectively causes the variable to
 disappear in the derivation process. A $\Rightarrow_{lm}$ indicates
-the sentenial form is as specified after one setp of the left most
+the sentential form is as specified after one setp of the left most
 derivation. A $\Rightarrow*_{lm}$ indicates 0 or more leftmost derivations
 are required to obtain the specified sentential form. Corresponding
 symbols for the rightmost derivations exist as well.
@@ -1102,7 +1855,7 @@ symbols for the rightmost derivations exist as well.
 
 A language that is defined by some CFG is called a context-free language.
 Intuitively, a context free language is a language that can count
-to infinite elements but not three. An example of a non-context freem
+to infinite elements but not three. An example of a non-context free
 language is $L=\{0^{n}1^{n}2^{n}|n\geq1\}$.
 
 \subsection{Leftmost and Rightmost Derivations\label{subsec:leftMostRightMostDerivations}}
@@ -1114,9 +1867,9 @@ from right to left.
 \subsection{Normal Forms for CFG's\label{subsec:normalFormsForCFG}}
 
 Poorly designed context free grammars may have rules that are never
-used in the derivation of strings. This is similiar to a DFA that
-has unreachable states. CFG's may also have redundant productions
-that may be combined. 
+used in the derivation of strings. This is similar to a DFA that has
+unreachable states. CFG's may also have redundant productions that
+may be combined. 
 
 \subsubsection{Eliminating Useless Variables from CFG's\label{subsec:eliminatingUselessVariables}}
 
@@ -1131,18 +1884,18 @@ a string of terminals and variables whose variables have productions
 that yields strings of terminals alone, then this production derives
 terminal strings. For example if there is a production $A\rightarrow w$,
 where $w$ consists only of terminals, then this qualifies as our
-basis. If we then have a prodcution $A\rightarrow\alpha$ who derives
-a string of variables and terminals than theis may qualify for our
+basis. If we then have a production $A\rightarrow\alpha$ who derives
+a string of variables and terminals than these may qualify for our
 inductive step. Additionally, we may have unreachable variables in
 the grammar. Variables that are unreachable can be eliminated from
 the grammar by an induction on the variables that are reachable from
-the start symbol $S$ and the productions that envolve the symbols
+the start symbol $S$ and the productions that involve the symbols
 of those that were discovered. Variables not discovered can then be
 eliminated.
 
-\subsubsection{Elimininating Epilson Productions\label{subsec:elimininatingEpilsonProduction}}
+\subsubsection{Eliminating Epsilon Productions\label{subsec:elimininatingEpilsonProduction}}
 
-Epsilon prodcutions are of the form $A\rightarrow\epsilon$. These
+Epsilon productions are of the form $A\rightarrow\epsilon$. These
 productions can be eliminated from the grammar, however in doing so
 the grammar loses the ability to represent the empty string. To eliminate
 epsilon productions we need to discover the nullable symbols of the
@@ -1152,17 +1905,17 @@ argument can be used to discover nullable symbols. The basis is obviously
 if a production directly derives epsilon as in $A\rightarrow\epsilon$,
 then it is a nullable symbol. The induction then becomes, if there
 is a production $A\rightarrow\alpha$, in which all the symbols of
-$\alpha$eventulay derive epsilon then the production is nullable. 
+$\alpha$eventually derive epsilon then the production is nullable. 
 
 \subsubsection{Eliminating Unit Productions\label{subsec:eliminatingUnitProductions}}
 
 Unit productions are productions whose body consist of a single variable.
 The key idea is that if a variable $A$ eventually derives a variable
 single variable $B$ by a series of unit productions, and $B$derives
-the production $B\rightarrow\alpha$, then we can rewite $A$ as the
-production $A\rightarrow\alpha$ and drop all the intermediate unit
-productions. The algorithm to discover unit productions is as follows:
-Find all pairs of variables $(A,B)$ such that $A\Rightarrow^{*}B$
+the production $B\rightarrow\alpha$, then we can rewrite $A$ as
+the production $A\rightarrow\alpha$ and drop all the intermediate
+unit productions. The algorithm to discover unit productions is as
+follows: Find all pairs of variables $(A,B)$ such that $A\Rightarrow^{*}B$
 by a sequence of unit production only. The induction has the basis
 $(A,A)$ and the IH if we have found $(A,B)$ and $B$ derives $C$,
 then $A$ derives $C$ and so they form the pair $(A,C).$
@@ -1178,7 +1931,7 @@ of two types:
 Theorem: If a language $L$ is a context free language, then the language
 with all epsilon productions eliminated has a context free grammar
 in Chomsky Normal Form. Forming the CFG such that it is in CNF can
-be carried out by cleaning up the grammar as descibed in the subsections\vref{subsec:elimininatingEpilsonProduction},\vref{subsec:eliminatingUnitProductions},
+be carried out by cleaning up the grammar as described in the subsections\vref{subsec:elimininatingEpilsonProduction},\vref{subsec:eliminatingUnitProductions},
 and \vref{subsec:eliminatingUselessVariables}. 
 
 \section{Pushdown Automata\label{sec:Pushdown-Automata}}
@@ -1195,7 +1948,7 @@ the symbol on top of its stack. Figure\vref{fig:pushdownAutomata}.
 In addition to transition to a new state, the PDA may push or pop
 symbols off of the stack. PDA's are typically described by the following
 components $Q$ a finite set of states, $\Sigma$ an input alphabet,
-$\Gamma$ a stack alphabet, $\delta$ a transistion function, $q_{0}$
+$\Gamma$ a stack alphabet, $\delta$ a transition function, $q_{0}$
 a start state,$z_{0}$ a stack start symbol, and a set of final states
 $F\subseteq Q$ . The transition function $\delta$ is parameterized
 by three components: a state in $Q$, an input symbol in $\Sigma$,
@@ -1219,14 +1972,14 @@ is given in Figure\vref{fig:pdaExample}.
 \subsection{Instantaneous Descriptions and the Goes-To Relation\label{subsec:instantaneousDescriptionsAndGoesToRelation}}
 
 An instantaneous description(ID) of a PDA is like a snapshot of a
-PDA as it computes. Each sucessesive step in Figure\vref{fig:pdaExample}
-has a corresponding instantaeous description triple describing the
+PDA as it computes. Each successive step in Figure\vref{fig:pdaExample}
+has a corresponding instantaneous description triple describing the
 current state $q$, the remaining input $w,$and the contents of the
 stack $a$. The vertical dash symbol, $\vdash$, represents the Goes-To
-relation. The relation means that for a specified ID I a tranistion
+relation. The relation means that for a specified ID I a transition
 to ID J is possible in one step. For example if the transition function
 $\delta(q,a,X)$ yields $\left(p,\beta\right)$ the we may specify
-the Goes-To relation as $(q,aw,Xa)\vdash(p,w,\beta\alpha)$. Similiarly,
+the Goes-To relation as $(q,aw,Xa)\vdash(p,w,\beta\alpha)$. Similarly,
 the $\vdash^{*}$ means the transition occurs in zero or more steps.
 
 \subsection{PDA Language Descriptions\label{subsec:PDALanguageDescriptions}}
@@ -1234,7 +1987,7 @@ the $\vdash^{*}$ means the transition occurs in zero or more steps.
 The languages of PDA's are defined by $L(P)$ for the set of strings
 $w$ such that for the ID $(q_{0},w,Z)$$\vdash^{*}$$(f,\epsilon,\alpha)$
 for the final state $f$ and the stack string $a$. This is the set
-of strings $w$ that are consumed by the PDA such that only the empy
+of strings $w$ that are consumed by the PDA such that only the empty
 string, $\epsilon,$ is left in the final state. The notation $N(P)$
 for a given PDA $P$ describes the PDA's language when the stack becomes
 empty.
@@ -1271,7 +2024,7 @@ language $L$ (i.e. $N(P)=L$). P has one state $q.$ The terminals
 of the grammar G become the input symbols $\Sigma$ of the PDA $P$.
 The variables and terminals of G make up the stack symbols $\Gamma$
 of the $P$. The start symbol of $G$ becomes the start symbol of
-$P.$ Intutitively, we must model the left sentential form of a grammar
+$P.$ Intuitively, we must model the left sentential form of a grammar
 with the PDA. If the stack of the PDA $P$ is $a,$ and $P$has so
 far consumed $x$from its input, then $P$ represents the left-sentential
 form $xa$. 
@@ -1289,7 +2042,7 @@ the \textquotedblleft a\textquotedblright{} on the stack against the
 \textquotedblleft a\textquotedblright{} on the input. The left-sentential
 form represented does not change. We have now consumed one more symbol,
 \textquotedblleft a\textquotedblright , from the input so that becomes
-part of the left-sentiantial form. But the \textquotedblleft a\textquotedblright{}
+part of the left-sentential form. But the \textquotedblleft a\textquotedblright{}
 that was on the stack is removed, so it no longer participates in
 the left-sentential form. The \emph{type-2} rules handle a variable,
 say $A$, on the top of the stack ($\delta(q,\epsilon,A)=(q,a))$.
@@ -1304,31 +2057,32 @@ replace the $A$ by $a$.
 
 In order to prove equivalence between the two representations we need
 to prove that for all $x,$$(q,wx,S)\vdash^{*}(q,x,\alpha)\leftrightarrow S\Rightarrow_{lm}^{*}w\alpha$.
-That is, for all x the instantaneous decription $(q,wx,S)$ goes to
-$(q,x,\alpha)$ in some number of steps of the PDA if and only if
-the CFG's leftmost derivation yields $w\alpha$. It is important to
-note that we allow for the suffix $x$in the string $wx$. The string
-$x$ has no effect on the process of consuming $w$ and so if the
-that statement is true for one $x$it is true for all $x.$ The proof
-follow starting from the only if direction $(\rightarrow)$. That
-is, if P transitions $(q,wx,S)$ goes to $(q,x,\alpha)$, then $S\Rightarrow_{lm}^{*}w\alpha$.
-This will be an inductive proof where the base case is 0 steps have
-taken place and $w$ is $\epsilon$ and $\alpha$is $S$. The truth
-of the base case becomes trivial because $S$ is $\alpha$ and $w\alpha$
-is just $\alpha$ because $\epsilon$ serves as the identity of concatenation.
-Surely then, $S$ derives itself. Now we must consider the next $n$
-steps of the proof, and assume an inductive hypothesis for the sequence
-of $n-1$ steps. For the $n^{th}$ step two cases can occur. A type-1
-rule is used, or a type 2 rule is used. We will consider both case
-in turn. The descriptions of these rules are described in the previous
-subsection. For the use of a \emph{type-1 }rule in the $n^{th}$ step,
-the ID's for the 0 through $n-1$ steps must be $(q,yax,S)\vdash^{*}(q,ax,a\alpha)\vdash(q,x,\alpha)$,
+That is, for all x the instantaneous description $(q,wx,S)$ goes
+to $(q,x,\alpha)$ in some number of steps of the PDA if and only
+if the CFG's leftmost derivation yields $w\alpha$. It is important
+to note that we allow for the suffix $x$in the string $wx$. The
+string $x$ has no effect on the process of consuming $w$ and so
+if the that statement is true for one $x$it is true for all $x.$
+The proof follow starting from the only if direction $(\rightarrow)$.
+That is, if P transitions $(q,wx,S)$ goes to $(q,x,\alpha)$, then
+$S\Rightarrow_{lm}^{*}w\alpha$. This will be an inductive proof where
+the base case is 0 steps have taken place and $w$ is $\epsilon$
+and $\alpha$is $S$. The truth of the base case becomes trivial because
+$S$ is $\alpha$ and $w\alpha$ is just $\alpha$ because $\epsilon$
+serves as the identity of concatenation. Surely then, $S$ derives
+itself. Now we must consider the next $n$ steps of the proof, and
+assume an inductive hypothesis for the sequence of $n-1$ steps. For
+the $n^{th}$ step two cases can occur. A type-1 rule is used, or
+a type 2 rule is used. We will consider both case in turn. The descriptions
+of these rules are described in the previous subsection. For the use
+of a \emph{type-1 }rule in the $n^{th}$ step, the ID's for the 0
+through $n-1$ steps must be $(q,yax,S)\vdash^{*}(q,ax,a\alpha)\vdash(q,x,\alpha)$,
 where $ya=w$. That is, the prefix of the string $x$must end with
 the symbol $a$ with the $a$ symbol on top of the stack followed
 by $\alpha$, and in the previous $n-1$ steps the string $y$ is
 consumed by the PDA, and in the $n^{th}$ step the PDA consumes the
 input symbol $a$ and removes it from the stack. By the inductive
-hypothesis applied to the $n-1$ steps, we can conlude that there
+hypothesis applied to the $n-1$ steps, we can conclude that there
 is a left most derivation from $S$ to $ya\alpha$ because y was consumed
 and thus equivalent to $\epsilon$and $a\alpha$ is on the stack.
 The symbol $a$is then consumed from the input and popped from stack
@@ -1345,13 +2099,13 @@ in the derivation it is replaced by $\gamma$. We then have $S\Rightarrow_{lm}^{*
 returning us to our base case, thus proving the only if direction
 of the proof. Next, we prove the if direction ($\leftarrow)$. We
 now must prove $S\Rightarrow_{lm}^{*}w\alpha\rightarrow(q,wx,S)\vdash^{*}(q,x,\alpha)$
-for all $x$ $\ldots${[}ommited{]}
+for all $x$ $\ldots${[}omitted{]}
 
 \subsection{Converting PDA's $\Rightarrow$ CFG's\label{subsec:convertingPDA2CFG}}
 
 In this section we obtain the grammar $G$ from a PDA $P$. We assume
 that the language $L$ is accepted by the PDA upon emptying its stack,
-more formally $L=N(P).$ Intuitively, we should assign variables labled
+more formally $L=N(P).$ Intuitively, we should assign variables labeled
 as $pXq$ to the grammar $G$ for the transitions from state $p$to
 state $q$when popping the symbol $X$ from the PDA's stack. Upon
 popping the $X$ from the stack it may grow, but the stack size will
@@ -1409,7 +2163,7 @@ in Section\vref{sec:pumpingLemmaRegularLanguages}. The pumping lemma
 for regular languages relied on a cycle early on in a sufficiently
 long string $w$ in order ``pump'' an the string an arbitrary number
 of times, thus producing a infinite number of strings in the language.
-Similiarly, the pumping lemma for context free languages models this
+Similarly, the pumping lemma for context free languages models this
 idea, but requires two cycles along the string's path in tandem. 
 
 \subsection{Formal Specification of the CFL Pumping Lemma\label{subsec:formalSpecificationOfContextFreeLanguages}}
@@ -1446,7 +2200,7 @@ algorithm uses Dynamic Programming to decide whether $w$ is in the
 language or not, so it may be useful to first review the section\vref{sec:Dynamic-Programming}
 first in order to gain better understanding of CYK.
 
-\subsubsection{The CYK ALgorithm}
+\subsubsection{The CYK Algorithm}
 \begin{flushleft}
 Let $w=a_{0}\ldots a_{n}$ be a string of length $n$where $a_{i}$
 stores the symbol at the $i^{th}$ position. Construct a $n$ by $n$
@@ -1454,23 +2208,23 @@ triangular array. This can done efficiently by using an indexing function
 where upon a single-indexed array is mapped to an upper-triangular
 array. The following function $k=j(j+1)/2+i$ where $k$ represents
 the index into the array properly maps the elements of the array.
-This idea can be viewed in Figure\vref{fig:triangularArray}. Additionaly,
+This idea can be viewed in Figure\vref{fig:triangularArray}. Additionally,
 each entry of the array should be viewed as a set of variables of
 the grammar. The set $X_{ij}$ is stored in position $(i,j)$ of the
-array where $i\leq j$ and is inteded to be the set of variables that
-derive the substring of the input starting from position $i$ and
-ending at position $j$. An inductive argument is used to fill the
-table on the length of the input string derived . The length of the
-string can be computed as $j-i+1$. We start by computing the entries
-$X_{i,i}$, which is the set of variables that derive the string consisting
-of the symbol at $a_{i}$ . Next, we find the variables at $X_{i,i+1}$
-each of which derive the string at $a_{i,i+1}$. Then, we move to
-the $X_{i,i+2}$ variables which are the sets of variables that derive
-the strings of length three, $a_{i},$$a_{i+1},$$a_{i+2}$ and so
-on . Finally, after we have computed the set $X_{1,n}$ which represents
-the entire input string , we can test whether the start symbol $S$
-is contained in the set . If it is then the string is in the language,
-otherwise it is not. Formally, the basis $X_{i,i}=\{A|A\Rightarrow^{*}a_{i}\}$
+array where $i\leq j$ and is intended to be the set of variables
+that derive the substring of the input starting from position $i$
+and ending at position $j$. An inductive argument is used to fill
+the table on the length of the input string derived . The length of
+the string can be computed as $j-i+1$. We start by computing the
+entries $X_{i,i}$, which is the set of variables that derive the
+string consisting of the symbol at $a_{i}$ . Next, we find the variables
+at $X_{i,i+1}$ each of which derive the string at $a_{i,i+1}$. Then,
+we move to the $X_{i,i+2}$ variables which are the sets of variables
+that derive the strings of length three, $a_{i},$$a_{i+1},$$a_{i+2}$
+and so on . Finally, after we have computed the set $X_{1,n}$ which
+represents the entire input string , we can test whether the start
+symbol $S$ is contained in the set . If it is then the string is
+in the language, otherwise it is not. Formally, the basis $X_{i,i}=\{A|A\Rightarrow^{*}a_{i}\}$
 where $a_{i}$ represents a single symbol in $w$. The induction is
 then $X_{i,j}$=\{A| there is a production $A\rightarrow BC$, and
 an integer $k$, with $i\leq k<j$, such that $B$ is in $X_{i,k}$
@@ -1496,8 +2250,8 @@ value $k$ to the appropriate $i$ and column $j$ where $i\leq j$.}
 
 \subsubsection{Emptiness Test for CFL's\label{subsec:emptinessTestForCFL}}
 
-The algorithim to test for an empty CFL uses the ideas we learned
-in subsection\vref{subsec:eliminatingUselessVariables}. We use these
+The algorithm to test for an empty CFL uses the ideas we learned in
+subsection\vref{subsec:eliminatingUselessVariables}. We use these
 ideas of checking whether variables are useful in the derivation to
 determine if the start symbol $S$ is a useful symbol. If the start
 symbol does not derive anything, it is a useless variable, and we
@@ -1507,7 +2261,7 @@ can state that the CFL is empty.
 
 The test for infinteness in CFL mirrors the idea that was proposed
 in section\vref{subsec:infinitenessTestRegularLanguages}. Apply those
-priniciples with the pumping lemma for context free languages outlined
+principles with the pumping lemma for context free languages outlined
 in section\vref{sec:pumpingLemmaForContextFreeLanguages}.
 
 \subsection{Closure Properties of Context Free Languages\label{subsec:closurePropertiesOfContextFreeLanguages}}
@@ -1523,7 +2277,7 @@ not closed under intersection or difference.
 
 //TODO
 
-\subsubsection{Concatentation for CFL's\label{subsec:concatentationForCFL's}}
+\subsubsection{Concatenation for CFL's\label{subsec:concatentationForCFL's}}
 
 //TODO
 
@@ -1534,7 +2288,7 @@ not closed under intersection or difference.
 \section{Countability\label{sec:Countability}}
 
 It is important to understand that all computation can be encoded
-as integers. The ascii or if you like the UTF-8 table encodes english
+as integers. The ASCII or if you like the UTF-8 table encodes English
 characters and algebraic numerals, which we can interpret as integers.
 This idea can be applied to all types of media. At the very root we
 may interpret all things as integers.
@@ -1566,8 +2320,8 @@ to 1 and the negative integers are are mapped to the even numbers
 are mapped to odd numbers$(i\leftrightarrow2i+1$, for all $i\geq1$).
 The enumerated sequence then becomes $0,-1,1,-2,2,-3,3,\ldots$ Another
 example of an enumerable set is the binary strings, but there is a
-trick involved. The binary strings $101,0101,00101$ all coorespond
-to the integer value 5, so it seems imposible to form a coorespondence
+trick involved. The binary strings $101,0101,00101$ all correspond
+to the integer value 5, so it seems impossible to form a correspondence
 such that they become countable. The trick here is to prepend a 1
 to the binary strings so that the strings can become distinguishable.
 The aforementioned strings become $1101,10101,100101$ as integers
@@ -1592,8 +2346,8 @@ $x$in the $j^{th}$ language $L_{j}$, if $x$is in $L_{j}$, then
 it cannot be by the definition of the language. If $x$is not in the
 language $L_{j}$, then $x$is in the language by the definition of
 the language. This makes for a very confusing situation. Remember,
-$L$ contains $w$ if and only if $w$ is not the language that correpsonds
-to the smae integer $i$ that $w$ corresponds to. We now have a contradiction
+$L$ contains $w$ if and only if $w$ is not the language that corresponds
+to the same integer $i$ that $w$ corresponds to. We now have a contradiction
 and therefore we know that we know the languages over the binary strings
 are not countable. Graphically, this concept can be seen in the Diagonalization
 Method in Figure\vref{fig:diagonalization}.
@@ -1664,7 +2418,7 @@ and either move the head left or right one square.
 
 \subsection{Turing Machine Notation}
 
-A Turing machine is made up of the following componenets.
+A Turing machine is made up of the following components.
 \begin{itemize}
 \item A finite set of states ($Q).$
 \item An input alphabet $(\Sigma).$
@@ -1676,12 +2430,12 @@ A Turing machine is made up of the following componenets.
 \end{itemize}
 Conventionally, the lowercase letters at the beginning of the alphabet
 are input symbols ($a,b,c).$ Upper case letters at the end of the
-alphabet represetn tape symbols $(X,Y,Z)$. Lowercase letters at the
+alphabet represent tape symbols $(X,Y,Z)$. Lowercase letters at the
 end of the alphabet represent input strings $w,x,y,z$. Greek symbols
 represent tape symbols $(\alpha,\beta,\gamma)$. The transition function
 $\delta$ takes two parameters a $q_{i}\varepsilon Q$ and a tape
 symbol in $\Gamma$. The transition function yields a triple of the
-form (state, tape symbol, direction). If for a given input a tranisiton
+form (state, tape symbol, direction). If for a given input a transition
 is not defined then the Turing machine halts in the current state.
 
 \subsection{Instantaneous Descriptions of Turing Machines}
@@ -1711,31 +2465,31 @@ Turing Machines that accept by final state, and who are \emph{guaranteed
 to halt} whether it accepts or not define the Recursive Languages
 class. In some textbooks this is called the Decidable Language class. 
 
-\subsection{Multitape Turing Machines}
+\subsection{Multi-tape Turing Machines}
 
-Multitape Turing Machines allow for a ordinary Turing Machine to have
-$k$ tapes for any fixed $k.$ The steps the Multitape Turing Machine
-makes are dependant on the symbols the head of each tape is pointing
-to and their corresponding states. Each tape has its own head and
-they move on their own tape without restricting each others movement.
-On each read of the tape a new symbol and state is assigned for each
-tape and head. Additionally, a head may choose to not move. This model
-is no more powerful than the traditional Turing Machine. One may simply
-expand the alphabet for a traditional Turing Machine to accomadate
-the number of tapes that it must simulate.
+Multi tape Turing Machines allow for a ordinary Turing Machine to
+have $k$ tapes for any fixed $k.$ The steps the Multi tape Turing
+Machine makes are dependent on the symbols the head of each tape is
+pointing to and their corresponding states. Each tape has its own
+head and they move on their own tape without restricting each others
+movement. On each read of the tape a new symbol and state is assigned
+for each tape and head. Additionally, a head may choose to not move.
+This model is no more powerful than the traditional Turing Machine.
+One may simply expand the alphabet for a traditional Turing Machine
+to accommodate the number of tapes that it must simulate.
 
 \subsection{Nondeterministic Turing Machines}
 
 Nondeterministic Turing Machines are granted multiple choices based
 on the state, direction, move triple. Once a choice is made, then
 the next state, new symbol and head direction are determined. As with
-the NFA's, DFA's, and PDA's, the nondeterministic Turing Machine accpets
+the NFA's, DFA's, and PDA's, the nondeterministic Turing Machine accepts
 if any sequence of choices leads to an ID with and accepting state.
 
 \subsection{Closure Properties of Recursive and Recursively Enumerable Languages}
 
 Recursive Languages and Recursively Enumerable Languages share the
-properites: union, concatenation, Kleene star, reversal, intersection,
+properties: union, concatenation, Kleene star, reversal, intersection,
 and inverse. Recursive languages have difference and complementation.
 Recursively Enumerable Languages have homomorphism.
 
@@ -2358,7 +3112,7 @@ the preferred definition of NP-completeness is the one we gave here
 \textendash{} the existence of polytime reductions. To make the distinction,
 this notion of NP-completeness is often called Karp-completeness. 
 
-\subsection{Cook's Theorem\label{subsec:Cook's-Theorem}}
+\subsection{Cook-Levin Theorem\label{subsec:Cook's-Theorem}}
 
 Recall from the Section\vref{sec:propositionalSententialLogic} on
 propositional logic that we expresses the truth of expressions with
@@ -2485,6 +3239,12 @@ $G'$ which has a Hamiltonian circuit. Here $K=\{a_{1}\}.$ }
 
 \section{Optimatility}
 
+\section{Divide and Conquer}
+
+T. Roughgardener lectures
+
+\section{Greedy Algorithms}
+
 \section{Approximation Algorithms\label{sec:Approximation-Algorithms}}
 
 \subsection{Backtracking}
@@ -2545,6 +3305,37 @@ and Bipartiteness}
 \subsection{Hopcroft-Karp Algorithm}
 
 \subsection{The Hungarian Algorithm}
+
+\section{Appendix: Mathematical Rules}
+
+This material will help you reason about various tasks including creating
+inductive proofs and reasoning about Big O notation.
+
+\subsection{Rules About Logarithms}
+
+The logarithm $y=log_{b}x$ is equivalent to $x=b^{y}$. For example,
+$log_{5}125=3$ and $5^{3}=125$. In this course and many other computer
+science course the use of $log$ connotes $log_{2}$, where 2 is the
+base of the logarithm.
+\begin{center}
+\begin{tabular}{cc}
+$log_{b}b=1$ & $log_{b}1=0$\tabularnewline
+$b^{log_{b}x}=x$ & $log_{b}(x^{r})=rlog_{b}x$\tabularnewline
+$log_{b}b^{x}=x$ & $log_{b}\frac{x}{y}=log_{b}x-log_{b}y$\tabularnewline
+$log_{b}(xy)=log_{b}x+log_{b}y$ & The domain of $log_{b}x$ is $x>0$\tabularnewline
+\end{tabular}
+\par\end{center}
+
+\subsection{Rules About Exponents}
+\begin{center}
+\begin{tabular}{cc}
+$a^{n}a^{m}=a^{n+m}$ & $\frac{a^{n}}{a^{m}}=a^{n-m}=\frac{1}{a^{m-n}}$\tabularnewline
+$(a^{n})^{m}=a^{nm}$ & $a^{0}=1,a\neq0$\tabularnewline
+$(ab)^{n}=a^{n}b^{n}$ & $(\frac{a}{b})^{n}=\frac{a^{n}}{b^{n}}$\tabularnewline
+$a^{-n}=\frac{1}{a^{n}}$ & $\frac{1}{a^{-n}}=a^{n}$\tabularnewline
+$(\frac{a}{b})^{-n}=(\frac{b}{a})^{n}=\frac{b^{n}}{a^{n}}$ & $a^{\frac{n}{m}}=(a^{\frac{1}{m}})^{n}=(a^{n})^{\frac{1}{m}}$\tabularnewline
+\end{tabular}
+\par\end{center}
 
 \section{Appendix: Reference Material\label{sec:Appendix:-Reference-Material}}
 
