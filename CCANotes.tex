@@ -95,9 +95,9 @@ it is safe to skip forward and not concern yourself what may be obvious
 to you, but I encourage you to read all the sections because additional
 clarity may be gained with another pass.
 
-\part{Mathematics and Logic}
+\part{Mathematics and Logic\label{part:Mathematics-and-Logic}}
 
-\section{Discrete Mathematics}
+\section{Discrete Mathematics\label{sec:Discrete-Mathematics}}
 
 \begin{figure}
 \begin{centering}
@@ -199,7 +199,7 @@ Propositional statements are said to be \emph{satisfiable} if some
 combination of truth assignments to the propositional variables makes
 the statement true.
 
-\subsection{Predicate Calculus and Quantification Logic}
+\subsection{Predicate Calculus and Quantification Logic\label{subsec:Predicate-Calculus-and}}
 
 Predicate logic is a generalization of propositional logic onto arbitrary
 statements. \emph{Propositional functions} given by a capital letter
@@ -236,7 +236,7 @@ relations on predicates with quantification symbols.}
 \end{figure}
 
 
-\subsection{Rules of Inference}
+\subsection{Rules of Inference\label{subsec:Rules-of-Inference}}
 
 The \emph{validity} of a proofs arguments are derived from the truth
 of the premises it offers. An argument in propositional logic is a
@@ -300,7 +300,7 @@ $\frac{P(c)}{\therefore\exists xP(x)}$ & Existential generalization\tabularnewli
 \end{figure}
 
 
-\subsection{Proofs}
+\subsection{Proofs\label{subsec:Proofs}}
 
 In order to begin to understand how to construct valid proof it is
 important to understand the terminology that is used. 
@@ -320,7 +320,7 @@ a theorem that has been proved.
 a proof is omitting the proof of one of the cases in a proof by cases.
 \end{itemize}
 
-\subsubsection{Types of Proofs}
+\subsubsection{Types of Proofs\label{subsec:Types-of-Proofs}}
 \begin{itemize}
 \item \emph{Direct Proofs} is a proof that assumes the antecedent of the
 implication is true and seeks to justify and prove the conclusion
@@ -439,7 +439,7 @@ Uniqueness Proof & \tabularnewline
 \end{figure}
 
 
-\subsubsection{Strategies for Constructing Proofs}
+\subsubsection{Strategies for Constructing Proofs\label{subsec:Strategies-for-Constructing}}
 
 The following general approach for constructing proofs is often helpful.
 \begin{enumerate}
@@ -466,13 +466,13 @@ Even if the final conclusions required are not the same, it may be
 constructive to look to the previous proves for ideas which may help
 in your new proof.
 
-\subsection{Mathematical Structures: Sets, Sequences, Series, and Matrices\label{sec:Sets}}
+\subsection{Mathematical Structures: Sets, Sequences, Series, and Matrices\label{sec:Mathematical-Structures}}
 
 Mathematical structures are the foundation on which reasoning is carried
 out. In the following sections we cover sets, sequences, series and
 matricies.
 
-\subsubsection{Sets}
+\subsubsection{Sets\label{subsec:Sets}}
 
 A \emph{set} is an unordered collection of objects. A object is said
 to be \emph{contained} within a set when it is a member of the set.
@@ -644,7 +644,7 @@ $A$ and $B$. Rosen refers us to Velleman for a proof of this theorem.
 
 The Continuum Hypothesis 
 
-\subsubsection{Sequences and Summations}
+\subsubsection{Sequences and Summations\label{subsec:Sequences-and-Summations}}
 
 A sequence is a function from a subset of the set of integers (usually
 either the set $\{0,1,2,\ldots\}$or the set $\{1,2,3,\ldots\}$)
@@ -698,7 +698,7 @@ $A$. Also, if $f$ is a function from $A$ to $B$, we say htat $f$
 \emph{maps $A$ to $B$. }The range is a subset of the codomain, and
 the image is a memeber of the range.
 
-\subsubsection{One-to-One and Onto Functions and Their Nature}
+\subsubsection{One-to-One and Onto Functions and Their Nature\label{subsec:One-to-One-and-Onto}}
 
 Given sets $A$ and $B,$ a function $f$ is said to be \emph{one-to-one,
 }or \emph{injuction}, if and only if $f(a)=f(b)$ imples that $a=b$
@@ -760,7 +760,7 @@ numbers classified into subsets of the complex numbers.}
 \end{figure}
 
 
-\subsubsection{Composition of Functions}
+\subsubsection{Composition of Functions\label{subsec:Composition-of-Functions}}
 
 Let $g$ be a function from the set $A$ to the set $B$and let $f$
 be a function from the set $B$ to the set $C$. The \emph{composition
@@ -784,9 +784,9 @@ the dependence of the mapping of $f$ by that of $g$. }
 \end{figure}
 
 
-\subsection{The Growth of Functions and Time Complexity}
+\subsection{The Growth of Functions and Time Complexity\label{subsec:The-Growth-of-Functions}}
 
-\subsubsection{Big-O Notation}
+\subsubsection{Big-O Notation\label{subsec:Big-O-Notation}}
 
 Let $f$ and $g$ be functions from the set of integers or the set
 of real numbers to the set of real numbers. We say that $f(x)$is
@@ -799,9 +799,9 @@ $O(g(x))$ if there are constants $C$and $k$ such that
 The constancs $C$ and $k$ are called witnesses to the relationship
 between $f(x)$and $O(g(x))$.
 
-\subsubsection{Big-$\Omega$ and Big-$\Theta$ Notation}
+\subsubsection{Big-$\Omega$ and Big-$\Theta$ Notation\label{subsec:Big-Omega-and-Big-Theta}}
 
-\subsubsection{Time Complexity}
+\subsubsection{Time Complexity\label{subsec:Time-Complexity}}
 
 \subsection{Recursion and Induction\label{sec:Induction}}
 
@@ -837,7 +837,7 @@ for all integers $n$ with $n\ge b$.
 at the given link.
 \end{itemize}
 
-\subsubsection{Strong Induction and Well-Ordering}
+\subsubsection{Strong Induction and Well-Ordering\label{subsec:Strong-Induction}}
 
 To prove that $P(n)$is true for all positive integers $n$, where
 $P(n)$ is a propositional function, we complete two steps:
@@ -855,12 +855,12 @@ An integer n can be written as the product of two primes.
 The\emph{ well-ordering property} states that every nonempty set of
 nonnegative integers has a least element.
 
-\subsection{Modular Arithmetic}
+\subsection{Modular Arithmetic\label{subsec:Modular-Arithmetic}}
 
 Figure\vref{fig:moduluarArithmatic} gives an overview of basic modular
 arithmetic operations. This becomes useful for primality testing. 
 
-\subsubsection{Miller-Rabin Compositeness Test}
+\subsubsection{Miller-Rabin Compositeness Test\label{subsec:Miller-Rabin-Compositeness-Test}}
 
 //TODO give details on Miller-Rabin
 
@@ -890,13 +890,13 @@ modular arithmetic equations}
 \end{figure}
 
 
-\subsection{Combinatorics}
+\subsection{Combinatorics\label{subsec:Combinatorics}}
 
 You can use counting techniques to answer a variety of questions.
 Learning how to account for the time complexity of algorithm will
 be very useful in this course.
 
-\subsubsection{The Product Rule}
+\subsubsection{The Product Rule\label{subsec:The-Product-Rule}}
 
 The product rule is used to count when counting separate tasks. You
 should apply this rule when counting nested for loops. Suppose that
@@ -926,7 +926,7 @@ to clean. Therefore $n$ rooms may be cleaned by this employee. The
 next employee has $n-1$different rooms to clean.
 \end{sol*}
 
-\subsubsection{The Sum Rule}
+\subsubsection{The Sum Rule\label{subsec:The-Sum-Rule}}
 
 If a task can be done either in one of $n_{1}$ ways or in one of
 $n_{2}$ ways, where none of the set of $n_{1}$ ways is the same
@@ -946,7 +946,7 @@ Then the number of ways to do the task is $n_{1}+n_{2}+\ldots+n_{m}$.
 //TODO Provide an inductive proof of the Sum Rule.
 \end{proof}
 
-\subsubsection{The Subtraction Rule or The Inclusion Exclusion Principle}
+\subsubsection{The Subtraction Rule or The Inclusion Exclusion Principle\label{subsec:The-Subtraction-Rule}}
 
 If a task can be done in either $n_{1}$ ways or $n_{2}$ ways, then
 the number of ways to do the task is $n_{1}+n_{2}$ minus the number
@@ -959,13 +959,13 @@ when considering the union of sets.
 \]
 
 
-\subsubsection{The Division Rule}
+\subsubsection{The Division Rule\label{subsec:The-Division-Rule}}
 
 There are$n/d$ ways to do a task if it can be done using a procedure
 that can be carried out in $n$ ways, and for every way $w$, exactly
 $d$ of the $n$ ways correspond to way $w$.
 
-\subsubsection{The Pigeonhole Principle (Dirichlet Drawer Principle)}
+\subsubsection{The Pigeonhole Principle (Dirichlet Drawer Principle)\label{subsec:The-Pigeonhole-Principle}}
 \begin{thm}
 If N objects are placed into k boxes, then there is at least one box
 containing at least $\left\lceil N/k\right\rceil $ objects.
@@ -994,7 +994,7 @@ tells us that one of these boxes contains two or more elements $x$
 of the domain. This means that $f$ cannot be one-to-one.
 \end{proof}
 
-\subsection{Permutations and Combinations}
+\subsection{Permutations and Combinations\label{subsec:Permutations-and-Combinations}}
 
 A \emph{permutation} of the elements of a set is an ordered arrangement
 of the elements in the set. A \emph{r-permuation }of a set $S$ is
@@ -1056,7 +1056,7 @@ p(E_{1}\bigcup E_{2)}=p(E_{1})+p(E_{2})-p(E_{1}\bigcap E_{2}).
 \]
 
 
-\subsubsection{Nonuniform Probability}
+\subsubsection{Nonuniform Probability\label{subsec:Nonuniform-Probability}}
 
 In the previous section we operated under the conditions of equal
 probability for each event in the sample space. However, many questions
@@ -1070,7 +1070,7 @@ space must be between 0 and 1.
 element of $S$ must be 1.
 \end{enumerate}
 
-\subsubsection{Conditional Probability}
+\subsubsection{Conditional Probability\label{subsec:Conditional-Probability}}
 
 Let $E$ and $F$ be events with $p(F)>0$. The conditional probability
 of $E$ given $F$, denoted by $p(E|F).$
@@ -1097,7 +1097,7 @@ It should be noted that all mutually independent events are also pairwise
 independent, but not all pairwise independent events are mutually
 independent.
 
-\subsubsection{Bernoulli Trials}
+\subsubsection{Bernoulli Trials\label{subsec:Bernoulli-Trials}}
 
 An experiment that only has two possible outcomes is called a \emph{Bernoulli
 trial. }Bernoulli trials consist of independent events. Examples of
@@ -1120,12 +1120,12 @@ and $n-k$ failures is $p^{k}q^{n-k}$. Further, there are $C(n,k)$tuples
 in which there are $k$ successes, and so the probability is $C(n,k)p^{k}q^{n-k}$.
 \end{proof}
 
-\subsubsection{Random Variables}
+\subsubsection{Random Variables\label{subsec:Random-Variables}}
 
-(Possibly the most poorly named concept in mathematics) A random variable
-is a \emph{function} from the sample space of an experiment to the
-set of real numbers. That is, a random variable assigns a real number
-$r$ to each possible outcome.
+\emph{(Possibly the most poorly named concept in mathematics)} A random
+variable is a \emph{function} from the sample space of an experiment
+to the set of real numbers. That is, a random variable assigns a real
+number $r$ to each possible outcome.
 
 The distribution of a random variable $X$ on a sample space $S$
 is the set of pairs $(r,p(X=r))$ for all $r$ $\epsilon$ $X(S)$,
@@ -1133,7 +1133,7 @@ where $p(X=r)$ is the probability that $X$ takes the value $r$.
 (The set of pairs in this distribution is determined by the probabilities
 $p(X=r)$ for $r\in X(S).)$
 
-\subsubsection{Probablistic Algorithms}
+\subsubsection{Probablistic Algorithms\label{subsec:Probablistic-Algorithms}}
 
 Probabilitic algorithms are algorithims that make a random choice
 at some step during computation. This strikes a contrast with determinitic
@@ -1144,7 +1144,7 @@ a correct answer to a decision problem increases dramatically. Probablistic
 algorithms are traditionally classified as Monte Carlo type or Las
 Vegas type algorithms.
 
-\subsubsection{Monte Carlo Algorithms}
+\subsubsection{Monte Carlo Algorithms\label{subsec:Monte-Carlo-Algorithms}}
 
 For a sufficiently large number of computations the chances that a
 Monte Carlo algorithm will yield a correct answer to a decision problem
@@ -1156,7 +1156,7 @@ returned a true response then the algorithm will respond in the affirmative.
 However if every test responded with an unkown status then the algorithm
 will respond false.
 
-\subsubsection{Las Vegas Algorithms}
+\subsubsection{Las Vegas Algorithms\label{subsec:Las-Vegas-Algorithms}}
 
 \subsubsection{The Probabilistic Method}
 
@@ -1165,7 +1165,7 @@ chosen at random from a $S$ does not have a particular property is
 less than 1 (the is some uncertantity), then there exists an element
 in S with this property.
 
-\subsubsection{Expected Value and Variance}
+\subsubsection{Expected Value and Variance\label{subsec:Expected-Value-and}}
 
 The \emph{expected value} of a random varariable (chance function)
 is the sum over all the elements of the sample space of the probability
@@ -1227,7 +1227,7 @@ V(X)=\sum_{s\epsilon S}(X(s)-E(X))^{2}p(s)
 \]
 
 
-\subsubsection{Chebyshev's Inequality}
+\subsubsection{Chebyshev's Inequality\label{subsec:Chebyshev's-Inequality}}
 
 Chebyshev's inequality helps us answer how likely it is that the outcome
 of a random variable will be significanyly more than its expected
@@ -1245,19 +1245,19 @@ p(|X(s)-E(X)|\ge r)\le V(X)/r^{2}.
 
 \section{Linear Algebra\label{sec:Linear-Programming}}
 
-\subsection{Linear Equations in Linear Algebra}
+\subsection{Linear Equations in Linear Algebra\label{subsec:Linear-Equations}}
 
-\subsection{Matrix Algebra}
+\subsection{Matrix Algebra\label{subsec:Matrix-Algebra}}
 
-\subsection{Determinants}
+\subsection{Determinants\label{subsec:Determinants}}
 
-\subsection{Vector Spaces}
+\subsection{Vector Spaces\label{subsec:Vector-Spaces}}
 
-\subsection{Eigenvalues and Eigenvectors}
+\subsection{Eigenvalues and Eigenvectors\label{subsec:Eigenvalues-and-Eigenvectors}}
 
-\subsection{Orthogonality and Least Squares}
+\subsection{Orthogonality and Least Squares\label{subsec:Orthogonality-and-Least}}
 
-\subsection{Symmetric Matrices and Quadratic Forms}
+\subsection{Symmetric Matrices and Quadratic Forms\label{subsec:Symmetric-Matrices-and}}
 
 \subsection{Geometry of Vector Spaces}
 
@@ -1402,10 +1402,11 @@ An example of a transition function on a chess board shown in Figure\vref{fig:ch
 is given by the NFA's transition table in Figure\vref{fig:convertNFA2DFA}.
 An equivalent DFA transition table is given by the adjoining table
 in the diagram. A lazy conversion technique can be carried out to
-only include the state sets in the DFA only when necessary. An automaton
-modeling the NFA representation of the chess board is depicted in
-Figure\vref{fig:chessNFA2}. A corresponding DFA automaton representation
-is depicted in Figure
+only include the state sets in the DFA only when necessary. 
+
+An automaton modeling the NFA representation of the chess board is
+depicted in Figure\vref{fig:chessNFA2}. A corresponding DFA automaton
+representation is depicted in Figure\vref{fig:chessDFA}.
 
 \begin{figure}
 \begin{centering}
@@ -1503,9 +1504,11 @@ labels have been omitted for the sake of clarity.}
 
 NFA's that allow for epsilon transitions are called epsilon NFA. Epsilon
 transitions allow for an automaton to transition between states without
-regard to the input string. Effectively, it allows for the computation
-to skip forward in the automaton without processing input. An example
-of an epsilon NFA is depicted in Figure\vref{fig:epsilonNFA}.
+regard to the input string. 
+
+Effectively, it allows for the computation to skip forward in the
+automaton without processing input. An example of an epsilon NFA is
+depicted in Figure\vref{fig:epsilonNFA}.
 
 \begin{figure}
 \begin{centering}
@@ -1525,12 +1528,12 @@ The closure of state $q2$ in Figure \vref{fig:epsilonNFA} is $\left\{ q2,q1,q3,q
 
 \section{Regular Expressions\label{sec:Regular-Expressions}}
 
-Regular expressions use three operations: union, concatenation, and
-Kleene star. Concatenation on languages $L$ and $M$is denoted $LM.$
-$LM$ is defined as $wx$ where $w\varepsilon L$ and $x\varepsilon M$.
-Kleene star ($^{*})$ is the set of strings formed by concatenating
-0 or more strings of $L$ in any order. The Kleene star of $L$ is
-then $L^{*}=\left\{ \epsilon\right\} \cup L\cup LL\ldots$ 
+Regular expressions use three operations: \emph{union}, \emph{concatenation},
+and \emph{Kleene star}. Concatenation on languages $L$ and $M$ is
+denoted $LM.$ $LM$ is defined as $wx$ where $w\varepsilon L$ and
+$x\varepsilon M$. Kleene star ($^{*})$ is the set of strings formed
+by concatenating 0 or more strings of $L$ in any order. The Kleene
+star of $L$ is then $L^{*}=\left\{ \epsilon\right\} \cup L\cup LL\ldots$ 
 
 \subsection{Precedence of Operators on Regular Expressions\label{subsec:Precedence-of-Operators}}
 \begin{enumerate}
@@ -1592,23 +1595,26 @@ one may form a product on the states of each DFA such that for each
 respective state in Q and R the product DFA's state set is $Q\times R$
 has a corresponding state. The start state for the product DFA would
 then be the pair $\left[q_{0},r_{0}\right]$ . The transition function
-would then be formed as follows: $\delta(\left[q,r\right],1)=\left[\delta_{L}(q,1),\delta_{M}(r,1)\right]$.
+would then be formed as follows: $\delta(\left[q,r\right],1)=\left[\delta_{L}(q,1),\delta_{M}(r,1)\right]$. 
+
 The product DFA N pictured in Figure\vref{fig:productDFA} is assigned
 final states such that either the one of the state pair's respective
 DFA enters a final state, but not both. For example, the state B is
 a final state in the DFA L, and the state C is a final state in the
 DFA M. The state pair (B,D) is then marked final in the DFA N instead
-of (B,C) because the state D is not a final state in the DFA M. Similarly,
-the state pair (A,C) is marked a final state in the DFA N because
-C in final state the DFA M, but A is not a final state in the DFA
-L. This feature of only one state being accepting is used a differentiating
-characteristic to determine whether the languages of the DFA's L and
-M are equivalent. The languages L and M are equivalent if and only
-if the language of N is empty. This means that N models the feature
-that neither L accepts when M does not, nor does M accept when L does
-not. It is clear from the that the empty string $\epsilon$ is accepted
-by M and not by L and is so modeled by the pair (A,C) in N. N accepts
-the empty string and therefore, L and M are not equivalent languages.
+of (B,C) because the state D is not a final state in the DFA M. 
+
+Similarly, the state pair (A,C) is marked a final state in the DFA
+N because C in final state the DFA M, but A is not a final state in
+the DFA L. This feature of only one state being accepting is used
+a differentiating characteristic to determine whether the languages
+of the DFA's L and M are equivalent. The languages L and M are equivalent
+if and only if the language of N is empty. This means that N models
+the feature that neither L accepts when M does not, nor does M accept
+when L does not. It is clear from the that the empty string $\epsilon$
+is accepted by M and not by L and is so modeled by the pair (A,C)
+in N. N accepts the empty string and therefore, L and M are not equivalent
+languages.
 
 \begin{figure}
 \begin{centering}
@@ -1623,31 +1629,36 @@ M. }
 
 \subsubsection{The Infiniteness Test for Regular Languages\label{subsec:infinitenessTestRegularLanguages}}
 
-A final example of decision problems fro regular languages in the
+A final example of decision problems for regular languages in the
 Infiniteness Problem. The problem asks, is the given regular language
 composed of an infinite number of strings? We can determine if a given
 language is infinite by examining the DFA-representation of the language.
 If the DFA has n states, and the given language has a string of n
 or more in length, then the language is infinite. Otherwise, the language
 must be finite. (If a language has a string of length n or more, then
-surely the DFA contains a cycle that yielded such a string). The proof
-of this idea follows: If there is a n-state DFA that accepts a string
-w of length n or more, then there must be a state that appears twice
-on the path traced out by the simulation of w on the DFA from the
-start state to the final state. This is because for all strings w
-of length n a DFA must traverse n+1 states. A diagram of the automaton
-demonstrating this principle can be seen in Figure \vref{fig:pumpingLemma}.
-
+surely the DFA contains a cycle that yielded such a string). 
+\begin{thm}
+If there is a n-state DFA that accepts a string w of length n or more,
+then there must be a state that appears twice on the path traced out
+by the simulation of w on the DFA from the start state to the final
+state. 
+\end{thm}
+\begin{proof}
+This is because for all strings w of length n a DFA must traverse
+n+1 states. A diagram of the automaton demonstrating this principle
+can be seen in Figure \vref{fig:pumpingLemma}.
+\end{proof}
 \noindent 
 \begin{figure}
 \centering{}\includegraphics[scale=0.5]{Diagrams/pumpingLemma}\caption{\label{fig:pumpingLemma}In the automaton pictured above a string
-w is formed by the the substrings x, y, and z. The substring x is
-the substring that takes us to the first cycle in the automaton. The
-cycle occurs at state q. The edge labeled y represents the edge which
-returns the string w to state q for the first time. Because the substring
-y is locked within the string w, that is its prefix is the substring
-x and its postfix is the substring z, it cannot be the empty string.
-However, the substrings x or z may be the empty string. Then $xy^{i}z$
+w is formed by the the substrings $x$, $y$, and $z$. The substring
+$x$ is the substring that takes us to the first cycle in the automaton.
+The cycle occurs at state $q_{1}$. The edge labeled $y$ represents
+the edge which returns the string $w$ to state $q_{1}$ for the first
+time.\emph{ Because the substring $y$ is locked within the string
+$w$, that is its prefix is the substring $x$ and its suffix is the
+substring $z$, it cannot be the empty string.} \emph{However, the
+substrings $x$ or $z$ may be the empty string.} Then $xy^{i}z$
 for all $i\geq0$ is in the language, and therefore an infinite number
 of strings exist in the language.}
 \end{figure}
@@ -1683,15 +1694,17 @@ $R$ and $S$ respectively, then $R+S$ is a regular expression whose
 language is the $L\cup M$. 
 
 \subsubsection{Intersection for Regular Languages\label{subsec:IntersectionForRegularLanguages}}
-
+\begin{thm}
 If $L$ and $M$ are regular languages, then $L\cap M$ is also a
-regular language. The proof of this statement is as follows: Let $I$
-and $J$ be the DFA's for the regular languages $L$ and $M$, respectively.
-Form the product DFA $K$ of $I$ and \textbf{$J$ }and mark the final
-states of $K$ as the states in which both $I$ and $J$ are in final
-states. The DFA $K$ is now a regular language representing $L\cap M$.
-This idea is demonstrated in Figure\vref{fig:intersectionDFA}.
-
+regular language. 
+\end{thm}
+\begin{proof}
+Let $I$ and $J$ be the DFA's for the regular languages $L$ and
+$M$, respectively. Form the product DFA $K$ of $I$ and \textbf{$J$
+}and mark the final states of $K$ as the states in which both $I$
+and $J$ are in final states. The DFA $K$ is now a regular language
+representing $L\cap M$. This idea is demonstrated in Figure\vref{fig:intersectionDFA}.
+\end{proof}
 \begin{figure}
 \begin{centering}
 \includegraphics[scale=0.5]{Diagrams/intersectionDFA}
@@ -1704,34 +1717,45 @@ final state exists for both $I$ and $J$. }
 
 
 \subsubsection{Difference for Regular Languages\label{subsec:DifferenceForRegularLanguages}}
-
+\begin{thm}
 If $L$ and $M$ are regular languages, then $L-M$ is also a regular
 language. $L-M$ represents the strings that are in $L$ but not in
-$M$. The proof of this statement is as follows: Let $I$ and $J$
-be the DFA's for the regular languages $L$ and $M$, respectively.
-Form the product DFA $K$ of $I$ and \textbf{$J$ }and mark the final
-states of $K$ as the states in which $I$ is in a final state and
-$J$ is not in a final state. The DFA $K$ now represents $L-M$.
+$M$. 
+\end{thm}
+\begin{proof}
+Let $I$ and $J$ be the DFA's for the regular languages $L$ and
+$M$, respectively. Form the product DFA $K$ of $I$ and \textbf{$J$
+}and mark the final states of $K$ as the states in which $I$ is
+in a final state and $J$ is not in a final state. The DFA $K$ now
+represents $L-M$.
+\end{proof}
 
 \subsubsection{Concatenation for Regular Languages\label{subsec:ConcatenationForRegularLanguages}}
-
+\begin{thm}
 If $L$ and $M$ are regular languages, then $LM$ is also a regular
-language. The proof of this statement is as follows: Let the languages
-$L$ and $M$ be the languages of the regular expressions $R$ and
-$S$ respectively, then $RS$ is a regular expression whose language
-is the $LM$.
+language. 
+\end{thm}
+\begin{proof}
+Let the languages $L$ and $M$ be the languages of the regular expressions
+$R$ and $S$ respectively, then $RS$ is a regular expression whose
+language is the $LM$.
+\end{proof}
 
 \subsubsection{Kleene Closure for Regular Languages\label{subsec:KleeneClosureForRegularLanguages}}
 
 $R^{*}$ is a regular expression whose language is $L^{*}$.
 
 \subsubsection{Complement for Regular Languages\label{subsec:ComplementForRegularLanguages}}
-
+\begin{thm}
 The complement of a language $L$ with respect to an alphabet $\Sigma$
 such that $\Sigma^{*}$contains $L$ is the difference of $\Sigma^{*}$
-and the language $L$. Since $\Sigma^{*}$ is surely a regular language,
-and regular languages are closed under difference as we have seen
-previously, then the complement $\Sigma^{*}-L$ is also regular.
+and the language $L$.
+\end{thm}
+\begin{proof}
+Since $\Sigma^{*}$ is surely a regular language, and regular languages
+are closed under difference as we have seen previously, then the complement
+$\Sigma^{*}-L$ is also regular.
+\end{proof}
 
 \section{Conversion of Language Representations\label{subsec:conversionOfLanguageRepresentations}}
 
@@ -1760,27 +1784,28 @@ be used to generate a equivalent DFA much faster.
 \subsection{DFA Minimization Algorithm\label{subsec:DFA-Minimization-Algorithm}}
 
 The key idea here is to create a table used to find distinguishable
-states. Distinguishable state pairs are those that have one member
-of the pair in an accepting state while the other is not in an accepting
-state. The table used to distinguish these pairs is formed by the
-product of the DFA's states, $Q\times Q$. If states can be distinguished
-then they represent a state in minimum DFA, while those that are indistinguishable
-can be merged into a single state. Effectively, we are recursively
-finding the shortest distinguishable string for a DFA.
+states. \emph{Distinguishable state pairs are those that have one
+member of the pair in an accepting state while the other is not in
+an accepting state.} The table used to distinguish these pairs is
+formed by the product of the DFA's states, $Q\times Q$. If states
+can be distinguished then they represent a state in minimum DFA, while
+those that are indistinguishable can be merged into a single state.
+Effectively, we are recursively finding the shortest distinguishable
+string for a DFA.
 
 \section{The Pumping Lemma for Regular Languages\label{sec:pumpingLemmaRegularLanguages}}
 
-For every regular language L, there is an integer n, which happens
-to be the number of states in the DFA of L, such that for every w
-in L of length $\geq n$. We can write w = xyz such that the following
-properties hold:
+For every regular language $L$, there is an integer $n$, which happens
+to be the number of states in the DFA of $L$, such that for every
+$w$ in $L$ of length $\geq n$. We can write $w=xyz$ such that
+the following properties hold:
 \begin{enumerate}
 \item $|xy|\leq n$
 \item $|y|>0$
-\item For all $i\geq0$, $xy^{i}z$ is in L.\label{enu:PumpingLemmaProperty3}
+\item For all $i\geq0$, $xy^{i}z$ is in $L$.\label{enu:PumpingLemmaProperty3}
 \end{enumerate}
-The Pumping Lemma is useful in determining whether a language is regular
-or nonregular.
+\emph{The pumping lemma is useful in determining whether a language
+is regular or nonregular.}
 
 \subsection{Using the Pumping Lemma to Prove a Language is Nonregular\label{subsec:usingThePumpingLemmaToProveALanguageIsNonregular}}
 \begin{claim}
@@ -1788,34 +1813,40 @@ L = \{$0^{k}1$$^{k}$ | $k\geq1$\} is a nonregular language.
 \end{claim}
 \begin{proof}
 Suppose for the purposes of contradiction that L is a regular language,
-then there exists an n for which the properties of the Pumping Lemma
-hold true.Let w = $0^{n}1$$^{n}$. The string w can be written in
-the form w = xyx where each component x, y, z forms some substring
-of w where x and consist of 0's and $y\not=\epsilon$, and z is composed
-of 1's. However, for this to be a regular language all the properties
-of the Pumping Lemma must hold true. In particular particular property\ref{enu:PumpingLemmaProperty3}.
+then there exists an $n$ for which the properties of the pumping
+lemma hold true. Let w = $0^{n}1$$^{n}$. The string $w$ can be
+written in the form $w=xyz$ where each component x, y, z forms some
+substring of $w$ where $x$ and consist of 0's and $y\not=\epsilon$,
+and $z$ is composed of 1's. 
+
+However, for this to be a regular language all the properties of the
+pumping lemma must hold true. In particular particular property\ref{enu:PumpingLemmaProperty3}.
 For $i=2$, $w=xyyz$. The string formed by this construction contains
 more 0's than 1's, violating the conditions on the language as specified
-in the set former. Similarly, if yz and consist of 1's and $y\not=\epsilon$,
-the string formed by this construction contains more 1's than 0's
-again violating the conditions of the language. Thus, the language
-must be nonregular because it does not meet the conditions of the
-Pumping Lemma. 
+in the set former. 
+
+Similarly, if yz and consist of 1's and $y\not=\epsilon$, the string
+formed by this construction contains more 1's than 0's, again violating
+the conditions of the language. Thus, the language must be nonregular
+because it does not meet the conditions of the pumping lemma. 
 \end{proof}
 
 \section{Context Free Grammars\label{sec:contextFreeGrammars}}
 
 A context free grammar is a notation for describing languages. It
 is more powerful than regular expressions and finite automata, but
-still cannot define all possible languages. A context free grammar
-is composed of variables which stand for a set of strings. These variables
-are defined in terms of each other. These rules for how variables
-should be composed are often called productions. Take for example
-the language L = \{$0^{n}1$$^{n}$ | $n\geq1$\}. This is a familiar
-language that we saw earlier in the examples on what is not a regular
-language. A context free grammar (CFG) for $L$ can be defined as
-$S\rightarrow01$, $S\rightarrow0S1$. Here S is defined recursively
-such that there will always be an equal number of 0's and 1's.
+still cannot define all possible languages. 
+
+A context free grammar is composed of variables which stand for a
+set of strings. These variables are defined in terms of each other\textendash recursively.
+These rules for how variables should be composed are often called
+productions. Take for example the language L = \{$0^{n}1$$^{n}$
+| $n\geq1$\}, this is a familiar language that we saw earlier in
+the examples on what is not a regular language. 
+
+A context free grammar (CFG) for $L$ can be defined as $S\rightarrow01$,
+$S\rightarrow0S1$. Here S is defined recursively such that there
+will always be an equal number of 0's and 1's.
 
 \subsection{CFG Nomenclature\label{subsec:CFGNomenclature}}
 \begin{itemize}
@@ -1835,28 +1866,37 @@ terminals based on the productions of a CFG.
 \end{itemize}
 
 \subsection{Conventional Usage of Context Free Grammars\label{subsec:conventionalUsageOfContextFreeGrammars}}
-
-Capital letters at the beginning of the alphabet are typically used
-as variables (e.g A, B, C). Lowercase letters at the beginning of
-the alphabet are used as terminals (a, b, c). Capital letters at the
-end of the alphabet can be either terminals or variables (X, Y, Z).
-Lowercase letters at the end of the alphabet are strings containing
-terminals only (e.g. w, x, y, z). Greek letters are strings of terminals
-or variables ($\alpha,$$\beta,\gamma)$. A star ({*}) indicates 0
-or more steps are necessary to obtain a specified derivation. A variable
-followed by the epsilon symbol effectively causes the variable to
-disappear in the derivation process. A $\Rightarrow_{lm}$ indicates
-the sentential form is as specified after one setp of the left most
-derivation. A $\Rightarrow*_{lm}$ indicates 0 or more leftmost derivations
-are required to obtain the specified sentential form. Corresponding
-symbols for the rightmost derivations exist as well.
+\begin{itemize}
+\item Capital letters at the beginning of the alphabet are typically used
+as variables (e.g A, B, C).
+\item Lowercase letters at the beginning of the alphabet are used as terminals
+(a, b, c). 
+\item Capital letters at the end of the alphabet can be either terminals
+or variables (X, Y, Z). 
+\item Lowercase letters at the end of the alphabet are strings containing
+terminals only (e.g. w, x, y, z). 
+\item Greek letters are strings of terminals or variables ($\alpha,$$\beta,\gamma)$. 
+\item A star ({*}) indicates 0 or more steps are necessary to obtain a specified
+derivation. 
+\item A variable followed by the epsilon symbol effectively causes the variable
+to disappear in the derivation process. 
+\item A $\Rightarrow_{lm}$ indicates the sentential form is as specified
+after one setp of the left most derivation. 
+\item A $\Rightarrow*_{lm}$ indicates 0 or more leftmost derivations are
+required to obtain the specified sentential form. Corresponding symbols
+for the rightmost derivations exist as well.
+\end{itemize}
 
 \subsection{Context-Free Languages\label{subsec:contextFreeLanguages}}
 
-A language that is defined by some CFG is called a context-free language.
-Intuitively, a context free language is a language that can count
-to infinite elements but not three. An example of a non-context free
-language is $L=\{0^{n}1^{n}2^{n}|n\geq1\}$.
+A language that is defined by some CFG is called a\emph{ context-free
+language}. Intuitively, a context free language is a language that
+can count to infinite elements but not three. An example of a non-context
+free language is 
+\[
+L=\{0^{n}1^{n}2^{n}|n\geq1\}
+\]
+.
 
 \subsection{Leftmost and Rightmost Derivations\label{subsec:leftMostRightMostDerivations}}
 
@@ -2056,27 +2096,32 @@ replace the $A$ by $a$.
 \subsubsection{Proof of Equivalence between CFG and PDA\label{subsec:proofEquivalenceCFGPDA}}
 
 In order to prove equivalence between the two representations we need
-to prove that for all $x,$$(q,wx,S)\vdash^{*}(q,x,\alpha)\leftrightarrow S\Rightarrow_{lm}^{*}w\alpha$.
-That is, for all x the instantaneous description $(q,wx,S)$ goes
+to prove computation of the PDA mirrors that of the derivation of
+the CFG.
+\begin{thm}
+For any well formed PDA and CFG for all $x,$$(q,wx,S)\vdash^{*}(q,x,\alpha)\leftrightarrow S\Rightarrow_{lm}^{*}w\alpha$.
+That is, for all $x$ the instantaneous description $(q,wx,S)$ goes
 to $(q,x,\alpha)$ in some number of steps of the PDA if and only
-if the CFG's leftmost derivation yields $w\alpha$. It is important
-to note that we allow for the suffix $x$in the string $wx$. The
+if the CFG's leftmost derivation yields $w\alpha$. (It is important
+to note that we allow for the suffix $x$ in the string $wx$. The
 string $x$ has no effect on the process of consuming $w$ and so
-if the that statement is true for one $x$it is true for all $x.$
-The proof follow starting from the only if direction $(\rightarrow)$.
-That is, if P transitions $(q,wx,S)$ goes to $(q,x,\alpha)$, then
-$S\Rightarrow_{lm}^{*}w\alpha$. This will be an inductive proof where
-the base case is 0 steps have taken place and $w$ is $\epsilon$
-and $\alpha$is $S$. The truth of the base case becomes trivial because
-$S$ is $\alpha$ and $w\alpha$ is just $\alpha$ because $\epsilon$
-serves as the identity of concatenation. Surely then, $S$ derives
-itself. Now we must consider the next $n$ steps of the proof, and
-assume an inductive hypothesis for the sequence of $n-1$ steps. For
-the $n^{th}$ step two cases can occur. A type-1 rule is used, or
-a type 2 rule is used. We will consider both case in turn. The descriptions
-of these rules are described in the previous subsection. For the use
-of a \emph{type-1 }rule in the $n^{th}$ step, the ID's for the 0
-through $n-1$ steps must be $(q,yax,S)\vdash^{*}(q,ax,a\alpha)\vdash(q,x,\alpha)$,
+if the that statement is true for one $x$ it is true for all $x.$) 
+\end{thm}
+\begin{proof}
+The proof follows starting from the only if direction $(\rightarrow)$.
+That is, if the PDA transitions $(q,wx,S)$ goes to $(q,x,\alpha)$,
+then the CFG's derives $S\Rightarrow_{lm}^{*}w\alpha$. This will
+be an inductive proof where the base case is 0 steps have taken place
+and $w$ is $\epsilon$ and $\alpha$ is $S$. The truth of the base
+case becomes trivial because $S$ is $\alpha$ and $w\alpha$ is just
+$\alpha$ because $\epsilon$ serves as the identity of concatenation.
+Surely then, $S$ derives itself. Now we must consider the next $n$
+steps of the proof, and assume an inductive hypothesis for the sequence
+of $n-1$ steps. For the $n^{th}$ step two cases can occur. A type-1
+rule is used, or a type 2 rule is used. We will consider both case
+in turn. The descriptions of these rules are described in the previous
+subsection. For the use of a \emph{type-1 }rule in the $n^{th}$ step,
+the ID's for the 0 through $n-1$ steps must be $(q,yax,S)\vdash^{*}(q,ax,a\alpha)\vdash(q,x,\alpha)$,
 where $ya=w$. That is, the prefix of the string $x$must end with
 the symbol $a$ with the $a$ symbol on top of the stack followed
 by $\alpha$, and in the previous $n-1$ steps the string $y$ is
@@ -2097,8 +2142,10 @@ the inductive hypothesis we obtain $S\Rightarrow_{lm}^{*}wA\beta$
 after the first $n-1$ steps. Because $A$ is the leftmost variable
 in the derivation it is replaced by $\gamma$. We then have $S\Rightarrow_{lm}^{*}w\gamma\beta=w\alpha$
 returning us to our base case, thus proving the only if direction
-of the proof. Next, we prove the if direction ($\leftarrow)$. We
-now must prove $S\Rightarrow_{lm}^{*}w\alpha\rightarrow(q,wx,S)\vdash^{*}(q,x,\alpha)$
+of the proof. 
+\end{proof}
+Next, we prove the if direction ($\leftarrow)$. We now must prove
+$S\Rightarrow_{lm}^{*}w\alpha\rightarrow(q,wx,S)\vdash^{*}(q,x,\alpha)$
 for all $x$ $\ldots${[}omitted{]}
 
 \subsection{Converting PDA's $\Rightarrow$ CFG's\label{subsec:convertingPDA2CFG}}
@@ -2134,25 +2181,28 @@ $\epsilon$. The grammar in this case can model the PDA's behavior
 by popping $X$and not replacing it with any other symbol $(pXq\rightarrow a)$.
 The next simplest case simplest case involves modeling transition
 between productions. Transitivy is modeled by introducing an intermediate
-state $r$and a variable $Y$. The transition function in this case
-would look like $\delta(p,a,X)$ yields $(r,Y)$. The corresponding
-production would then be $pXq\rightarrow arYq$. This allows us to
-erase X and transition from $p$ to $q$ by way of $r$ while reading
-$a$and pushing $Y$ onto the stack. The final simplest case we will
-consider is $\delta(p,a,X)$ yields $(r,YZ)$ for some state $r$
-and some symbols $Y$and $Z$. Here $X$ is replaced by $YZ$. In
-order for $X$ to be erased, there must be some input string u that
-has the net effect of erasing $Y$. And $u$ must take the PDA from
-state $r$ to some state $s$, which we don\textquoteright t know.
-As a result, we\textquoteright re going to have to have one production
-for each state $s$. But after reaching state $s$, we must have some
-additional input $v$ that takes the PDA from state $s$ to state
-$q$, while popping the $Z$ from the stack. The net effect is that$auv$
-pops $X$ from the stack while going from state $p$ to $q.$ The
-general case for creating productions to model the PDA follows. Suppose
-$\delta(p,a,X)$ yields $(r,Y_{1},\ldots Y_{k})$ for some state $r$
-and $k\geq3.$ Then in the grammar generate the set of productions
-$pXq\rightarrow arY_{1}s_{1}s_{1}Y_{2}s_{2}\ldots s_{k-2}Y_{k-1}s_{k-1}s_{k-1}Y_{k}q$.
+state $r$and a variable $Y$. 
+
+The transition function in this case would look like $\delta(p,a,X)$
+yields $(r,Y)$. The corresponding production would then be $pXq\rightarrow arYq$.
+This allows us to erase X and transition from $p$ to $q$ by way
+of $r$ while reading $a$and pushing $Y$ onto the stack. The final
+simplest case we will consider is $\delta(p,a,X)$ yields $(r,YZ)$
+for some state $r$ and some symbols $Y$and $Z$. Here $X$ is replaced
+by $YZ$. In order for $X$ to be erased, there must be some input
+string u that has the net effect of erasing $Y$. And $u$ must take
+the PDA from state $r$ to some state $s$, which we don\textquoteright t
+know. As a result, we\textquoteright re going to have to have one
+production for each state $s$. But after reaching state $s$, we
+must have some additional input $v$ that takes the PDA from state
+$s$ to state $q$, while popping the $Z$ from the stack. The net
+effect is that$auv$ pops $X$ from the stack while going from state
+$p$ to $q.$ 
+
+The general case for creating productions to model the PDA follows.
+Suppose $\delta(p,a,X)$ yields $(r,Y_{1},\ldots Y_{k})$ for some
+state $r$ and $k\geq3.$ Then in the grammar generate the set of
+productions $pXq\rightarrow arY_{1}s_{1}s_{1}Y_{2}s_{2}\ldots s_{k-2}Y_{k-1}s_{k-1}s_{k-1}Y_{k}q$.
 This models the case in which $X$ is replaced by three or more symbols
 transitioning from $p$ to $q.$
 
@@ -2215,16 +2265,20 @@ array where $i\leq j$ and is intended to be the set of variables
 that derive the substring of the input starting from position $i$
 and ending at position $j$. An inductive argument is used to fill
 the table on the length of the input string derived . The length of
-the string can be computed as $j-i+1$. We start by computing the
-entries $X_{i,i}$, which is the set of variables that derive the
-string consisting of the symbol at $a_{i}$ . Next, we find the variables
-at $X_{i,i+1}$ each of which derive the string at $a_{i,i+1}$. Then,
-we move to the $X_{i,i+2}$ variables which are the sets of variables
-that derive the strings of length three, $a_{i},$$a_{i+1},$$a_{i+2}$
-and so on . Finally, after we have computed the set $X_{1,n}$ which
-represents the entire input string , we can test whether the start
-symbol $S$ is contained in the set . If it is then the string is
-in the language, otherwise it is not. Formally, the basis $X_{i,i}=\{A|A\Rightarrow^{*}a_{i}\}$
+the string can be computed as $j-i+1$. 
+\par\end{flushleft}
+
+\begin{flushleft}
+We start by computing the entries $X_{i,i}$, which is the set of
+variables that derive the string consisting of the symbol at $a_{i}$
+. Next, we find the variables at $X_{i,i+1}$ each of which derive
+the string at $a_{i,i+1}$. Then, we move to the $X_{i,i+2}$ variables
+which are the sets of variables that derive the strings of length
+three, $a_{i},$$a_{i+1},$$a_{i+2}$ and so on . Finally, after we
+have computed the set $X_{1,n}$ which represents the entire input
+string , we can test whether the start symbol $S$ is contained in
+the set . If it is then the string is in the language, otherwise it
+is not. Formally, the basis $X_{i,i}=\{A|A\Rightarrow^{*}a_{i}\}$
 where $a_{i}$ represents a single symbol in $w$. The induction is
 then $X_{i,j}$=\{A| there is a production $A\rightarrow BC$, and
 an integer $k$, with $i\leq k<j$, such that $B$ is in $X_{i,k}$
@@ -2296,11 +2350,11 @@ may interpret all things as integers.
 \subsection{Finite Sets}
 
 A finite set is a set that contains a finite number of elements. Refer
-to Section\vref{sec:Sets}. It may be useful to refresh your memory
-on this topic. The formal definition of a finite set is one for which
-it is impossible to find a one to one correspondence between the members
-of the set and a proper subset of the set. An example of a set is
-$\{a,b,c\}.$
+to Section\vref{sec:Mathematical-Structures}. It may be useful to
+refresh your memory on this topic. The formal definition of a finite
+set is one for which it is impossible to find a one to one correspondence
+between the members of the set and a proper subset of the set. An
+example of a set is $\{a,b,c\}.$
 
 \subsection{Infinite Sets}
 
@@ -2318,9 +2372,10 @@ example all integers $\mathbb{Z}$ form a countable set. 0 is mapped
 to 1 and the negative integers are are mapped to the even numbers
 ($-i\leftrightarrow2i$, for all $i\geq1$), while the positive integers
 are mapped to odd numbers$(i\leftrightarrow2i+1$, for all $i\geq1$).
-The enumerated sequence then becomes $0,-1,1,-2,2,-3,3,\ldots$ Another
-example of an enumerable set is the binary strings, but there is a
-trick involved. The binary strings $101,0101,00101$ all correspond
+The enumerated sequence then becomes $0,-1,1,-2,2,-3,3,\ldots$ 
+
+Another example of an enumerable set is the binary strings, but there
+is a trick involved. The binary strings $101,0101,00101$ all correspond
 to the integer value 5, so it seems impossible to form a correspondence
 such that they become countable. The trick here is to prepend a 1
 to the binary strings so that the strings can become distinguishable.
@@ -2339,13 +2394,13 @@ $L$ = \{ w | w is the $i^{th}$ binary string and $w$ is not in
 the $i^{th}$ language\}. Surely, the language $L$ is a language
 over the binary alphabet. Thus, $L$ is the $j^{th}$ language for
 some particular $j.$ Now let some binary string $x$be the $j^{th}$
-string. Now consider substituting $x$for $w$ in the $j^{th}$ language
+string. Now consider substituting $x$ for $w$ in the $j^{th}$ language
 $L_{j}$ = \{ $x$ | $x$is the $j^{th}$ binary string and $x$is
 not in the $j^{th}$ language\}. For some arbitrary $j^{th}$ string
 $x$in the $j^{th}$ language $L_{j}$, if $x$is in $L_{j}$, then
 it cannot be by the definition of the language. If $x$is not in the
-language $L_{j}$, then $x$is in the language by the definition of
-the language. This makes for a very confusing situation. Remember,
+language $L_{j}$, then $x$ is in the language by the definition
+of the language. This makes for a very confusing situation. Remember,
 $L$ contains $w$ if and only if $w$ is not the language that corresponds
 to the same integer $i$ that $w$ corresponds to. We now have a contradiction
 and therefore we know that we know the languages over the binary strings

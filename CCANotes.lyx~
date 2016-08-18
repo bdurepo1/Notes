@@ -188,10 +188,24 @@ In following sections I outline some of the key concepts you will need to
 
 \begin_layout Part
 Mathematics and Logic
+\begin_inset CommandInset label
+LatexCommand label
+name "part:Mathematics-and-Logic"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Discrete Mathematics
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Discrete-Mathematics"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -877,6 +891,13 @@ satisfiable
 
 \begin_layout Subsection
 Predicate Calculus and Quantification Logic
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Predicate-Calculus-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1043,6 +1064,13 @@ name "fig:quantificationNegation"
 
 \begin_layout Subsection
 Rules of Inference
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Rules-of-Inference"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1473,6 +1501,13 @@ This table gives the Rules of Inference.
 
 \begin_layout Subsection
 Proofs
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Proofs"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1541,6 +1576,13 @@ without loss of generality
 
 \begin_layout Subsubsection
 Types of Proofs
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Types-of-Proofs"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2307,6 +2349,13 @@ Classification of the proof strategies
 
 \begin_layout Subsubsection
 Strategies for Constructing Proofs
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Strategies-for-Constructing"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2377,7 +2426,7 @@ of existing proofs is often a fruitful procedure.
 Mathematical Structures: Sets, Sequences, Series, and Matrices
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Sets"
+name "sec:Mathematical-Structures"
 
 \end_inset
 
@@ -2392,6 +2441,13 @@ Mathematical structures are the foundation on which reasoning is carried
 
 \begin_layout Subsubsection
 Sets
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Sets"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3427,6 +3483,13 @@ The Continuum Hypothesis
 
 \begin_layout Subsubsection
 Sequences and Summations
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Sequences-and-Summations"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3892,6 +3955,13 @@ The range is a subset of the codomain, and the image is a memeber of the
 
 \begin_layout Subsubsection
 One-to-One and Onto Functions and Their Nature
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:One-to-One-and-Onto"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4230,6 +4300,13 @@ The diagram shows the hierarchy of numbers classified into subsets of the
 
 \begin_layout Subsubsection
 Composition of Functions
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Composition-of-Functions"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4382,10 +4459,24 @@ The composition of
 
 \begin_layout Subsection
 The Growth of Functions and Time Complexity
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-Growth-of-Functions"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 Big-O Notation
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Big-O-Notation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4459,10 +4550,24 @@ Big-
 \end_inset
 
  Notation
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Big-Omega-and-Big-Theta"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 Time Complexity
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Time-Complexity"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4617,6 +4722,13 @@ target "http://tutorial.math.lamar.edu/getfile.aspx?file=B,31,N"
 
 \begin_layout Subsubsection
 Strong Induction and Well-Ordering
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Strong-Induction"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4687,6 +4799,13 @@ The
 
 \begin_layout Subsection
 Modular Arithmetic
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Modular-Arithmetic"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4704,6 +4823,13 @@ reference "fig:moduluarArithmatic"
 
 \begin_layout Subsubsection
 Miller-Rabin Compositeness Test
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Miller-Rabin-Compositeness-Test"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4921,6 +5047,13 @@ This table gives an overview of useful modular arithmetic equations
 
 \begin_layout Subsection
 Combinatorics
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Combinatorics"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4931,6 +5064,13 @@ You can use counting techniques to answer a variety of questions.
 
 \begin_layout Subsubsection
 The Product Rule
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-Product-Rule"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5010,6 +5150,13 @@ different rooms to clean.
 
 \begin_layout Subsubsection
 The Sum Rule
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-Sum-Rule"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5097,6 +5244,13 @@ Suppose that a task can be done in one of
 
 \begin_layout Subsubsection
 The Subtraction Rule or The Inclusion Exclusion Principle
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-Subtraction-Rule"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5131,6 +5285,13 @@ If a task can be done in either
 
 \begin_layout Subsubsection
 The Division Rule
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-Division-Rule"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5164,6 +5325,13 @@ There are
 
 \begin_layout Subsubsection
 The Pigeonhole Principle (Dirichlet Drawer Principle)
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-Pigeonhole-Principle"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -5266,6 +5434,13 @@ Suppose that for each element
 
 \begin_layout Subsection
 Permutations and Combinations
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Permutations-and-Combinations"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5610,6 +5785,13 @@ p(E_{1}\bigcup E_{2)}=p(E_{1})+p(E_{2})-p(E_{1}\bigcap E_{2}).
 
 \begin_layout Subsubsection
 Nonuniform Probability
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Nonuniform-Probability"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5645,6 +5827,13 @@ ts on the members of the sample pace
 
 \begin_layout Subsubsection
 Conditional Probability
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Conditional-Probability"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5767,6 +5956,13 @@ when for
 
 \begin_layout Subsubsection
 Bernoulli Trials
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Bernoulli-Trials"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5869,11 +6065,21 @@ tuples in which there are
 
 \begin_layout Subsubsection
 Random Variables
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Random-Variables"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-(Possibly the most poorly named concept in mathematics) A random variable
- is a 
+
+\emph on
+(Possibly the most poorly named concept in mathematics)
+\emph default
+ A random variable is a 
 \emph on
 function
 \emph default
@@ -5937,6 +6143,13 @@ The distribution of a random variable
 
 \begin_layout Subsubsection
 Probablistic Algorithms
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Probablistic-Algorithms"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5953,6 +6166,13 @@ lly.
 
 \begin_layout Subsubsection
 Monte Carlo Algorithms
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Monte-Carlo-Algorithms"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5970,6 +6190,13 @@ For a sufficiently large number of computations the chances that a Monte
 
 \begin_layout Subsubsection
 Las Vegas Algorithms
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Las-Vegas-Algorithms"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -5988,6 +6215,13 @@ The Pobablistic Method states that if the probability that an element chosen
 
 \begin_layout Subsubsection
 Expected Value and Variance
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Expected-Value-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6183,6 +6417,13 @@ V(X)=\sum_{s\epsilon S}(X(s)-E(X))^{2}p(s)
 
 \begin_layout Subsubsection
 Chebyshev's Inequality
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Chebyshev's-Inequality"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6575,14 +6816,14 @@ The classical example is the language L = {
 }.
  DFA's cannot check for the same number of symbols in a string or balanced
  parenthesis.
- This job falls to
+ This job falls to context free grammars (CFG) outlined in section 
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "sec:contextFreeGrammars"
 
 \end_inset
 
- (CFG).
+.
 \end_layout
 
 \begin_layout Section
@@ -6865,7 +7106,11 @@ reference "fig:convertNFA2DFA"
  diagram.
  A lazy conversion technique can be carried out to only include the state
  sets in the DFA only when necessary.
- An automaton modeling the NFA representation of the chess board is depicted
+ 
+\end_layout
+
+\begin_layout Standard
+An automaton modeling the NFA representation of the chess board is depicted
  in Figure
 \begin_inset CommandInset ref
 LatexCommand vref
@@ -6875,6 +7120,13 @@ reference "fig:chessNFA2"
 
 .
  A corresponding DFA automaton representation is depicted in Figure
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "fig:chessDFA"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -7705,7 +7957,11 @@ name "sec:epsilonNFA's"
 NFA's that allow for epsilon transitions are called epsilon NFA.
  Epsilon transitions allow for an automaton to transition between states
  without regard to the input string.
- Effectively, it allows for the computation to skip forward in the automaton
+ 
+\end_layout
+
+\begin_layout Standard
+Effectively, it allows for the computation to skip forward in the automaton
  without processing input.
  An example of an epsilon NFA is depicted in Figure
 \begin_inset CommandInset ref
@@ -7827,8 +8083,19 @@ name "sec:Regular-Expressions"
 \end_layout
 
 \begin_layout Standard
-Regular expressions use three operations: union, concatenation, and Kleene
- star.
+Regular expressions use three operations: 
+\emph on
+union
+\emph default
+, 
+\emph on
+concatenation
+\emph default
+, and 
+\emph on
+Kleene star
+\emph default
+.
  Concatenation on languages 
 \begin_inset Formula $L$
 \end_inset
@@ -7837,7 +8104,7 @@ Regular expressions use three operations: union, concatenation, and Kleene
 \begin_inset Formula $M$
 \end_inset
 
-is denoted 
+ is denoted 
 \begin_inset Formula $LM.$
 \end_inset
 
@@ -8097,7 +8364,11 @@ reference "fig:productDFA"
 \end_inset
 
 .
- The product DFA N pictured in Figure
+ 
+\end_layout
+
+\begin_layout Standard
+The product DFA N pictured in Figure
 \begin_inset CommandInset ref
 LatexCommand vref
 reference "fig:productDFA"
@@ -8110,7 +8381,11 @@ e DFA enters a final state, but not both.
  is a final state in the DFA M.
  The state pair (B,D) is then marked final in the DFA N instead of (B,C)
  because the state D is not a final state in the DFA M.
- Similarly, the state pair (A,C) is marked a final state in the DFA N because
+ 
+\end_layout
+
+\begin_layout Standard
+Similarly, the state pair (A,C) is marked a final state in the DFA N because
  C in final state the DFA M, but A is not a final state in the DFA L.
  This feature of only one state being accepting is used a differentiating
  characteristic to determine whether the languages of the DFA's L and M
@@ -8212,7 +8487,7 @@ name "subsec:infinitenessTestRegularLanguages"
 \end_layout
 
 \begin_layout Standard
-A final example of decision problems fro regular languages in the Infiniteness
+A final example of decision problems for regular languages in the Infiniteness
  Problem.
  The problem asks, is the given regular language composed of an infinite
  number of strings? We can determine if a given language is infinite by
@@ -8222,11 +8497,18 @@ A final example of decision problems fro regular languages in the Infiniteness
  Otherwise, the language must be finite.
  (If a language has a string of length n or more, then surely the DFA contains
  a cycle that yielded such a string).
- The proof of this idea follows: If there is a n-state DFA that accepts
- a string w of length n or more, then there must be a state that appears
- twice on the path traced out by the simulation of w on the DFA from the
- start state to the final state.
- This is because for all strings w of length n a DFA must traverse n+1 states.
+ 
+\end_layout
+
+\begin_layout Theorem
+If there is a n-state DFA that accepts a string w of length n or more, then
+ there must be a state that appears twice on the path traced out by the
+ simulation of w on the DFA from the start state to the final state.
+ 
+\end_layout
+
+\begin_layout Proof
+This is because for all strings w of length n a DFA must traverse n+1 states.
  A diagram of the automaton demonstrating this principle can be seen in
  Figure 
 \begin_inset CommandInset ref
@@ -8264,16 +8546,76 @@ name "fig:pumpingLemma"
 \end_inset
 
 In the automaton pictured above a string w is formed by the the substrings
- x, y, and z.
- The substring x is the substring that takes us to the first cycle in the
- automaton.
- The cycle occurs at state q.
- The edge labeled y represents the edge which returns the string w to state
- q for the first time.
- Because the substring y is locked within the string w, that is its prefix
- is the substring x and its postfix is the substring z, it cannot be the
- empty string.
- However, the substrings x or z may be the empty string.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, and 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ The substring 
+\begin_inset Formula $x$
+\end_inset
+
+ is the substring that takes us to the first cycle in the automaton.
+ The cycle occurs at state 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+.
+ The edge labeled 
+\begin_inset Formula $y$
+\end_inset
+
+ represents the edge which returns the string 
+\begin_inset Formula $w$
+\end_inset
+
+ to state 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+ for the first time.
+
+\emph on
+ Because the substring 
+\begin_inset Formula $y$
+\end_inset
+
+ is locked within the string 
+\begin_inset Formula $w$
+\end_inset
+
+, that is its prefix is the substring 
+\begin_inset Formula $x$
+\end_inset
+
+ and its suffix is the substring 
+\begin_inset Formula $z$
+\end_inset
+
+, it cannot be the empty string.
+
+\emph default
+ 
+\emph on
+However, the substrings 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $z$
+\end_inset
+
+ may be the empty string.
+
+\emph default
  Then 
 \begin_inset Formula $xy^{i}z$
 \end_inset
@@ -8431,7 +8773,7 @@ name "subsec:IntersectionForRegularLanguages"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 If 
 \begin_inset Formula $L$
 \end_inset
@@ -8445,7 +8787,11 @@ If
 \end_inset
 
  is also a regular language.
- The proof of this statement is as follows: Let 
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
 \begin_inset Formula $I$
 \end_inset
 
@@ -8587,7 +8933,7 @@ name "subsec:DifferenceForRegularLanguages"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 If 
 \begin_inset Formula $L$
 \end_inset
@@ -8614,7 +8960,11 @@ If
 \end_inset
 
 .
- The proof of this statement is as follows: Let 
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
 \begin_inset Formula $I$
 \end_inset
 
@@ -8682,7 +9032,7 @@ name "subsec:ConcatenationForRegularLanguages"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 If 
 \begin_inset Formula $L$
 \end_inset
@@ -8696,7 +9046,11 @@ If
 \end_inset
 
  is also a regular language.
- The proof of this statement is as follows: Let the languages 
+ 
+\end_layout
+
+\begin_layout Proof
+Let the languages 
 \begin_inset Formula $L$
 \end_inset
 
@@ -8756,7 +9110,7 @@ name "subsec:ComplementForRegularLanguages"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 The complement of a language 
 \begin_inset Formula $L$
 \end_inset
@@ -8782,7 +9136,10 @@ contains
 \end_inset
 
 .
- Since 
+\end_layout
+
+\begin_layout Proof
+Since 
 \begin_inset Formula $\Sigma^{*}$
 \end_inset
 
@@ -8892,8 +9249,12 @@ name "subsec:DFA-Minimization-Algorithm"
 
 \begin_layout Standard
 The key idea here is to create a table used to find distinguishable states.
- Distinguishable state pairs are those that have one member of the pair
- in an accepting state while the other is not in an accepting state.
+ 
+\emph on
+Distinguishable state pairs are those that have one member of the pair in
+ an accepting state while the other is not in an accepting state.
+
+\emph default
  The table used to distinguish these pairs is formed by the product of the
  DFA's states, 
 \begin_inset Formula $Q\times Q$
@@ -8918,14 +9279,36 @@ name "sec:pumpingLemmaRegularLanguages"
 \end_layout
 
 \begin_layout Standard
-For every regular language L, there is an integer n, which happens to be
- the number of states in the DFA of L, such that for every w in L of length
- 
+For every regular language 
+\begin_inset Formula $L$
+\end_inset
+
+, there is an integer 
+\begin_inset Formula $n$
+\end_inset
+
+, which happens to be the number of states in the DFA of 
+\begin_inset Formula $L$
+\end_inset
+
+, such that for every 
+\begin_inset Formula $w$
+\end_inset
+
+ in 
+\begin_inset Formula $L$
+\end_inset
+
+ of length 
 \begin_inset Formula $\geq n$
 \end_inset
 
 .
- We can write w = xyz such that the following properties hold:
+ We can write 
+\begin_inset Formula $w=xyz$
+\end_inset
+
+ such that the following properties hold:
 \end_layout
 
 \begin_layout Enumerate
@@ -8951,7 +9334,11 @@ For all
 \begin_inset Formula $xy^{i}z$
 \end_inset
 
- is in L.
+ is in 
+\begin_inset Formula $L$
+\end_inset
+
+.
 \begin_inset CommandInset label
 LatexCommand label
 name "enu:PumpingLemmaProperty3"
@@ -8962,7 +9349,9 @@ name "enu:PumpingLemmaProperty3"
 \end_layout
 
 \begin_layout Standard
-The Pumping Lemma is useful in determining whether a language is regular
+
+\emph on
+The pumping lemma is useful in determining whether a language is regular
  or nonregular.
 \end_layout
 
@@ -8995,8 +9384,12 @@ L = {
 
 \begin_layout Proof
 Suppose for the purposes of contradiction that L is a regular language,
- then there exists an n for which the properties of the Pumping Lemma hold
- true.Let w = 
+ then there exists an 
+\begin_inset Formula $n$
+\end_inset
+
+ for which the properties of the pumping lemma hold true.
+ Let w = 
 \begin_inset Formula $0^{n}1$
 \end_inset
 
@@ -9005,14 +9398,37 @@ Suppose for the purposes of contradiction that L is a regular language,
 \end_inset
 
 .
- The string w can be written in the form w = xyx where each component x,
- y, z forms some substring of w where x and consist of 0's and 
+ The string 
+\begin_inset Formula $w$
+\end_inset
+
+ can be written in the form 
+\begin_inset Formula $w=xyz$
+\end_inset
+
+ where each component x, y, z forms some substring of 
+\begin_inset Formula $w$
+\end_inset
+
+ where 
+\begin_inset Formula $x$
+\end_inset
+
+ and consist of 0's and 
 \begin_inset Formula $y\not=\epsilon$
 \end_inset
 
-, and z is composed of 1's.
- However, for this to be a regular language all the properties of the Pumping
- Lemma must hold true.
+, and 
+\begin_inset Formula $z$
+\end_inset
+
+ is composed of 1's.
+ 
+\end_layout
+
+\begin_layout Proof
+However, for this to be a regular language all the properties of the pumping
+ lemma must hold true.
  In particular particular property
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -9032,14 +9448,18 @@ reference "enu:PumpingLemmaProperty3"
 .
  The string formed by this construction contains more 0's than 1's, violating
  the conditions on the language as specified in the set former.
- Similarly, if yz and consist of 1's and 
+ 
+\end_layout
+
+\begin_layout Proof
+Similarly, if yz and consist of 1's and 
 \begin_inset Formula $y\not=\epsilon$
 \end_inset
 
-, the string formed by this construction contains more 1's than 0's again
+, the string formed by this construction contains more 1's than 0's, again
  violating the conditions of the language.
  Thus, the language must be nonregular because it does not meet the conditions
- of the Pumping Lemma.
+ of the pumping lemma.
  
 \end_layout
 
@@ -9058,9 +9478,13 @@ name "sec:contextFreeGrammars"
 A context free grammar is a notation for describing languages.
  It is more powerful than regular expressions and finite automata, but still
  cannot define all possible languages.
- A context free grammar is composed of variables which stand for a set of
+ 
+\end_layout
+
+\begin_layout Standard
+A context free grammar is composed of variables which stand for a set of
  strings.
- These variables are defined in terms of each other.
+ These variables are defined in terms of each other–recursively.
  These rules for how variables should be composed are often called productions.
  Take for example the language L = {
 \begin_inset Formula $0^{n}1$
@@ -9074,10 +9498,13 @@ A context free grammar is a notation for describing languages.
 \begin_inset Formula $n\geq1$
 \end_inset
 
-}.
- This is a familiar language that we saw earlier in the examples on what
+}, this is a familiar language that we saw earlier in the examples on what
  is not a regular language.
- A context free grammar (CFG) for 
+ 
+\end_layout
+
+\begin_layout Standard
+A context free grammar (CFG) for 
 \begin_inset Formula $L$
 \end_inset
 
@@ -9183,17 +9610,32 @@ name "subsec:conventionalUsageOfContextFreeGrammars"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Capital letters at the beginning of the alphabet are typically used as variables
  (e.g A, B, C).
- Lowercase letters at the beginning of the alphabet are used as terminals
+\end_layout
+
+\begin_layout Itemize
+Lowercase letters at the beginning of the alphabet are used as terminals
  (a, b, c).
- Capital letters at the end of the alphabet can be either terminals or variables
+ 
+\end_layout
+
+\begin_layout Itemize
+Capital letters at the end of the alphabet can be either terminals or variables
  (X, Y, Z).
- Lowercase letters at the end of the alphabet are strings containing terminals
+ 
+\end_layout
+
+\begin_layout Itemize
+Lowercase letters at the end of the alphabet are strings containing terminals
  only (e.g.
  w, x, y, z).
- Greek letters are strings of terminals or variables (
+ 
+\end_layout
+
+\begin_layout Itemize
+Greek letters are strings of terminals or variables (
 \begin_inset Formula $\alpha,$
 \end_inset
 
@@ -9202,17 +9644,33 @@ Capital letters at the beginning of the alphabet are typically used as variables
 \end_inset
 
 .
- A star (*) indicates 0 or more steps are necessary to obtain a specified
+ 
+\end_layout
+
+\begin_layout Itemize
+A star (*) indicates 0 or more steps are necessary to obtain a specified
  derivation.
- A variable followed by the epsilon symbol effectively causes the variable
+ 
+\end_layout
+
+\begin_layout Itemize
+A variable followed by the epsilon symbol effectively causes the variable
  to disappear in the derivation process.
- A 
+ 
+\end_layout
+
+\begin_layout Itemize
+A 
 \begin_inset Formula $\Rightarrow_{lm}$
 \end_inset
 
  indicates the sentential form is as specified after one setp of the left
  most derivation.
- A 
+ 
+\end_layout
+
+\begin_layout Itemize
+A 
 \begin_inset Formula $\Rightarrow*_{lm}$
 \end_inset
 
@@ -9233,11 +9691,19 @@ name "subsec:contextFreeLanguages"
 \end_layout
 
 \begin_layout Standard
-A language that is defined by some CFG is called a context-free language.
+A language that is defined by some CFG is called a
+\emph on
+ context-free language
+\emph default
+.
  Intuitively, a context free language is a language that can count to infinite
  elements but not three.
  An example of a non-context free language is 
-\begin_inset Formula $L=\{0^{n}1^{n}2^{n}|n\geq1\}$
+\begin_inset Formula 
+\[
+L=\{0^{n}1^{n}2^{n}|n\geq1\}
+\]
+
 \end_inset
 
 .
@@ -10102,7 +10568,11 @@ name "subsec:proofEquivalenceCFGPDA"
 
 \begin_layout Standard
 In order to prove equivalence between the two representations we need to
- prove that for all 
+ prove computation of the PDA mirrors that of the derivation of the CFG.
+\end_layout
+
+\begin_layout Theorem
+For any well formed PDA and CFG for all 
 \begin_inset Formula $x,$
 \end_inset
 
@@ -10111,7 +10581,11 @@ In order to prove equivalence between the two representations we need to
 \end_inset
 
 .
- That is, for all x the instantaneous description 
+ That is, for all 
+\begin_inset Formula $x$
+\end_inset
+
+ the instantaneous description 
 \begin_inset Formula $(q,wx,S)$
 \end_inset
 
@@ -10125,11 +10599,11 @@ In order to prove equivalence between the two representations we need to
 \end_inset
 
 .
- It is important to note that we allow for the suffix 
+ (It is important to note that we allow for the suffix 
 \begin_inset Formula $x$
 \end_inset
 
-in the string 
+ in the string 
 \begin_inset Formula $wx$
 \end_inset
 
@@ -10146,16 +10620,20 @@ in the string
 \begin_inset Formula $x$
 \end_inset
 
-it is true for all 
+ it is true for all 
 \begin_inset Formula $x.$
 \end_inset
 
- The proof follow starting from the only if direction 
+) 
+\end_layout
+
+\begin_layout Proof
+The proof follows starting from the only if direction 
 \begin_inset Formula $(\rightarrow)$
 \end_inset
 
 .
- That is, if P transitions 
+ That is, if the PDA transitions 
 \begin_inset Formula $(q,wx,S)$
 \end_inset
 
@@ -10163,7 +10641,7 @@ it is true for all
 \begin_inset Formula $(q,x,\alpha)$
 \end_inset
 
-, then 
+, then the CFG's derives 
 \begin_inset Formula $S\Rightarrow_{lm}^{*}w\alpha$
 \end_inset
 
@@ -10181,7 +10659,7 @@ it is true for all
 \begin_inset Formula $\alpha$
 \end_inset
 
-is 
+ is 
 \begin_inset Formula $S$
 \end_inset
 
@@ -10382,7 +10860,11 @@ rule in the
 
  returning us to our base case, thus proving the only if direction of the
  proof.
- Next, we prove the if direction (
+ 
+\end_layout
+
+\begin_layout Standard
+Next, we prove the if direction (
 \begin_inset Formula $\leftarrow)$
 \end_inset
 
@@ -10582,7 +11064,11 @@ and a variable
 \end_inset
 
 .
- The transition function in this case would look like 
+ 
+\end_layout
+
+\begin_layout Standard
+The transition function in this case would look like 
 \begin_inset Formula $\delta(p,a,X)$
 \end_inset
 
@@ -10713,7 +11199,11 @@ and
 \begin_inset Formula $q.$
 \end_inset
 
- The general case for creating productions to model the PDA follows.
+ 
+\end_layout
+
+\begin_layout Standard
+The general case for creating productions to model the PDA follows.
  Suppose 
 \begin_inset Formula $\delta(p,a,X)$
 \end_inset
@@ -11025,7 +11515,12 @@ reference "fig:triangularArray"
 \end_inset
 
 .
- We start by computing the entries 
+ 
+\end_layout
+
+\begin_layout Standard
+\align left
+We start by computing the entries 
 \begin_inset Formula $X_{i,i}$
 \end_inset
 
@@ -11553,7 +12048,7 @@ A finite set is a set that contains a finite number of elements.
  Refer to Section
 \begin_inset CommandInset ref
 LatexCommand vref
-reference "sec:Sets"
+reference "sec:Mathematical-Structures"
 
 \end_inset
 
@@ -11622,7 +12117,11 @@ A countable set is a set with a one to one correspondence with the positive
 \begin_inset Formula $0,-1,1,-2,2,-3,3,\ldots$
 \end_inset
 
- Another example of an enumerable set is the binary strings, but there is
+ 
+\end_layout
+
+\begin_layout Standard
+Another example of an enumerable set is the binary strings, but there is
  a trick involved.
  The binary strings 
 \begin_inset Formula $101,0101,00101$
@@ -11706,7 +12205,7 @@ be the
 \begin_inset Formula $x$
 \end_inset
 
-for 
+ for 
 \begin_inset Formula $w$
 \end_inset
 
@@ -11776,7 +12275,7 @@ is not in the language
 \begin_inset Formula $x$
 \end_inset
 
-is in the language by the definition of the language.
+ is in the language by the definition of the language.
  This makes for a very confusing situation.
  Remember, 
 \begin_inset Formula $L$
